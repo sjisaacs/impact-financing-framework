@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Local Claude Code config
+.claude/
+
+# Source files not deployed to the public site
+CHAI-Market-Shaping-Framework 202410.pdf
+Critique 1.docx
+Critique 2.docx
+Critique 3.docx
+
+# Editor / OS noise
+*.swp
+*.bak
+Thumbs.db
+
+# Defensive: build artefacts that don't apply today but might appear later
+node_modules/
+*.log
