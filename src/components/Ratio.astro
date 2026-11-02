@@ -1,0 +1,23 @@
+---
+// The framework's objective written as a ratio. Each term links to where it is explained.
+// The multiplication sign travels with the term that follows it, so terms wrap cleanly on phones.
+const terms = [
+  { href: '/framework/mechanisms/', label: 'Size of the change' },
+  { href: '/cost-effectiveness/#duration-beyond-the-counterfactual', label: 'Duration beyond the counterfactual' },
+  { href: '/cost-effectiveness/#value-per-unit', label: 'Value per unit' },
+  { href: '/cost-effectiveness/#probability-of-success', label: 'Probability of success' },
+  { href: '/cost-effectiveness/#share-attributable', label: 'Share attributable' },
+];
+---
+<div class="bg-white border border-slate-200 rounded-xl p-6 not-prose" role="group" aria-label="Durable impact per concessional dollar">
+  <div class="flex flex-wrap items-center gap-x-2 gap-y-2 justify-center">
+    {terms.map((t, i) => (
+      <span class="inline-flex items-center gap-2">
+        {i > 0 && <span class="text-slate-500" aria-hidden="true">×</span>}
+        <a class="ratio-term" href={t.href}>{t.label}</a>
+      </span>
+    ))}
+  </div>
+  <div class="border-t-2 border-slate-800 my-4 mx-auto max-w-3xl" role="presentation"></div>
+  <div class="flex justify-center"><a class="ratio-term" href="/cost-effectiveness/#expected-cost">Expected cost to the funder</a></div>
+</div>

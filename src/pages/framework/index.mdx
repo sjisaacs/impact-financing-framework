@@ -1,0 +1,178 @@
+---
+layout: ../../layouts/Page.astro
+title: The Framework
+description: Two landscapes and two kinds of gap. A Transitional Access Gap needs a temporary path through a ridge; a Structural Misalignment needs the financial landscape reshaped and a payer that lasts.
+lede: Two landscapes, two kinds of gap. Telling them apart is the first decision that shapes cost-effectiveness.
+bands: true
+framework: true
+toc:
+  - { id: two-landscapes, label: Two Landscapes }
+  - { id: two-kinds-of-gap, label: Two Kinds of Gap }
+  - { id: gaps-not-markets, label: 'Gaps, Not Markets' }
+  - { id: learning-curves, label: Learning Curves }
+  - { id: the-externality, label: The Externality }
+  - { id: misdiagnosis, label: Misdiagnosis }
+---
+import Section from '../../components/Section.astro';
+import Fig from '../../components/Fig.astro';
+import Illustration from '../../components/Illustration.astro';
+import RidgeGap from '../../components/figures/RidgeGap.astro';
+import Terraform from '../../components/figures/Terraform.astro';
+import LearningCurve from '../../components/figures/LearningCurve.astro';
+import WedgeGeometry from '../../components/figures/WedgeGeometry.astro';
+import Matrix from '../../components/Matrix.astro';
+import Term from '../../components/Term.astro';
+
+<Section id="two-landscapes" tone="slate" title="The Core Insight: Two Landscapes" intro="The central metaphor of this framework. Understanding these two landscapes, and whether they align, tells you what kind of intervention you need." wide>
+<div class="not-prose grid md:grid-cols-3 gap-4 mb-8">
+  <div class="bg-white p-6 rounded-xl border border-slate-200">
+    <div class="flex items-center gap-3 mb-3"><span class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-700 text-sm font-bold">1</span><h3 class="font-serif text-lg text-slate-900">The Financial Landscape: What Markets See</h3></div>
+    <p class="text-sm text-slate-600 mb-3">Imagine a topographical map where elevation represents profitability. Low elevation means high profit; high elevation means low profit, or losses. Capital, money seeking returns, flows like water across this terrain and pools at the low points.</p>
+    <p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Key insight:</strong> this landscape is real. It is shaped by costs, prices, regulations and risks. To predict where money will flow, map this terrain.</p>
+  </div>
+  <div class="bg-white p-6 rounded-xl border border-slate-200">
+    <div class="flex items-center gap-3 mb-3"><span class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-700 text-sm font-bold">2</span><h3 class="font-serif text-lg text-slate-900">The Social Landscape: What We Want</h3></div>
+    <p class="text-sm text-slate-600 mb-3">Now imagine a second map over the same ground, where low elevation means high social value: affordable medicine reaching everyone who needs it, clean energy replacing fossil fuels, people reached who were not.</p>
+    <p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Key insight:</strong> markets cannot see this landscape. Its terrain is set by everything society values, including effects that never appear in a price.</p>
+  </div>
+  <div class="bg-white p-6 rounded-xl border border-slate-200">
+    <div class="flex items-center gap-3 mb-3"><span class="w-7 h-7 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 text-blue-700 text-sm font-bold">3</span><h3 class="font-serif text-lg text-slate-900">The Central Question: Do the Landscapes Align?</h3></div>
+    <p class="text-sm text-slate-600 mb-3">Place the maps on top of each other. Often they are similar, which is why markets work as well as they do. Sometimes they are inverted: the financial low point sits on high ground in the social landscape.</p>
+    <p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>The question:</strong> where are the low points of each landscape, and why isn't capital already pooled in the one we want?</p>
+  </div>
+</div>
+
+<Fig takeaway="The same ground, read two ways." caption="Water marks where capital pools on the financial landscape, and where we would want it on the social landscape.">
+  <Illustration name="landscapes-two" alt="Two stacked landscapes. In the financial landscape, rivers of capital flow into a lake in one valley. The social landscape's most valuable valley lies elsewhere." width={1600} height={893} />
+</Fig>
+
+<div class="not-prose grid md:grid-cols-2 gap-4">
+  <div class="bg-blue-50 border border-blue-100 p-6 rounded-xl"><div class="font-semibold text-slate-900 mb-1">If the landscapes are aligned</div><p class="text-sm text-slate-600 mb-2">The profitable destination is also the good one. Capital just needs help getting there; it is stuck behind a barrier of risk or uncertainty.</p><p class="text-sm font-semibold text-blue-900">Our work is navigation: create a temporary path through the barrier.</p></div>
+  <div class="bg-emerald-50 border border-emerald-100 p-6 rounded-xl"><div class="font-semibold text-slate-900 mb-1">If the landscapes are misaligned</div><p class="text-sm text-slate-600 mb-2">The profitable destination is not the good one. Capital flows efficiently to the wrong place, or never reaches the right one.</p><p class="text-sm font-semibold text-emerald-800">Our work is terraforming: reshape the financial landscape, and keep it reshaped.</p></div>
+</div>
+</Section>
+
+<Section id="two-kinds-of-gap" title="Two Kinds of Gap, Two Kinds of Solution" intro="There are two fundamental kinds of gap between what a market does and what we want it to do. Knowing which you face determines what to use, how long to intervene, and what success looks like." wide>
+
+### The Walk-Away Test
+
+Imagine the intervention has fully succeeded and is then withdrawn. If the market holds its new position, the gap was transitional. If it slides back, the gap was structural. The test asks one question: is the outcome we want self-enforcing? That alone decides whether an intervention can end, and so whether its impact can outlast its cost.
+
+Answering it honestly is empirical work: compare unit cost at scale with what the buyers who will remain can sustainably pay, ask whether new suppliers could enter at that price, and ask whether high volume is even desirable. Novel antibiotics show why the last question matters. Stewardship means high volume is never supposed to arrive, so a gap that looks transitional is structural.
+
+<div class="not-prose bg-white rounded-xl border border-blue-200 overflow-hidden my-10">
+  <div class="bg-blue-50 px-6 py-4 border-b border-blue-100">
+    <span class="tag tag-mode1">Transitional Access Gap</span>
+    <h3 class="font-serif text-2xl text-slate-900 mt-2">Landscapes aligned, capital stuck</h3>
+    <p class="text-slate-600 text-sm mt-1">The destination is good for everyone, but capital can't get there on its own.</p>
+  </div>
+  <div class="p-4 sm:p-6 space-y-5">
+    <Illustration name="landscape-ridge" alt="Water pooled in a small valley on the left, separated by a ridge from a broad green valley on the right." width={1600} height={634} />
+    <p class="text-slate-700"><strong>The landscapes agree.</strong> The financial and social landscapes share the same global minimum: investment there would be both profitable and beneficial. But capital is trapped in a <Term>local minimum</Term>, stuck behind a <Term>ridge</Term> of risk, uncertainty or coordination failure. Suppliers won't invest without committed buyers; buyers won't commit without proven supply; risk is priced as if the market may never exist.</p>
+    <div class="diagram-container !my-0"><RidgeGap /></div>
+    <div class="bg-blue-50 border-l-4 border-blue-900 p-5 rounded-r-lg">
+      <div class="text-xs font-bold text-blue-900 uppercase tracking-wider mb-2">The Solution: Create a Path Through</div>
+      <p class="text-sm text-slate-700">Create a temporary path through the ridge so capital can reach the global minimum: guarantees reduce the perceived barrier, concessional capital bridges the gap, coordination removes the uncertainty. <strong>Key feature:</strong> once capital reaches the global minimum, it stays there, because staying is profitable. The intervention can be removed.</p>
+    </div>
+    <Illustration name="landscape-path" alt="A channel cut through the ridge lets water flow from the small valley into the broad valley beyond." width={1600} height={634} />
+    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
+      <div class="text-xs font-bold text-blue-800 uppercase tracking-wider mb-2">Case in Point: TLD for HIV</div>
+      <p class="text-sm text-slate-700 mb-2">In 2017, a superior HIV regimen, TLD, was ready to replace older treatments. Generic manufacturers needed demand certainty to invest in capacity; countries needed assured supply at a predictable price to plan their transitions. The Gates Foundation guaranteed minimum volumes, and the Clinton Health Access Initiative brokered ceiling price agreements of about $75 per patient per year for public buyers in 92 countries.</p>
+      <p class="text-sm text-slate-700"><strong>Why this is transitional:</strong> once countries had switched and licensed generic suppliers competed, the market sustained itself without the guarantee. <a class="text-blue-800 underline" href="/cases/tld/">Read the case.</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="not-prose bg-white rounded-xl border border-emerald-200 overflow-hidden my-10">
+  <div class="bg-emerald-50 px-6 py-4 border-b border-emerald-100">
+    <span class="tag tag-mode2">Structural Misalignment</span>
+    <h3 class="font-serif text-2xl text-slate-900 mt-2">Landscapes misaligned</h3>
+    <p class="text-slate-600 text-sm mt-1">The market will not sustain the outcome, however well it functions.</p>
+  </div>
+  <div class="p-4 sm:p-6 space-y-5">
+    <p class="text-slate-700"><strong>The landscapes disagree.</strong> The financial landscape has no low point where the social landscape does. This takes two forms.</p>
+    <div class="grid md:grid-cols-2 gap-4 text-sm">
+      <div class="bg-slate-50 p-4 rounded-lg"><div class="font-semibold text-slate-900 mb-1">Harm that pays</div><p class="text-slate-600">The financial low point is a toxic pit: pollution is profitable because its costs fall on people outside the transaction.</p></div>
+      <div class="bg-slate-50 p-4 rounded-lg"><div class="font-semibold text-slate-900 mb-1">Good that nobody pays for</div><p class="text-slate-600">There is no pit. The social low point simply isn't low on the financial map, because its value accrues to people who cannot pay or to society at large. Much of global health is this kind.</p></div>
+    </div>
+    <div class="diagram-container !my-0"><Terraform /><div class="legend"><span><i class="k-fin"></i>financial landscape, reshaped</span><span class="opacity-70"><i class="k-fin" style="border-top-style:dashed"></i>before</span><span><i class="k-soc"></i>social landscape</span></div></div>
+    <div class="bg-emerald-50 border-l-4 border-emerald-700 p-5 rounded-r-lg">
+      <div class="text-xs font-bold text-emerald-900 uppercase tracking-wider mb-2">The Solution: Terraform the Financial Landscape</div>
+      <p class="text-sm text-slate-700 mb-2">Reshape the financial landscape to match the social one. Two levers: <strong>raise the financial floor of harmful activities</strong> through taxes, penalties and regulation, and <strong>lower the financial floor of beneficial activities</strong> through subsidies, outcome payments and permanent payers.</p>
+      <p class="text-sm text-slate-700"><strong>Key feature:</strong> these changes must be permanent. Remove them and the landscapes diverge again, which makes the durability of whoever pays the central design problem.</p>
+    </div>
+    <Illustration name="landscapes-reshaped" alt="The financial landscape reshaped so that capital now flows into the valley that the social landscape values, while the old basin dries out." width={1600} height={893} />
+    <div class="bg-slate-50 p-5 rounded-lg border border-slate-200">
+      <div class="text-xs font-bold text-emerald-800 uppercase tracking-wider mb-2">Case in Point: Pricing Carbon</div>
+      <p class="text-sm text-slate-700 mb-2">Without intervention, emitting carbon dioxide is free while reducing emissions costs money, so the financial landscape slopes toward pollution. A carbon tax or a compliance cap with tradable permits raises the floor under emissions, and must stay in place for as long as the externality exists.</p>
+      <p class="text-sm text-slate-700"><strong>Why this is structural, and fragile:</strong> there is no graduation to a market that prices emissions on its own. British Columbia priced carbon from 2008 until setting its consumer tax to zero in 2025. <a class="text-emerald-800 underline" href="/cases/bc-carbon-tax/">Read the case.</a></p>
+    </div>
+  </div>
+</div>
+</Section>
+
+<Section id="gaps-not-markets" tone="slate" title="Diagnose Gaps, Not Markets">
+
+Most markets contain both kinds of gap, so the walk-away test applies to each gap rather than to the market as a whole. Donor financing for contraceptives in low-income countries is a permanent payer, a structural solution that has been in place for decades. The 2013 implant volume guarantee solved a transitional problem inside it, moving that subsidized market from high price and low volume to low price and high volume ([see the case](/cases/implants/)).
+
+The order of diagnosis matters. First ask who must pay permanently, and how much, for the outcome to exist at all. Then ask what keeps the market from reaching the best outcome that payer can sustain. [Payers](/framework/payers/) covers the first question and [Mechanisms](/framework/mechanisms/) the second.
+
+</Section>
+
+<Section id="learning-curves" title="When Costs Fall with Volume">
+
+Where unit costs fall with cumulative production, a market has two stable positions: low volume at high cost, and high volume at low cost. That is a transitional gap with an unusually high ridge, and the ridge wears down as capital flows through it, because each unit made lowers the cost of the next. Solar power in the late 2000s and electric vehicles in the mid-2010s are the familiar examples: too expensive at first, but every unit deployed drove costs down.
+
+<Fig takeaway="Learning curves are transitional gaps whose ridge erodes as volume grows." caption="Lighter lines are earlier. Support is needed only until cumulative volume carries costs below what buyers will pay.">
+  <LearningCurve />
+</Fig>
+
+Solar also shows how the two kinds of gap interact. Its unpriced climate benefit was a structural gap, yet once costs fell far enough, new solar often won on cost alone and that gap stopped binding for many projects. Solving a transitional gap can make a structural one matter less, which is worth knowing before committing to a permanent subsidy.
+
+</Section>
+
+<Section id="the-externality" tone="slate" title="What the Externality Is" intro="Economics has a precise name for the difference between the two landscapes. Getting its geometry right tells you how big an intervention must be and whether it is worth doing.">
+
+The externality, broadly defined, is the difference between social and private value at every point. What separates the two low points, though, is not the size of that difference but its slope at the market's low point. There, the financial landscape is flat by definition. Any tilt left in the social landscape at that point is exactly the marginal externality, which the framework calls the **wedge**.
+
+<Fig takeaway="Three quantities, three questions." caption="The wedge sizes the instrument. The displacement sizes the behavior change. The welfare at stake sizes the case for acting.">
+  <WedgeGeometry />
+  <div class="legend" slot="legend"><span><i class="k-fin"></i>financial landscape</span><span><i class="k-soc"></i>social landscape</span><span><i class="k-wedge"></i>wedge</span></div>
+</Fig>
+
+<div class="not-prose grid md:grid-cols-3 gap-4 my-8">
+  <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">The wedge</div><p class="text-sm text-slate-600">Sizes the instrument: the tax, subsidy or payment per unit needed to make the market's low point and the social low point coincide.</p></div>
+  <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">The displacement</div><p class="text-sm text-slate-600">Sizes the behavior change, in tons abated or doses delivered. Roughly the wedge divided by how steeply private returns change away from the market's low point.</p></div>
+  <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">The welfare at stake</div><p class="text-sm text-slate-600">Sizes the case: how much social value is lost where the market sits. This is <Term>deadweight loss</Term> in its exact sense, roughly half the wedge times the displacement.</p></div>
+</div>
+
+One consequence is easy to miss. A large externality that does not vary with the activity moves nothing. If a factory imposed the same fixed harm whatever it produced, the social landscape would be the financial one shifted, the low points would coincide, and no corrective price would change behavior. Misalignment requires a gap that changes as the activity changes.
+
+### Path Externalities and Destination Externalities
+
+Externalities are not unique to structural gaps, which is why the distinction turns on where they bind rather than whether they exist. A <Term>coordination failure</Term> exists because one firm's investment benefits others who do not pay for it; Rosenstein-Rodan's argument for a "big push" rests on exactly these spillovers. Learning by doing leaks to competitors, as Arrow showed. These externalities live on the path: they build the ridge, and they stop binding once capital reaches the better valley.
+
+A structural gap has its externality at the destination. The social landscape is still tilted at the market's low point, and will stay tilted for as long as the underlying economics hold. The walk-away test is a practical check on exactly this distinction.
+
+### Three Sources of the Wedge
+
+1. **Effects on third parties.** Emissions, infection, antimicrobial resistance. The classic externality, corrected by a price on the harm or a payment for the benefit.
+2. **Value no one can be excluded from.** Public goods, from disease surveillance to research. Markets underprovide them because no one can be charged.
+3. **Needs not backed by purchasing power.** When a poor patient cannot pay for treatment, the market may be efficient given incomes; social value differs because willingness to pay is weighted by income. The remedy is a transfer that someone must fund indefinitely, not a price correction, so it is worth naming separately.
+
+Much of the structural gap in global health is the third kind. Tobacco, often cited as a corrective-tax case, is largely something else: an <Term>internality</Term>, harm smokers do to their own future selves through addiction and present bias.
+
+</Section>
+
+<Section id="misdiagnosis" title="Two Ways to Misdiagnose" intro="Each kind of gap has a matching error, and both are expensive.">
+
+<Matrix />
+
+<div class="not-prose grid md:grid-cols-2 gap-4 mt-8">
+  <div class="bg-orange-50 border border-orange-100 p-6 rounded-xl"><div class="font-semibold text-slate-900 mb-2">Bridge to Nowhere</div><p class="text-sm text-slate-600">Treating a structural gap as transitional. You launch a pilot, prove it works, then watch it collapse when funding ends, because the economics never changed.</p></div>
+  <div class="bg-orange-50 border border-orange-100 p-6 rounded-xl"><div class="font-semibold text-slate-900 mb-2">Windfall</div><p class="text-sm text-slate-600">Treating a transitional gap as structural. You lock in permanent support for something the market would have sustained on its own, paying for what would have happened anyway.</p></div>
+</div>
+
+[Cost-effectiveness](/cost-effectiveness/#what-misdiagnosis-costs) shows what each error costs.
+
+</Section>

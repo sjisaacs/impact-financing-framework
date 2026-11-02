@@ -1,0 +1,10 @@
+---
+// Diagram container with a takeaway caption, in the original site's style.
+interface Props { caption?: string; takeaway?: string; }
+const { caption, takeaway } = Astro.props;
+---
+<figure class="diagram-container not-prose">
+  <slot />
+  {(takeaway || caption) && <figcaption class="fig-caption">{takeaway && <strong>{takeaway} </strong>}{caption}</figcaption>}
+  <slot name="legend" />
+</figure>

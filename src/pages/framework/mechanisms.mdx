@@ -1,0 +1,152 @@
+---
+layout: ../../layouts/Page.astro
+title: The Mechanisms of Price Reduction
+description: Six levers act on cost or margin. Each holds after exit under a different condition, and the durable ones are the hardest to activate, which is why the field drifts toward risk transfer.
+lede: Between diagnosis and instrument sits a layer usually left implicit, the mechanism through which an intervention actually moves the price. Knowing which lever does the work tells you whether the impact will last.
+bands: true
+framework: true
+toc:
+  - { id: why-a-separate-layer, label: Why a Separate Layer }
+  - { id: six-levers, label: Six Levers }
+  - { id: durability, label: Durability }
+  - { id: easy-and-hard-levers, label: Easy and Hard Levers }
+  - { id: parallel-approaches, label: Transfers and Incentives }
+  - { id: the-catalyst, label: The Catalyst }
+  - { id: lever-accounting, label: Lever Accounting }
+---
+import Section from '../../components/Section.astro';
+import Fig from '../../components/Fig.astro';
+import PriceStack from '../../components/figures/PriceStack.astro';
+import LeverMap from '../../components/figures/LeverMap.astro';
+import Term from '../../components/Term.astro';
+
+<Section id="why-a-separate-layer" title="Why a Separate Layer?">
+
+Two interventions can use the same instrument and produce different impact, because the instrument works through different price-reduction mechanisms in each case. A volume guarantee can deliver scale-driven cost reduction, risk-premium reduction, both, or neither. Knowing which mechanism is doing the work tells you whether the impact will last, whether the design is over- or under-engineered, and what will be left on the table if you skip the harder mechanisms.
+
+The two pathways are exhaustive by construction. Measure price as what the <Term>payer</Term> spends per unit of the outcome it values, such as a patient-year of viral suppression or a delivered test result. That price decomposes into cost and margin, so any durable reduction must lower cost, narrow margin, or both. Within those two pathways there are six distinct levers.
+
+<Fig takeaway="Six levers, two pathways." caption="Three levers lower the cost of producing the outcome; three narrow the supplier's margin above that cost.">
+  <div class="max-w-md mx-auto"><PriceStack /></div>
+</Fig>
+
+<div class="callout"><span class="label">Scope</span>The levers describe durable price reduction, so they apply to transitional gaps. Structural gaps are sustained by a payer through ongoing transfers or outcome payments rather than a lower market price; see <a href="/framework/payers/">Payers</a>.</div>
+
+</Section>
+
+<Section id="six-levers" tone="slate" title="Six Levers" wide>
+<div class="not-prose grid lg:grid-cols-2 gap-6">
+  <div class="bg-white rounded-xl border border-blue-200 overflow-hidden">
+    <div class="bg-blue-50 px-6 py-4 border-b border-blue-100"><div class="text-xs font-bold text-blue-800 uppercase tracking-wider">Pathway 1</div><h3 class="font-serif text-2xl text-slate-900">Cost Reduction</h3><p class="text-sm text-slate-600">The production floor moves down.</p></div>
+    <div class="p-6 space-y-6">
+      <div><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-700 font-bold text-sm">1</span><div><div class="font-semibold text-slate-900">Process improvement</div><div class="text-xs text-slate-500">Industrial engineering on the production process itself.</div></div></div>
+        <p class="text-sm text-slate-600 mb-2">Restructure specialty chemical sourcing, standardize packaging, dedicate lines, change cost allocation. Unit cost falls because the process is redesigned, not because volume rose.</p>
+        <p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Canonical case:</strong> the Clinton Foundation's first generic antiretroviral agreements in 2003 cut a common triple-therapy pill from about $300 to under $140 per patient per year, with further reductions built in as volumes grew.</p></div>
+      <div><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-700 font-bold text-sm">2</span><div><div class="font-semibold text-slate-900">Economies of scale</div><div class="text-xs text-slate-500">Learning curves and fixed-cost amortization.</div></div></div>
+        <p class="text-sm text-slate-600 mb-2">Higher volume spreads fixed overhead, raises capacity utilization and moves production down the learning curve. Unit cost falls because the same factory makes more units.</p>
+        <p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Canonical case:</strong> multiyear volume commitments for contraceptive implants in 2013 let manufacturers invest in capacity and run at higher utilization. <a class="underline" href="/cases/implants/">See the case.</a></p></div>
+      <div><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center text-blue-700 font-bold text-sm">3</span><div><div class="font-semibold text-slate-900">Capital cost reduction</div><div class="text-xs text-slate-500">Lowering the cost of capital as a production input.</div></div></div>
+        <p class="text-sm text-slate-600 mb-2">When concessional debt, first-loss capital or working capital lowers what a supplier pays for money, that saving flows into production cost the same way process or scale gains do. Financing tools become price-reduction tools when their concessional terms are passed into the contracted price.</p>
+        <p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Typical case:</strong> below-market working capital for generic manufacturers, given in exchange for pricing and supply terms.</p></div>
+    </div>
+  </div>
+  <div class="bg-white rounded-xl border border-emerald-200 overflow-hidden">
+    <div class="bg-emerald-50 px-6 py-4 border-b border-emerald-100"><div class="text-xs font-bold text-emerald-800 uppercase tracking-wider">Pathway 2</div><h3 class="font-serif text-2xl text-slate-900">Margin Reduction</h3><p class="text-sm text-slate-600">The supplier captures less of the cost-to-price gap.</p></div>
+    <div class="p-6 space-y-6">
+      <div><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-700 font-bold text-sm">4</span><div><div class="font-semibold text-slate-900">Competition</div><div class="text-xs text-slate-500">Market entry and healthy competitive dynamics.</div></div></div>
+        <p class="text-sm text-slate-600 mb-2">Additional qualified suppliers force margins down. Sometimes the design intent is precisely to make a market attractive enough for a second or third entrant. Price ceilings under which buyers can run competitive tenders are an explicit lever for this.</p>
+        <p class="text-xs text-emerald-700 bg-emerald-50 p-2 rounded"><strong>Canonical case:</strong> the 2017 dolutegravir agreements set a ceiling near $75 per patient per year; as more licensed generic suppliers entered, prices fell further. <a class="underline" href="/cases/tld/">See the case.</a></p></div>
+      <div><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-700 font-bold text-sm">5</span><div><div class="font-semibold text-slate-900">Disintermediation</div><div class="text-xs text-slate-500">Removing or restructuring the value stack.</div></div></div>
+        <p class="text-sm text-slate-600 mb-2">Removing distribution layers that each take a margin, or restructuring how price is composed so that hidden margin becomes visible and contestable. The same transaction can carry very different total cost depending on how many parties price into it.</p>
+        <p class="text-xs text-emerald-700 bg-emerald-50 p-2 rounded"><strong>Canonical case:</strong> all-inclusive per-test pricing for viral load testing, replacing separate charges for instruments, reagents, software and maintenance.</p></div>
+      <div><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-emerald-100 rounded-lg flex items-center justify-center text-emerald-700 font-bold text-sm">6</span><div><div class="font-semibold text-slate-900">Risk transfer</div><div class="text-xs text-slate-500">Absorbing the supplier's uncertainty premium.</div></div></div>
+        <p class="text-sm text-slate-600 mb-2">Suppliers facing uncertain demand, payment or market existence price a premium into their offers. When a third party absorbs that risk through a guarantee, the premium is no longer needed. Volume guarantees, payment guarantees and advance market commitments work mainly through this lever.</p>
+        <p class="text-xs text-emerald-700 bg-emerald-50 p-2 rounded"><strong>Canonical case:</strong> the pneumococcal advance market commitment, where donors absorbed market-existence and capacity risk and manufacturers committed to a capped $3.50 long-term price. <a class="underline" href="/cases/pneumococcal-amc/">See the case.</a></p></div>
+    </div>
+  </div>
+</div>
+</Section>
+
+<Section id="durability" title="Each Lever Holds Under a Different Condition" intro="A transitional intervention succeeds only if the lever it fires survives exit. Each lever changes something different, so each has its own durability condition.">
+
+| Lever | What it changes | Holds after exit if |
+| --- | --- | --- |
+| Process improvement | How the product is made | The supplier keeps the know-how, which is nearly always |
+| Scale | Position on the cost curve | Volume persists at the new price |
+| Competition | Number of viable suppliers | Entrants stay profitable at the new price |
+| Disintermediation | Layers in the value chain | The removed layers don't re-form |
+| Capital cost | Financing terms | Cheaper capital stays available after the concession ends, which is often not true |
+| Risk transfer | The uncertainty premium | The risk actually resolved, meaning demand proved real |
+
+Risk transfer has the most conditional durability. If a guarantee is never called, demand proved real and the premium disappears for good. If it is called, demand failed and the guarantee became a payment.
+
+</Section>
+
+<Section id="easy-and-hard-levers" tone="slate" title="Easy Levers and Hard Levers" intro="The six levers are not equally accessible, and the accessible ones are the least durable.">
+
+<Fig takeaway="The durable levers are the hard ones." caption="Risk transfer and capital cost can be activated through contract design alone. Process improvement and disintermediation need industrial engineering capability, supplier trust and access to cost data.">
+  <LeverMap />
+</Fig>
+
+Risk transfer and capital cost reduction can be activated through financial-instrument design alone, given <Term>concessional capital</Term>. Competition can be activated through market-structure choices like price ceilings and open expressions of interest. Process improvement requires sustained engineering work, protected access to supplier cost data and capability that financial actors do not typically have in house.
+
+The result is a structural drift toward the cheap levers. A field that started with cost-side pioneering has narrowed toward risk transfer as the default. Risk transfer alone produces a price reduction, but a much smaller one than risk transfer combined with process work upstream, and the least durable one of the six.
+
+<div class="not-prose grid md:grid-cols-3 gap-4 mt-8">
+  <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">Cheap and fast</div><p class="text-sm text-slate-600">Risk transfer, pooled procurement, simple price ceilings. Activated through contract design.</p></div>
+  <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">Medium</div><p class="text-sm text-slate-600">Scale, capital cost reduction, structured competition. Requires a multiyear horizon, credible demand or concessional capital.</p></div>
+  <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">Slow and capability-intensive</div><p class="text-sm text-slate-600">Process improvement, disintermediation, value-stack restructuring. Requires industrial engineering expertise and supplier trust.</p></div>
+</div>
+
+</Section>
+
+<Section id="parallel-approaches" title="Transfer Payments and Innovation Incentives" intro="Two families of intervention sit alongside the six levers rather than within them. They are widely used, frequently effective, and frequently confused with mechanism-driven price reduction.">
+
+### Transfers Are Not Levers
+
+A buy-down, a tax credit, a feed-in tariff or a permanent above-market price makes a product cheaper for the buyer because someone else pays the difference. The supplier's cost and margin are unchanged; no lever has fired.
+
+- A **transitional <Term>transfer</Term>** is a bridge to a lever. It buys volume until scale or competition lowers the underlying price, then ends. Early solar feed-in tariffs fit this pattern.
+- A **permanent transfer** sustains a price wedge with no mechanism for the market to converge. It is the right tool for a structural gap, and should be designed and funded as one.
+
+The boundary is empirical, not declared. The same subsidy applied to a technology on a learning curve is transitional; applied to an activity whose costs will not fall, it is permanent. A transfer is transitional only if it fires a lever.
+
+### Innovation Incentives Come First
+
+Priority review vouchers, exclusivity extensions, prizes and commitments for products that do not yet exist pull innovation forward by making research for unmet needs more attractive. They cause products to exist; once a product exists, the six levers determine the price it reaches. Innovation incentives are not a seventh lever. Designs that use them well pair them with a downstream lever, so the new product reaches a sustainable access price rather than launching as a high-price niche product.
+
+### Two Edges, Resolved
+
+Earlier versions of this framework left two questions open, and pricing per unit of outcome resolves both. **Product substitution**, such as replacing efavirenz with dolutegravir, is process improvement at the level of the outcome: the same viral suppression costs less to deliver. **Restructuring the price stack**, such as per-test pricing, adopts the unit the payer actually values and makes hidden margin contestable, so it belongs with disintermediation.
+
+</Section>
+
+<section id="the-catalyst" class="py-16 md:py-20 bg-blue-900 text-white scroll-mt-28">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+    <svg class="mx-auto mb-4 text-blue-300" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    <h2 class="font-serif text-3xl md:text-4xl mb-6">The Catalyst</h2>
+    <p class="text-lg text-blue-100 max-w-2xl mx-auto mb-4">A financial instrument is just a contract. A volume guarantee is ink on paper. A carbon credit is a database entry. What turns these abstractions into market change is a catalyst: an organization willing to play an activist role, persistently engaging, persuading and coordinating market actors.</p>
+    <p class="text-blue-100 max-w-2xl mx-auto mb-4">Someone must understand supplier economics well enough to know what demand certainty triggers investment, understand buyers well enough to know whether they will actually switch, negotiate terms that satisfy both sides, and adapt when conditions change.</p>
+    <div class="grid md:grid-cols-2 gap-4 text-left max-w-3xl mx-auto my-8">
+      <div class="bg-white/10 p-4 rounded-lg"><div class="font-semibold mb-1">In a transitional gap</div><p class="text-sm text-blue-100">The catalyst coordinates and informs, and its role should shrink as the market finds its footing. A catalyst that can never step back from a supposedly transitional market is itself diagnostic evidence.</p></div>
+      <div class="bg-white/10 p-4 rounded-lg"><div class="font-semibold mb-1">In a structural gap</div><p class="text-sm text-blue-100">The catalyst stewards the payer and the integrity architecture, such as registries, verification and standards, for as long as the payer exists.</p></div>
+    </div>
+    <p class="text-blue-100 max-w-2xl mx-auto mb-6">The catalyst is also the answer to the drift toward cheap levers. The hard levers fire only when someone with industrial knowledge and supplier trust is involved. That capability is a cost in the cost-effectiveness ratio, and often the best-spent one.</p>
+    <div class="bg-white/10 p-5 rounded-lg max-w-2xl mx-auto"><p class="font-serif text-xl italic">Never design an instrument without asking who will be the engine that powers it.</p></div>
+  </div>
+</section>
+
+<Section id="lever-accounting" tone="slate" title="Lever Accounting" intro="A single intervention rarely runs through one lever. Decomposing a result by lever, rather than attributing it to the instrument, shows what each component contributed.">
+
+<div class="not-prose bg-white rounded-xl border border-slate-200 p-6 md:p-8">
+  <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Worked Example</div>
+  <h3 class="font-serif text-2xl text-slate-900 mb-3">Contraceptive Implants, 2013</h3>
+  <p class="text-slate-600 mb-5">The 2013 implant agreements cut Jadelle's price from about $18 to $8.50 per unit, under an agreement intended to reach more than 27 million women over six years. They ran through at least four levers.</p>
+  <div class="grid md:grid-cols-2 gap-4 text-sm">
+    <div class="bg-blue-50 p-4 rounded-lg"><div class="font-semibold text-blue-900 mb-2">Cost reduction</div><p class="text-slate-700 mb-2"><strong>Process improvement.</strong> Harmonizing packaging specifications across previously fragmented requirements increased packaging-line throughput.</p><p class="text-slate-700"><strong>Scale.</strong> Multiyear volume commitments let manufacturers invest in capacity and run at higher utilization.</p></div>
+    <div class="bg-emerald-50 p-4 rounded-lg"><div class="font-semibold text-emerald-800 mb-2">Margin reduction</div><p class="text-slate-700 mb-2"><strong>Risk transfer.</strong> The guarantee removed demand uncertainty that had been priced into prior offers.</p><p class="text-slate-700"><strong>Competition, delayed.</strong> A third supplier's implant was prequalified in 2017 and offered at $6.90 in 2018.</p></div>
+  </div>
+  <p class="text-slate-600 mt-5">Decomposing the result by lever shows which constraints would change the answer, and where a thinner design might have under-delivered. It is also the evidence base the field lacks, and the <a class="text-blue-800 underline" href="/cases/">case library</a> is organized around it. <a class="text-blue-800 underline" href="/cases/implants/">Read the full case.</a></p>
+</div>
+
+</Section>

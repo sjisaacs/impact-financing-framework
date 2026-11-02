@@ -1,0 +1,140 @@
+---
+layout: ../layouts/Page.astro
+title: Cost-Effectiveness
+description: The framework's single objective, the most durable impact per concessional dollar, written as a ratio, with a worked example and a calculator. Size of the change, duration beyond the counterfactual, value per unit, probability and attribution, over expected cost.
+lede: The framework has one objective, the most durable impact per dollar of scarce concessional capital. Every principle in it is a term in that ratio.
+bands: true
+toc:
+  - { id: the-ratio, label: The Ratio }
+  - { id: why-durability-multiplies-impact, label: Why Durability Matters }
+  - { id: the-terms, label: The Terms }
+  - { id: worked-example, label: Worked Example }
+  - { id: precision-and-durability, label: Precision and Durability }
+  - { id: what-misdiagnosis-costs, label: Misdiagnosis }
+---
+import Section from '../components/Section.astro';
+import Fig from '../components/Fig.astro';
+import Ratio from '../components/Ratio.astro';
+import ImpactArea from '../components/figures/ImpactArea.astro';
+import RatioCalculator from '../components/RatioCalculator.astro';
+import Term from '../components/Term.astro';
+
+<Section id="the-ratio" tone="slate" title="The Ratio" intro="Concessional capital is any money that accepts less than it could earn elsewhere: grants, guarantees, below-market loans. It is scarce, and the question behind every intervention that uses it is how much durable impact each dollar buys." wide>
+
+<Ratio />
+
+Each term has a home in the framework. The size of the change comes from the [levers](/framework/mechanisms/) an intervention fires. The duration comes from the [diagnosis](/framework/): whether the gap is transitional or structural, and whether the lever or payer holds. The value per unit depends on [who pays](/framework/payers/) and what they do with what they save. Probability, attribution and expected cost are where most claims about market interventions are weakest.
+
+Express the result in the same units used for direct programs, such as cost per death averted or multiples of the value of cash transfers. Market interventions should compete with direct delivery on equal terms.
+
+</Section>
+
+<Section id="why-durability-multiplies-impact" title="Why Durability Multiplies Impact">
+
+<Fig takeaway="Impact is the area between the outcome with and without the intervention." caption="In a transitional gap, spending stops early while impact continues until the market would have arrived anyway. In a structural gap, impact lasts as long as the payer does.">
+  <ImpactArea />
+  <div class="legend" slot="legend"><span><i class="k-soc"></i>outcome with intervention</span><span><i class="k-cf"></i>counterfactual</span><span><i class="k-wedge"></i>funder spending</span></div>
+</Fig>
+
+In a transitional gap, spending stops early while the impact continues, which is where market interventions get their leverage. But the area ends where the market would have arrived on its own. Durability without <Term>additionality</Term> is a <Term>windfall</Term> with a long tail. The honest claim for a transitional intervention is the acceleration it caused, plus any permanent difference, not all the volume that followed. The long debate over the pneumococcal advance market commitment is at bottom a debate about where the counterfactual line sits ([see the case](/cases/pneumococcal-amc/)).
+
+In a structural gap, impact lasts only as long as the payer keeps paying. Setup costs are amortized over the payer's lifetime, and a payer that quits early strands them. Political and budgetary durability is therefore a cost-effectiveness parameter, not a consideration to mention at the end.
+
+</Section>
+
+<Section id="the-terms" tone="slate" title="The Terms">
+
+### Size of the Change
+
+Measure the price that matters: what the payer spends per unit of the outcome it values, such as a patient-year of viral suppression, a delivered test result or a ton of carbon removed. Pricing per outcome lets a product switch, a bundled service contract and a unit-price cut count in the same currency. [Mechanisms](/framework/mechanisms/) shows how each lever changes it.
+
+### Duration Beyond the Counterfactual
+
+Usually the largest term and the least modeled. Estimate when the outcome would have arrived without the intervention: through generic entry after patent expiry, a competitor's product, falling costs elsewhere, or another funder acting. Model it as explicit scenarios rather than a single guess, then ask whether the lever fired will hold after exit.
+
+<div class="callout callout-amber"><span class="label">Common error</span>Claiming credit for all the volume that follows a price drop. Credit runs only until the counterfactual would have caught up, plus any permanent difference.</div>
+
+### Value per Unit
+
+In a market with a structural payer, most of the value of a lower price flows through the payer's budget. A dollar saved is worth whatever the payer does with its marginal dollar: more of the same outcome if demand is unmet, the next-best program if not. Where price itself was the barrier to access, the value is the additional people reached.
+
+<div class="callout callout-amber"><span class="label">Common error</span>Assuming savings become health automatically. They do only if the payer redeploys them.</div>
+
+### Probability of Success
+
+Deals fail. Suppliers miss delivery, regulators delay registration, demand forecasts prove optimistic, and guarantees get called. Weight the outcome by an explicit probability, and treat a called guarantee as evidence about the diagnosis, not just as a cost.
+
+### Share Attributable
+
+Most market interventions involve several funders, a catalyst and the <Term>payer</Term>. Count only the share of the change this intervention caused: what would have happened had this funder stayed out, and what co-funders would otherwise have done with their money.
+
+<div class="callout callout-amber"><span class="label">Common error</span>Double counting. When every partner in a deal claims the full price drop, the field's combined claims exceed the impact that actually occurred.</div>
+
+### Expected Cost
+
+Count what the intervention is expected to cost the funder, not what it commits. A large guarantee that is rarely called is cheap; a small grant that changes nothing permanent is expensive. Include the cost of capital held against contingent commitments, and the cost of the <Term>catalyst</Term> whose work makes the instrument function.
+
+</Section>
+
+<Section id="worked-example" title="A Worked Example" intro="The figures below are hypothetical. They describe no real deal; they show how the terms combine, and how far the common errors can inflate a claim.">
+
+A funder offers two generic manufacturers a three-year volume guarantee with a face value of $20 million, in exchange for a ceiling price on a treatment that a payer buys for one million patients a year. The ceiling lowers the price by $30 per patient-year. Without the deal, generic competition would have brought the price down by the same amount three years later.
+
+<div class="table-wrap">
+<table class="ce-table">
+  <thead><tr><th>Term</th><th>Naive claim</th><th>Honest estimate</th><th>Why they differ</th></tr></thead>
+  <tbody>
+    <tr><td>Size of the change</td><td>$30 million a year</td><td>$30 million a year</td><td>$30 per patient-year across one million patient-years. Both agree.</td></tr>
+    <tr><td>Duration beyond the counterfactual</td><td>10 years</td><td>3 years</td><td>Credit runs only until competition would have delivered the same price.</td></tr>
+    <tr><td>Value per unit</td><td>1.0</td><td>0.8</td><td>The payer redeploys about 80 cents of each dollar saved into more treatment.</td></tr>
+    <tr><td>Probability of success</td><td>100%</td><td>75%</td><td>Registration delays or a supplier exit could stop the lower price from taking hold.</td></tr>
+    <tr><td>Share attributable</td><td>100%</td><td>50%</td><td>Two other partners were needed to make the deal happen.</td></tr>
+    <tr><td><strong>Durable impact</strong></td><td><strong>$300 million</strong></td><td><strong>$27 million</strong></td><td>The product of the five terms above.</td></tr>
+    <tr><td>Expected cost to the funder</td><td>$5 million</td><td>$5 million</td><td>A 15% chance the guarantee is called, with half its face value drawn if so ($1.5 million), the cost of capital held against the commitment ($1 million) and the catalyst's work ($2.5 million).</td></tr>
+    <tr><td><strong>Ratio</strong></td><td><strong>60 to 1</strong></td><td><strong>5.4 to 1</strong></td><td>Payer dollars redeployed per funder dollar.</td></tr>
+  </tbody>
+</table>
+</div>
+
+Both columns describe the same deal at the same cost. The honest estimate is about a ninth of the naive one, and the whole difference sits in the numerator. The counterfactual alone accounts for more than a factor of three. The expected cost, meanwhile, is a quarter of the $20 million headline commitment, which is why a guarantee that is rarely called can still be the precise choice.
+
+The estimate is most sensitive to the term that is hardest to observe. If generic competition would have arrived after one year rather than three, the honest ratio falls to 1.8 to 1; after seven years, it rises to 12.6 to 1. Presenting the range, rather than a single figure, is the honest way to report it.
+
+The result is in payer dollars redeployed per funder dollar. To compare it with direct programs, multiply by the value of the payer's marginal spending, expressed in the same units used for direct programs, such as deaths averted per dollar ([what a dollar saved is worth](/framework/payers/#value-of-savings)). In a structural gap, the duration term becomes the payer's expected lifetime and the expected cost includes every year of payment, so the impact no longer depends on when the market would have arrived, but it does depend on the payer continuing.
+
+<RatioCalculator />
+
+</Section>
+
+<Section id="precision-and-durability" tone="slate" title="The Principle of Precision" intro="Catalytic capital is scarce. Precision acts on the denominator of the ratio and durability on the numerator; together they are the framework's practical guidance." wide>
+
+<div class="not-prose bg-slate-900 text-white rounded-xl p-6 md:p-8 mb-10">
+  <div class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Before Everything: The Starting Question</div>
+  <p class="font-serif text-2xl mb-5">"If we do nothing, what happens, and when?"</p>
+  <div class="grid md:grid-cols-3 gap-3 text-sm">
+    <div class="bg-white/10 p-4 rounded-lg"><div class="font-semibold mb-1">Private capital gets there soon</div><p class="text-slate-300">Don't intervene. Your help isn't needed.</p></div>
+    <div class="bg-white/10 p-4 rounded-lg"><div class="font-semibold mb-1">It gets there, but years later</div><p class="text-slate-300">Intervene temporarily. The value is the acceleration, so price it against the counterfactual.</p></div>
+    <div class="bg-white/10 p-4 rounded-lg"><div class="font-semibold mb-1">It never gets there</div><p class="text-slate-300">The gap is structural. Plan a durable payer, not a pilot.</p></div>
+  </div>
+</div>
+
+Precision does not mean minimal spending. A cheap intervention that fires no durable lever has a small numerator; a costlier one that funds process engineering alongside a guarantee can win on the ratio. The field's drift toward risk transfer as the default looks frugal, but often is not ([see Mechanisms](/framework/mechanisms/#easy-and-hard-levers)).
+
+<h3 class="font-serif text-2xl text-slate-900 text-center !mt-12">Six Guardrails, Mapped to the Ratio</h3>
+
+<div class="not-prose grid md:grid-cols-2 gap-4 mt-6">
+  <div class="bg-white p-6 rounded-xl border border-slate-200"><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-700 font-bold text-sm">1</span><div class="font-semibold text-slate-900">Prove Additionality First</div></div><p class="text-sm text-slate-600 mb-2">Only intervene where private capital won't go on its own, or won't go soon. Arriving years earlier has value even if the market would eventually get there.</p><p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Ratio term:</strong> sets the baseline for size and duration.</p></div>
+  <div class="bg-white p-6 rounded-xl border border-slate-200"><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-700 font-bold text-sm">2</span><div class="font-semibold text-slate-900">Try Zero-Cost First</div></div><p class="text-sm text-slate-600 mb-2">Before deploying capital, check whether the failure is informational or regulatory. Coordination, market intelligence or regulatory clarity can sometimes fix problems without financial tools. Money is often the lazy answer.</p><p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Ratio term:</strong> lowers expected cost.</p></div>
+  <div class="bg-white p-6 rounded-xl border border-slate-200"><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-700 font-bold text-sm">3</span><div class="font-semibold text-slate-900">Transfer Only What's Blocking</div></div><p class="text-sm text-slate-600 mb-2">Absorb only the specific risk or cost that prevents the market from moving. If demand uncertainty is the barrier, address demand; don't also subsidize production.</p><p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Ratio term:</strong> lowers expected cost without reducing impact.</p></div>
+  <div class="bg-white p-6 rounded-xl border border-slate-200"><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-700 font-bold text-sm">4</span><div class="font-semibold text-slate-900">Stay as Commercial as Possible</div></div><p class="text-sm text-slate-600 mb-2">Use the least concessional capital the deal can bear, measured in expected subsidy. A big guarantee that is rarely called can be more precise than a small grant.</p><p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Ratio term:</strong> lowers expected cost.</p></div>
+  <div class="bg-white p-6 rounded-xl border border-slate-200"><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-700 font-bold text-sm">5</span><div class="font-semibold text-slate-900">Plan the Exit, or Plan the Payer</div></div><p class="text-sm text-slate-600 mb-2">For transitional gaps, design from day one for the intervention to become unnecessary. For structural gaps, be honest that it must be permanent, and design for the payer's durability.</p><p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Ratio term:</strong> protects duration.</p></div>
+  <div class="bg-white p-6 rounded-xl border border-slate-200"><div class="flex items-center gap-3 mb-2"><span class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-700 font-bold text-sm">6</span><div class="font-semibold text-slate-900">Pay for Results When You Can</div></div><p class="text-sm text-slate-600 mb-2">Outcome-based payment lets the market innovate on method, but only where verification is feasible and affordable. Otherwise it just adds transaction costs.</p><p class="text-xs text-blue-700 bg-blue-50 p-2 rounded"><strong>Ratio term:</strong> the funder pays only for change that happens.</p></div>
+</div>
+
+</Section>
+
+<Section id="what-misdiagnosis-costs" title="What Misdiagnosis Costs">
+
+A **bridge to nowhere**, a structural gap treated as transitional, spends temporary money and then watches the impact collapse at exit, so the numerator stays small. A **windfall**, a transitional gap treated as structural, keeps paying after the market would have held on its own, so the denominator grows with no impact added. Both errors are visible in the ratio before money moves, which is the case for diagnosing first. The [diagnostic](/diagnostic/) walks through it.
+
+</Section>

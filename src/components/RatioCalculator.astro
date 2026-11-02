@@ -1,0 +1,67 @@
+---
+// Interactive version of the ratio, prefilled with the worked example. Hidden until its script runs.
+const fields = [
+  { id: 'rc-size', label: 'Size of the change, per year', hint: 'In your units of impact before valuation, such as dollars saved by the payer', value: 30000000, step: 'any' },
+  { id: 'rc-years', label: 'Duration beyond the counterfactual, in years', hint: 'How much earlier than otherwise, plus any permanent difference', value: 3, step: 'any' },
+  { id: 'rc-value', label: 'Value per unit', hint: 'For example, the share of each dollar saved that the payer redeploys', value: 0.8, step: 'any' },
+  { id: 'rc-prob', label: 'Probability of success, %', hint: 'Chance the change takes hold at all', value: 75, step: 'any' },
+  { id: 'rc-attr', label: 'Share attributable, %', hint: 'The part of the change this funder caused', value: 50, step: 'any' },
+  { id: 'rc-cost', label: 'Expected cost to the funder, $', hint: 'Expected payouts, capital held and catalyst costs, not the headline commitment', value: 5000000, step: 'any' },
+];
+---
+<div id="rc" class="not-prose bg-white border border-slate-200 rounded-xl p-5 sm:p-8" hidden>
+  <div class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Calculator</div>
+  <h3 class="font-serif text-2xl text-slate-900 mb-2">Try Your Own Numbers</h3>
+  <p class="text-sm text-slate-600 mb-6">Prefilled with the honest column above. Nothing you enter leaves this page.</p>
+  <form class="grid sm:grid-cols-2 gap-x-6 gap-y-4" onsubmit="return false">
+    {fields.map((f) => (
+      <div class="flex flex-col">
+        <label for={f.id} class="block text-sm font-semibold text-slate-900">{f.label}</label>
+        <span id={`${f.id}-hint`} class="block text-xs text-slate-500 mb-1">{f.hint}</span>
+        <input id={f.id} type="number" inputmode="decimal" min="0" step={f.step} value={f.value} aria-describedby={`${f.id}-hint`}
+          class="mt-auto w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-900 bg-white focus:outline focus:outline-2 focus:outline-blue-900" />
+      </div>
+    ))}
+    <div class="sm:col-span-2">
+      <label for="rc-unit" class="block text-sm font-semibold text-slate-900">Unit of impact</label>
+      <input id="rc-unit" type="text" value="payer dollars redeployed" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-900 bg-white focus:outline focus:outline-2 focus:outline-blue-900" />
+    </div>
+  </form>
+  <div class="mt-6 bg-slate-50 border border-slate-200 rounded-lg p-5" aria-live="polite">
+    <div class="text-sm text-slate-600">Durable impact <span id="rc-num" class="font-semibold text-slate-900"></span></div>
+    <div class="mt-2 flex flex-wrap items-baseline gap-x-3">
+      <span id="rc-ratio" class="font-serif text-4xl text-slate-900"></span>
+      <span id="rc-ratio-unit" class="text-sm text-slate-600"></span>
+    </div>
+    <div id="rc-inverse" class="text-sm text-slate-600 mt-1"></div>
+  </div>
+  <p class="text-xs text-slate-500 mt-4">Over long durations, discount later years before multiplying. The ratio is only as good as its weakest term, which is usually the counterfactual.</p>
+</div>
+<script is:inline>
+  (function () {
+    var box = document.getElementById('rc'); if (!box) return; box.hidden = false;
+    var ids = ['rc-size', 'rc-years', 'rc-value', 'rc-prob', 'rc-attr', 'rc-cost'];
+    var el = {}; ids.concat(['rc-unit', 'rc-num', 'rc-ratio', 'rc-ratio-unit', 'rc-inverse']).forEach(function (i) { el[i] = document.getElementById(i); });
+    function n(i) { var v = parseFloat(el[i].value); return isFinite(v) && v >= 0 ? v : 0; }
+    function fmt(x) {
+      var a = Math.abs(x);
+      if (a >= 1e9) return String(+(x / 1e9).toFixed(a >= 1e10 ? 0 : 1)) + ' billion';
+      if (a >= 1e6) return String(+(x / 1e6).toFixed(a >= 1e7 ? 0 : 1)) + ' million';
+      if (a >= 100) return Math.round(x).toLocaleString('en-US');
+      if (a >= 10) return String(+x.toFixed(1));
+      return String(+x.toPrecision(2));
+    }
+    function update() {
+      var unit = el['rc-unit'].value.trim() || 'units of impact';
+      var num = n('rc-size') * n('rc-years') * n('rc-value') * (n('rc-prob') / 100) * (n('rc-attr') / 100);
+      var cost = n('rc-cost');
+      el['rc-num'].textContent = fmt(num) + ' ' + unit;
+      if (!cost) { el['rc-ratio'].textContent = '–'; el['rc-ratio-unit'].textContent = 'enter an expected cost above zero'; el['rc-inverse'].textContent = ''; return; }
+      var r = num / cost;
+      el['rc-ratio'].textContent = fmt(r);
+      el['rc-ratio-unit'].textContent = unit + ' per funder dollar';
+      el['rc-inverse'].textContent = num > 0 ? 'Equivalently, an expected cost of $' + fmt(cost / num) + ' per unit of impact.' : '';
+    }
+    box.addEventListener('input', update); update();
+  })();
+</script>

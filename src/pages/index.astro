@@ -1,0 +1,122 @@
+---
+import Base from '../layouts/Base.astro';
+import HeroTransitional from '../components/figures/HeroTransitional.astro';
+import HeroStructural from '../components/figures/HeroStructural.astro';
+import Ratio from '../components/Ratio.astro';
+import Term from '../components/Term.astro';
+import { SITE } from '../data/site.js';
+const five = [
+  { n: 1, href: '/framework/', title: 'Diagnosis', text: 'Is each gap transitional or structural? Misreading it builds bridges to nowhere or pays windfalls.' },
+  { n: 2, href: '/cost-effectiveness/#duration-beyond-the-counterfactual', title: 'The Counterfactual', text: 'Credit runs only until the market would have arrived anyway. It is usually the largest term, and the least modeled.' },
+  { n: 3, href: '/framework/mechanisms/', title: 'Lever Durability', text: 'A transitional intervention works only if the lever it fires survives exit, and the durable levers are the hard ones.' },
+  { n: 4, href: '/framework/payers/', title: 'The Payer', text: 'Structural gaps need a payer that keeps paying, and savings are worth what the payer does with them.' },
+  { n: 5, href: '/cost-effectiveness/#share-attributable', title: 'Attribution', text: 'Count only the share of the change an intervention caused, not the whole price drop.' },
+];
+const explore = [
+  { href: '/cost-effectiveness/', title: 'Cost-Effectiveness', text: 'The framework\'s single objective, written as a ratio, with a worked example, a calculator and the errors that inflate it.' },
+  { href: '/cases/', title: 'Case Studies', text: 'Implants, TLD, the pneumococcal AMC, Frontier and British Columbia, read through the framework.' },
+  { href: '/instruments/', title: 'Instruments', text: 'The anatomy of an instrument and a focused catalogue: role, levers and when each holds after exit.' },
+  { href: '/diagnostic/', title: 'Diagnostic', text: 'Apply the framework to a real market in five steps and produce a one-page brief.' },
+];
+---
+<Base>
+  <script is:inline>
+    // v1 was a single page with section anchors; forward old links such as /#mechanisms to their new pages.
+    (function () { var m = { 'the-gap': '/foundations/#the-gap', 'key-concepts': '/foundations/#key-concepts', 'common-mistakes': '/foundations/#common-mistakes',
+      'two-landscapes': '/framework/#two-landscapes', 'two-failures': '/framework/#two-kinds-of-gap', mechanisms: '/framework/mechanisms/',
+      anatomy: '/instruments/#anatomy', catalyst: '/framework/mechanisms/#the-catalyst', precision: '/cost-effectiveness/#precision-and-durability' };
+      var h = location.hash.slice(1); if (m[h]) location.replace(m[h]); })();
+  </script>
+  <section class="bg-gradient-to-b from-slate-50 to-white py-16 md:py-24 border-b border-slate-100">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-slate-900 mb-6 leading-tight animate-fade-in-up">The Impact Financing Framework</h1>
+      <p class="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-100 mb-6">
+        Why doesn't money flow where it's needed most, and <strong class="text-slate-800">when can public and philanthropic capital change that cost-effectively?</strong>
+      </p>
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200 mb-8">
+        A practical way to think about market shaping, and the market and financial interventions around it, grounded in economic theory and organized around one question: how much durable impact each dollar of scarce <Term>concessional capital</Term> buys.
+      </p>
+      <div class="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="/foundations/" class="px-8 py-4 bg-blue-900 text-white rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-flex items-center gap-2">Start with the Foundations</a>
+        <a href="/framework/" class="px-8 py-4 bg-white text-slate-700 border border-slate-300 rounded-lg font-semibold hover:bg-slate-50 transition-colors inline-flex items-center gap-2">Skip to the Framework</a>
+      </div>
+      <p class="text-sm text-slate-500 mt-4">New to impact finance? Start with the foundations (about 10 minutes). Already familiar? Go straight to the framework.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">Two Kinds of Gap</h2>
+      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">Capital flows like water across a financial landscape. Low ground means high returns, so capital pools in the low points. Whether it pools where we want depends on which kind of gap we face.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl border border-blue-200 overflow-hidden">
+          <div class="bg-blue-50 px-6 py-4 border-b border-blue-100">
+            <span class="tag tag-mode1">Transitional Access Gap</span>
+            <h3 class="font-serif text-xl text-slate-900 mt-2">Landscapes aligned, capital stuck</h3>
+          </div>
+          <div class="p-6">
+            <HeroTransitional />
+            <p class="text-slate-600 text-sm mt-4">The market would sustain the outcome once it got there. A temporary path carries capital through the ridge, then leaves.</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl border border-emerald-200 overflow-hidden">
+          <div class="bg-emerald-50 px-6 py-4 border-b border-emerald-100">
+            <span class="tag tag-mode2">Structural Misalignment</span>
+            <h3 class="font-serif text-xl text-slate-900 mt-2">Landscapes misaligned</h3>
+          </div>
+          <div class="p-6">
+            <HeroStructural />
+            <p class="text-slate-600 text-sm mt-4">The market will never sustain the outcome. The landscape must be reshaped, and someone must keep paying for as long as the outcome matters.</p>
+          </div>
+        </div>
+      </div>
+      <div class="legend justify-center">
+        <span><i class="k-fin"></i>financial landscape</span><span><i class="k-soc"></i>social landscape</span><span><i class="k-water"></i>capital</span><span><i class="k-wedge"></i>intervention</span>
+      </div>
+      <p class="text-slate-600 text-center max-w-2xl mx-auto mt-8">Most real markets contain both kinds of gap. <a class="text-blue-800 underline" href="/framework/">The framework</a> separates them.</p>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">The Question Behind Every Intervention</h2>
+      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">How much durable impact does each dollar of concessional capital buy? Every principle in the framework is a term in this ratio.</p>
+      <Ratio />
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">Where Impact Is Won or Lost</h2>
+      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">Five places where market and financial interventions gain or lose their cost-effectiveness, and where current practice is weakest.</p>
+      <div class="space-y-4">
+        {five.map((f) => (
+          <a href={f.href} class="block bg-slate-50 p-6 rounded-xl border border-slate-200 card-hover">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0"><span class="text-blue-700 font-bold">{f.n}</span></div>
+              <div>
+                <h3 class="font-semibold text-slate-900 mb-1 font-sans">{f.title}</h3>
+                <p class="text-sm text-slate-600">{f.text}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 md:py-20 bg-slate-50 border-t border-slate-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-10 text-center">Explore</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {explore.map((e) => (
+          <a href={e.href} class="block bg-white border border-slate-200 rounded-lg p-5 card-hover">
+            <h3 class="font-semibold text-slate-900 mb-2 font-sans">{e.title}</h3>
+            <p class="text-sm text-slate-600">{e.text}</p>
+          </a>
+        ))}
+      </div>
+      <p class="text-sm text-slate-500 text-center mt-10">Version {SITE.version}. A working framework: the <a class="underline" href="/questions/">open questions</a> are as much a part of it as the answers.</p>
+    </div>
+  </section>
+</Base>

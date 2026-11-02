@@ -1,0 +1,67 @@
+---
+layout: ../../layouts/Page.astro
+title: Contraceptive Implants, 2013
+description: A volume guarantee inside donor-financed family planning markets cut implant prices from about $18 to $8.50 per unit. A transitional gap nested in a structural payer, closed through four levers.
+lede: A volume guarantee inside donor-financed family planning markets cut the price of contraceptive implants by more than half. It is the clearest example of a transitional gap nested inside a structural payer, and of a price drop driven by several levers at once.
+tag: { label: "Transitional Access Gap", cls: "tag-mode1" }
+---
+import CaseSummary from '../../components/CaseSummary.astro';
+import ImplantsPrice from '../../components/figures/ImplantsPrice.astro';
+import Term from '../../components/Term.astro';
+
+<CaseSummary items={[
+  { term: 'Structural payer', detail: 'Donors and governments financing family planning commodities for women who could not pay full price.' },
+  { term: 'Transitional gap', detail: 'A high-price, low-volume trap: suppliers priced for small, unpredictable orders, and orders stayed small because prices were high.' },
+  { term: 'Intervention', detail: 'A volume guarantee from a partnership including the Gates Foundation, in exchange for price cuts by Bayer and Merck.' },
+  { term: 'Levers', detail: 'Scale, risk transfer, process improvement, and later competition.' },
+  { term: 'Durability', detail: 'Prices stayed low after the guarantee period and fell further when a third supplier entered.' },
+  { term: 'Key uncertainty', detail: 'How far and how fast prices would have fallen anyway, given a lower-cost competitor already in development.' },
+]} />
+
+## The Trap
+
+Before 2013, Bayer's Jadelle sold for about $18 per unit and Merck's Implanon for between $16.50 and $18, depending on volume thresholds. The Clinton Health Access Initiative described the market as a high-price, low-volume trap. Suppliers kept unit prices high because orders were small and unpredictable, and orders stayed small because prices were high. That made implants hard to budget for, for donors and ministries alike.
+
+## The Intervention
+
+In 2013, a partnership including the Gates Foundation guaranteed a minimum volume of purchases. Bayer cut Jadelle's price from $18 to $8.50 per unit, effective January 1, 2013, in more than 50 countries, under an agreement intended to reach more than 27 million women over six years. Merck reduced Implanon to the same price.
+
+<figure>
+  <ImplantsPrice />
+  <figcaption><strong>The guarantee halved the price, and competition later pushed it lower.</strong> Jadelle's price per unit; the 2018 point is Levoplant, a third supplier's prequalified implant. Implanon followed a similar path to $8.50.</figcaption>
+</figure>
+
+## Lever Accounting
+
+The price drop is usually attributed to "the volume guarantee." Decomposing it by <Term>lever</Term> shows that several mechanisms were at work, with different durability.
+
+- **Scale.** Multiyear volume commitments let both manufacturers invest in capacity and run at higher utilization. This holds as long as volume persists at the new price.
+- **Risk transfer.** The guarantee removed the demand uncertainty that had been priced into earlier offers. This holds if demand proved real, so that the guarantee was not drawn on.
+- **Process improvement.** Harmonizing packaging specifications that had been fragmented across buyers increased throughput on packaging lines. This holds almost regardless of what happens next.
+- **Competition, delayed.** Shanghai Dahua's implant, distributed as Levoplant, was prequalified by the World Health Organization in June 2017 and offered at $6.90 per unit in 2018. Competition holds as long as entrants remain viable at the lower price.
+
+## Reading It Through the Framework
+
+**Diagnosis.** Two gaps sat in the same market. The structural gap, women's limited ability to pay, was already filled by donor and government purchasing. The transitional gap was the trap. The guarantee navigated the transitional gap and left the structural payer in place.
+
+**Durability.** Most of the levers that fired are durable kinds: process improvement and competition hold robustly, and scale holds while volume holds. Whether risk transfer held depends on whether the guarantee was drawn on, which the public record reviewed here does not settle.
+
+**Value per unit.** Because a payer was buying, most of the value of the price cut flowed through the payer's budget. Each dollar saved could buy more implants or fund other family planning, so the value depends on what payers did with the savings.
+
+**The counterfactual.** A lower-cost implant was already moving toward prequalification, so some price decline was likely coming. The honest claim is the acceleration the <Term>volume guarantee</Term> caused, years of lower prices and higher volume earlier than otherwise, plus any permanent difference.
+
+**Exposure.** The low price rests partly on volume financed by the structural payer. If donor-financed volume falls, the scale lever is the part most likely to unwind, while the process and competition gains should largely hold.
+
+## Sources
+
+<ul class="sources">
+  <li><a href="https://www.clintonhealthaccess.org/wp-content/uploads/2015/08/Case-Study_LARC.pdf">Clinton Health Access Initiative, case study on long-acting reversible contraceptives</a></li>
+  <li><a href="https://sif.gatesfoundation.org/news-and-updates/press-release-innovative-partnership-reduces-cost-bayers-long-acting-reversible-contraceptive-implant-50-percent/">Gates Foundation, press release on the Jadelle agreement, 2013</a></li>
+  <li><a href="https://informahealthcare.com/doi/full/10.2147/OAJC.S55968">Open Access Journal of Contraception, review noting the 27-million-unit, six-year agreement</a></li>
+  <li><a href="https://www.fhi360.org/wp-content/uploads/2023/12/resource-sino-implant-brief_0.pdf">FHI 360, brief on the Sino-implant (II) initiative and implant prices, 2009 to 2018</a></li>
+  <li><a href="https://degrees.fhi360.org/?p=15489">FHI 360, on Levoplant and price competition</a></li>
+</ul>
+
+The packaging harmonization detail is drawn from the author's practitioner knowledge rather than a published source.
+
+[Back to case studies](/cases/)

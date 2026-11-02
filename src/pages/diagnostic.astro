@@ -1,0 +1,183 @@
+---
+import Page from '../layouts/Page.astro';
+const card = 'bg-white p-5 sm:p-6 rounded-xl border border-slate-200 ws-field';
+const step = 'w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 text-blue-700 font-bold text-sm';
+---
+<Page
+  title="Diagnostic"
+  description="A six-step diagnostic that applies the framework to a real market and produces a one-page brief: the gap, the payer, the lever, the instrument and a back-of-envelope cost-effectiveness ratio."
+  lede="Apply the framework to a real market in six steps. The diagnostic produces a one-page brief you can print or share, and flags the common errors the framework is designed to catch."
+  bands={true}
+  printHero={false}
+>
+  <section class="py-14 md:py-16 bg-slate-50">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <p class="text-sm text-slate-500 mb-6 text-center no-print">Your answers stay in this browser and are not sent anywhere.</p>
+      <form id="ws" class="ws-form space-y-5" novalidate>
+        <div class={card}>
+          <label for="title" class="!mt-0">Market or intervention</label>
+          <input type="text" id="title" name="title" placeholder="For example: pediatric HIV treatment in 20 countries" />
+        </div>
+        <fieldset class={card}>
+          <legend class="sr-only">Step 1</legend>
+          <div class="flex items-center gap-3 mb-1"><span class={step}>1</span><h2 class="font-serif text-xl text-slate-900">Whose decision must change?</h2></div>
+          <p class="text-sm text-slate-500 ml-11">Name the supplier, buyer or investor whose behavior the intervention targets.</p>
+          <label for="actor">Decision-maker</label><input type="text" id="actor" name="actor" placeholder="For example: generic manufacturers of a pediatric formulation" />
+          <label for="behavior">Target behavior</label><textarea id="behavior" name="behavior" placeholder="For example: register and supply in 20 countries at a price national programs can sustain"></textarea>
+        </fieldset>
+        <fieldset class={card}>
+          <legend class="sr-only">Step 2</legend>
+          <div class="flex items-center gap-3 mb-1"><span class={step}>2</span><h2 class="font-serif text-xl text-slate-900">Who must pay permanently?</h2></div>
+          <p class="text-sm text-slate-500 ml-11">Some outcomes pay for themselves once reached; others need a payer for as long as they matter.</p>
+          <label for="payer">Payer, if any</label><input type="text" id="payer" name="payer" placeholder="For example: national programs with donor co-financing" />
+          <div class="mt-3" role="radiogroup" aria-label="Payer status">
+            <label class="ws-choice"><input type="radio" name="payerState" value="durable" /> A payer exists and looks durable</label>
+            <label class="ws-choice"><input type="radio" name="payerState" value="uncertain" /> A payer exists, but its durability is uncertain</label>
+            <label class="ws-choice"><input type="radio" name="payerState" value="none" /> No payer exists yet</label>
+            <label class="ws-choice"><input type="radio" name="payerState" value="unneeded" /> No payer is needed once the market reaches the better position</label>
+          </div>
+        </fieldset>
+        <fieldset class={card}>
+          <legend class="sr-only">Step 3</legend>
+          <div class="flex items-center gap-3 mb-1"><span class={step}>3</span><h2 class="font-serif text-xl text-slate-900">Would the better state be self-enforcing?</h2></div>
+          <p class="text-sm text-slate-500 ml-11">The walk-away test: given that payer, would the market hold its new position if all support were withdrawn?</p>
+          <label for="scale">Unit cost at scale compared with what remaining buyers can sustainably pay</label><textarea id="scale" name="scale" placeholder="Evidence and sources"></textarea>
+          <div role="radiogroup" aria-labelledby="entry-q">
+            <span id="entry-q" class="block text-sm font-semibold text-slate-900 mt-4 mb-1">Could new suppliers enter at the target price?</span>
+            <label class="ws-choice"><input type="radio" name="entry" value="yes" /> Yes</label><label class="ws-choice"><input type="radio" name="entry" value="no" /> No</label><label class="ws-choice"><input type="radio" name="entry" value="unknown" /> Not yet known</label>
+          </div>
+          <div role="radiogroup" aria-labelledby="volume-q">
+            <span id="volume-q" class="block text-sm font-semibold text-slate-900 mt-4 mb-1">Is high volume desirable?</span>
+            <label class="ws-choice"><input type="radio" name="volume" value="yes" /> Yes</label><label class="ws-choice"><input type="radio" name="volume" value="no" /> No, volume should stay limited (for example, for stewardship)</label>
+          </div>
+        </fieldset>
+        <fieldset class={card}>
+          <legend class="sr-only">Step 4</legend>
+          <div class="flex items-center gap-3 mb-1"><span class={step}>4</span><h2 class="font-serif text-xl text-slate-900">What ridge blocks the market?</h2></div>
+          <div class="mt-3">
+            <label class="ws-choice"><input type="checkbox" name="barrier" value="coordination" /> Coordination: suppliers and buyers each wait for the other</label>
+            <label class="ws-choice"><input type="checkbox" name="barrier" value="information" /> Information: costs, demand or quality are opaque</label>
+            <label class="ws-choice"><input type="checkbox" name="barrier" value="risk" /> Risk: demand, payment or market existence is uncertain</label>
+            <label class="ws-choice"><input type="checkbox" name="barrier" value="capability" /> Capability: suppliers lack technical or regulatory capacity</label>
+            <label class="ws-choice"><input type="checkbox" name="barrier" value="financing" /> Financing: capital is unavailable or too expensive</label>
+          </div>
+          <label for="barrierNotes">Notes</label><textarea id="barrierNotes" name="barrierNotes"></textarea>
+        </fieldset>
+        <fieldset class={card}>
+          <legend class="sr-only">Step 5</legend>
+          <div class="flex items-center gap-3 mb-1"><span class={step}>5</span><h2 class="font-serif text-xl text-slate-900">Which lever will survive your exit?</h2></div>
+          <label for="lever">Main lever</label>
+          <select id="lever" name="lever"><option value="">Choose a lever</option><option value="process">Process improvement</option><option value="scale">Scale</option><option value="capital">Capital cost</option><option value="competition">Competition</option><option value="disintermediation">Disintermediation</option><option value="risk">Risk transfer</option><option value="transfer">None: a transfer or subsidy</option></select>
+          <label for="instrument">Instrument</label><input type="text" id="instrument" name="instrument" placeholder="For example: a three-year volume guarantee with a ceiling price" />
+          <label for="exit">Exit trigger</label><textarea id="exit" name="exit" placeholder="When, and on what evidence, does support end?"></textarea>
+        </fieldset>
+        <fieldset class={card}>
+          <legend class="sr-only">Step 6</legend>
+          <div class="flex items-center gap-3 mb-1"><span class={step}>6</span><h2 class="font-serif text-xl text-slate-900">What is it worth?</h2></div>
+          <p class="text-sm text-slate-500 ml-11">The terms of the <a class="underline" href="/cost-effectiveness/#worked-example">ratio</a>. The numbers are optional; if you fill them all in, the brief shows a back-of-envelope range.</p>
+          <label for="counterfactual">Counterfactual</label><textarea id="counterfactual" name="counterfactual" placeholder="When, and at what price, would this happen without the intervention?"></textarea>
+          <label for="cost">Expected cost to the funder</label><input type="text" id="cost" name="cost" placeholder="Expected, not committed: include the probability a guarantee is called" />
+          <div class="grid sm:grid-cols-2 gap-x-5 mt-2">
+            <div><label for="size">Size of the change, per year</label><input type="number" inputmode="decimal" min="0" step="any" id="size" name="size" placeholder="For example: 30000000" /></div>
+            <div><label for="unit">Unit</label><input type="text" id="unit" name="unit" placeholder="For example: payer dollars saved" /></div>
+            <div><label for="yearsLow">Years beyond the counterfactual, low case</label><input type="number" inputmode="decimal" min="0" step="any" id="yearsLow" name="yearsLow" placeholder="For example: 1" /></div>
+            <div><label for="yearsHigh">Years beyond the counterfactual, high case</label><input type="number" inputmode="decimal" min="0" step="any" id="yearsHigh" name="yearsHigh" placeholder="For example: 5" /></div>
+            <div><label for="value">Value per unit</label><input type="number" inputmode="decimal" min="0" step="any" id="value" name="value" placeholder="For example: 0.8" /></div>
+            <div><label for="prob">Probability of success, %</label><input type="number" inputmode="decimal" min="0" max="100" step="any" id="prob" name="prob" placeholder="For example: 75" /></div>
+            <div><label for="attr">Share attributable, %</label><input type="number" inputmode="decimal" min="0" max="100" step="any" id="attr" name="attr" placeholder="For example: 50" /></div>
+            <div><label for="costNum">Expected cost to the funder, $</label><input type="number" inputmode="decimal" min="0" step="any" id="costNum" name="costNum" placeholder="For example: 5000000" /></div>
+          </div>
+        </fieldset>
+        <div class="flex flex-wrap gap-3 justify-center pt-2 no-print">
+          <button type="button" id="make" class="px-8 py-3 bg-blue-900 text-white rounded-lg font-semibold hover:bg-blue-800 transition-colors">Create brief</button>
+          <button type="button" id="print" class="px-6 py-3 bg-white text-slate-700 border border-slate-300 rounded-lg font-semibold hover:bg-slate-50">Print brief</button>
+          <button type="button" id="clear" class="px-6 py-3 bg-white text-slate-700 border border-slate-300 rounded-lg font-semibold hover:bg-slate-50">Clear diagnostic</button>
+        </div>
+      </form>
+      <section id="brief" class="brief bg-white rounded-xl border border-slate-300 p-6 md:p-8 mt-8" hidden aria-live="polite"></section>
+    </div>
+  </section>
+  <script is:inline>
+    (function () {
+      var KEY = 'iff-diagnostic-v1', form = document.getElementById('ws'), out = document.getElementById('brief');
+      var LEVER = { process: 'Process improvement', scale: 'Scale', capital: 'Capital cost', competition: 'Competition', disintermediation: 'Disintermediation', risk: 'Risk transfer', transfer: 'None (a transfer)' };
+      var PAYER = { durable: 'Exists and looks durable', uncertain: 'Exists, durability uncertain', none: 'None yet', unneeded: 'Not needed once the better position is reached' };
+      function read() { var d = {}; new FormData(form).forEach(function (v, k) { if (k === 'barrier') (d.barrier = d.barrier || []).push(v); else d[k] = v; }); return d; }
+      function save() { try { localStorage.setItem(KEY, JSON.stringify(read())); } catch (e) {} }
+      function restore() { var d; try { d = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {} if (!d) return;
+        Array.prototype.forEach.call(form.elements, function (el) { if (!el.name || !(el.name in d)) return;
+          if (el.type === 'radio') el.checked = d[el.name] === el.value; else if (el.type === 'checkbox') el.checked = (d[el.name] || []).indexOf(el.value) > -1; else el.value = d[el.name]; }); }
+      function num(v) { if (v === undefined || v === null || v === '') return null; var x = parseFloat(v); return isFinite(x) && x >= 0 ? x : null; }
+      function fmt(x) { var a = Math.abs(x);
+        if (a >= 1e9) return String(+(x / 1e9).toFixed(a >= 1e10 ? 0 : 1)) + ' billion';
+        if (a >= 1e6) return String(+(x / 1e6).toFixed(a >= 1e7 ? 0 : 1)) + ' million';
+        if (a >= 100) return Math.round(x).toLocaleString('en-US');
+        if (a >= 10) return String(+x.toFixed(1));
+        return String(+x.toPrecision(2)); }
+      // Back-of-envelope ratio for the low and high counterfactual cases. Returns null unless every term is filled in.
+      function ratio(d) {
+        var size = num(d.size), lo = num(d.yearsLow), hi = num(d.yearsHigh), val = num(d.value), p = num(d.prob), a = num(d.attr), c = num(d.costNum);
+        if (size === null || val === null || p === null || a === null || !c || (lo === null && hi === null)) return null;
+        if (lo === null) lo = hi; if (hi === null) hi = lo; if (lo > hi) { var t = lo; lo = hi; hi = t; }
+        var k = size * val * (p / 100) * (a / 100);
+        return { lo: lo, hi: hi, impactLo: k * lo, impactHi: k * hi, rLo: k * lo / c, rHi: k * hi / c, cost: c, unit: (d.unit || '').trim() || 'units of impact' };
+      }
+      function diagnose(d) {
+        if (d.volume === 'no') return ['Structural Misalignment', 'tag-mode2', 'Volume should stay limited, so the market cannot become self-sustaining. Plan a permanent payer and decouple payment from volume.'];
+        if (d.payerState === 'none') return ['Missing payer', 'tag-hybrid', 'At least part of the gap is structural, and no one is yet paying for it.'];
+        if (d.payerState === 'unneeded') {
+          if (d.entry === 'yes') return ['Transitional Access Gap', 'tag-mode1', 'The better position looks self-enforcing once reached: a temporary path through the ridge, then exit.'];
+          if (d.entry === 'no') return ['Possibly structural', 'tag-mode2', 'No payer is planned, but new suppliers could not enter at the target price, so the market may slide back after exit. Apply the walk-away test before committing.'];
+          return ['Transitional, if entry holds', 'tag-mode1', 'The gap looks transitional, but whether suppliers could enter at the target price is not yet known. Gather that evidence before committing.'];
+        }
+        if (d.payerState === 'durable' || d.payerState === 'uncertain') return ['Nested', 'tag-hybrid', 'A structural payer with a transitional gap inside it: shape the market within the payer.'];
+        return ['Not yet clear', 'tag-hybrid', 'Answer steps 2 and 3 to diagnose the gap.'];
+      }
+      function flags(d, r) { var f = [];
+        if (d.payerState === 'none') f.push('No structural payer yet. Build the payer first, or the intervention risks becoming a bridge to nowhere.');
+        if (d.payerState === 'uncertain') f.push('Payer durability is uncertain. Weight scenarios in which the payer weakens or stops.');
+        if (d.volume === 'no') f.push('High volume is not desirable, so payment should be decoupled from volume and planned as permanent.');
+        if (d.entry === 'no') f.push('New suppliers could not enter at the target price, so competition will not hold the price down after exit.');
+        if (d.entry === 'unknown') f.push('Entry at the target price is unknown. This is evidence worth gathering before committing.');
+        if (d.lever === 'risk') f.push('Risk transfer is the least durable lever. Consider pairing it with process improvement or engineered competition.');
+        if (d.lever === 'capital') f.push('Capital cost reductions hold only if cheaper capital stays available after the concession ends.');
+        if (d.lever === 'transfer') f.push('A transfer fires no lever on its own. Name the lever it is meant to enable, or plan to fund it indefinitely.');
+        if (!d.lever) f.push('No lever chosen. Without one, there is no mechanism for the change to outlast the intervention.');
+        if (!d.counterfactual && num(d.yearsLow) === null && num(d.yearsHigh) === null) f.push('No counterfactual stated. Impact cannot be estimated without one.');
+        if (!d.exit && d.payerState !== 'none' && d.volume !== 'no') f.push('No exit trigger. Transitional support should state in advance when it ends.');
+        if (!d.cost && !num(d.costNum)) f.push('No expected cost. Count expected cost, not the committed amount.');
+        if (num(d.attr) === 100) f.push('The full change is attributed to this funder. If others contributed, count only the share this funder caused.');
+        if (num(d.prob) === 100) f.push('Success is treated as certain. Deals fail; weight the outcome by an explicit probability.');
+        if (num(d.value) !== null && num(d.value) >= 1 && (d.payerState === 'durable' || d.payerState === 'uncertain')) f.push('Each unit a payer saves is valued at full face value or more. Savings become impact only if the payer redeploys them.');
+        if (r && r.hi > 10) f.push('The high case credits more than ten years beyond the counterfactual. Check that the market would not have arrived sooner on its own.');
+        if (r && r.lo === r.hi) f.push('Only one counterfactual case given. Show a low and a high case; the counterfactual is usually the largest uncertainty.');
+        return f; }
+      function add(p, tag, text, cls) { var el = document.createElement(tag); el.textContent = text; if (cls) el.className = cls; p.appendChild(el); return el; }
+      function range(a, b) { return a === b ? fmt(a) : fmt(a) + ' to ' + fmt(b); }
+      function render() { var d = read(), dx = diagnose(d), r = ratio(d); out.innerHTML = '';
+        add(out, 'h2', 'Intervention Brief' + (d.title ? ': ' + d.title : ''), 'font-serif text-2xl text-slate-900 mb-3');
+        add(out, 'span', dx[0], 'tag ' + dx[1]);
+        add(out, 'p', dx[2], 'text-slate-700 mt-3');
+        var ce = 'Counterfactual: ' + (d.counterfactual || 'not stated') + '\nExpected cost to the funder: ' + (d.cost || (num(d.costNum) ? '$' + fmt(num(d.costNum)) : 'not stated'));
+        if (r) ce += '\nBack-of-envelope ratio: ' + range(r.rLo, r.rHi) + ' ' + r.unit + ' per funder dollar, crediting ' + range(r.lo, r.hi) + ' years beyond the counterfactual.' +
+          '\nDurable impact: ' + range(r.impactLo, r.impactHi) + ' ' + r.unit + ', for an expected cost of $' + fmt(r.cost) + '.';
+        var sec = [['Decision to change', [d.actor, d.behavior].filter(Boolean).join(': ') || 'Not stated.'],
+          ['Structural plan', 'Payer: ' + (d.payer || 'not named') + '. Status: ' + (PAYER[d.payerState] || 'not stated') + '.'],
+          ['Self-enforcement evidence', (d.scale || 'Not stated.') + '\nEntry at target price: ' + (d.entry || 'not stated') + '. High volume desirable: ' + (d.volume || 'not stated') + '.'],
+          ['Transitional plan', 'Barriers: ' + ((d.barrier || []).join(', ') || 'not stated') + (d.barrierNotes ? '. ' + d.barrierNotes : '') + '\nLever: ' + (LEVER[d.lever] || 'not chosen') + '\nInstrument: ' + (d.instrument || 'not stated') + '\nExit trigger: ' + (d.exit || 'not stated')],
+          ['Cost-effectiveness terms', ce]];
+        sec.forEach(function (s) { add(out, 'h3', s[0], 'font-semibold text-slate-900 mt-5 mb-1'); add(out, 'p', s[1], 'text-sm text-slate-600'); });
+        var f = flags(d, r); add(out, 'h3', f.length ? 'Flags to Resolve' : 'Flags', 'font-semibold text-slate-900 mt-5 mb-1');
+        if (!f.length) add(out, 'p', 'None raised. Check the cost-effectiveness terms with evidence.', 'text-sm text-slate-600');
+        f.forEach(function (t) { add(out, 'div', t, 'flag'); });
+        var date = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+        add(out, 'p', 'Prepared ' + date + ' with the Impact Financing Framework diagnostic, impactfinancingframework.org/diagnostic. Framework text licensed CC BY 4.0.', 'text-xs text-slate-500 mt-6 pt-4 border-t border-slate-200');
+        out.hidden = false; }
+      form.addEventListener('input', save); form.addEventListener('change', save);
+      document.getElementById('make').addEventListener('click', function () { render(); out.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+      document.getElementById('print').addEventListener('click', function () { render(); window.print(); });
+      document.getElementById('clear').addEventListener('click', function () { form.reset(); out.hidden = true; out.innerHTML = ''; try { localStorage.removeItem(KEY); } catch (e) {} });
+      restore();
+    })();
+  </script>
+</Page>

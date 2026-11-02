@@ -1,0 +1,50 @@
+---
+layout: ../../layouts/Page.astro
+title: The Pneumococcal Advance Market Commitment, 2009
+description: The first advance market commitment paid a premium for pneumococcal vaccine supply in exchange for capacity and a capped long-term price. Evaluators and critics disagree mainly about the counterfactual.
+lede: The first advance market commitment paid a premium for pneumococcal vaccines in exchange for capacity and a capped long-term price. Supporters and critics have argued about it for over a decade, and the framework shows that most of the disagreement is about one term, the counterfactual.
+tag: { label: "Transitional Access Gap", cls: "tag-mode1" }
+---
+import CaseSummary from '../../components/CaseSummary.astro';
+import Term from '../../components/Term.astro';
+
+<CaseSummary items={[
+  { term: 'Structural payer', detail: 'Gavi and co-financing countries, buying vaccines for children in low-income countries.' },
+  { term: 'Transitional gap', detail: 'Manufacturers needed assurance of a viable market before building capacity for Gavi-eligible countries.' },
+  { term: 'Intervention', detail: 'A $1.5 billion commitment from Italy, the United Kingdom, Canada, Russia, Norway and the Gates Foundation, launched in 2009.' },
+  { term: 'Levers', detail: 'Risk transfer on market existence and capacity, and scale, with a capped tail price as the durable commitment.' },
+  { term: 'Key uncertainty', detail: 'Whether, when and at what price suppliers would have served these markets without the commitment.' },
+]} />
+
+## The Design
+
+All vaccines bought under the commitment were initially purchased at $7 per dose. That price combined each manufacturer's tail price, capped at $3.50 and paid by Gavi, with a top-up from the commitment's funds. The top-up applied to roughly the first 20 percent of each supplier's contracted doses. In return, manufacturers committed to supply a share of forecast demand for ten years, continuing at the tail price once their share of the funds was used.
+
+## What It Achieved, and the Critique
+
+An independent evaluation for Gavi found that the commitment contributed to increased supply and uptake of pneumococcal conjugate vaccines in developing countries. Gavi noted that the tail price ceiling had been set to allow more than one manufacturer to participate, and later negotiated reductions.
+
+Critics drew a different conclusion from the same history. Médecins Sans Frontières argued that a vaccine already existed, so the commitment did little to accelerate research, and that much of the money functioned as a subsidy to the only two suppliers, Pfizer and GlaxoSmithKline, until a third entered in late 2019. It also argued the tail price was higher than countries could sustain as Gavi support phased out.
+
+## Reading It Through the Framework
+
+**Diagnosis.** The payer existed: Gavi and countries would buy the vaccine. The gap was transitional, about capacity and price for these markets, rather than about whether a product could be invented. <Term t="Advance Market Commitment">Advance market commitments</Term> were conceived for products that do not yet exist; this one was applied to a product that did.
+
+**Levers.** The commitment worked mainly through risk transfer on market existence and capacity, plus scale. Its most durable feature was the long-term tail price ceiling, which persists after the top-up funds are spent.
+
+**The counterfactual.** This is where the disagreement lives, because the <Term>counterfactual</Term> sets how much of the later supply the commitment can claim. If manufacturers would have supplied these markets at similar prices only a few years later, the commitment's impact is the value of those years of earlier coverage, minus the premium paid. If they would have supplied much later, at higher prices, or in smaller volumes, the impact is far larger. Both sides agree on most of the facts. They disagree about the dashed line in the [impact figure](/cost-effectiveness/#why-durability-multiplies-impact).
+
+**Lesson for design.** Pull mechanisms are easiest to evaluate, and most likely to be cost-effective, where the counterfactual is clear: products that genuinely do not exist, or markets that suppliers demonstrably will not enter. Where a product already exists, a volume guarantee or ceiling price agreement may buy the same acceleration at lower expected cost.
+
+## Sources
+
+<ul class="sources">
+  <li><a href="https://www.gavi.org/news/document-library/pneumococcal-amc-process-sheet">Gavi, pneumococcal AMC process sheet</a></li>
+  <li><a href="https://knowledgeportalia.org/_files/ugd/356854_bf0cf809f139415eafadc345c54c0097.pdf">Knowledge Portal on Innovation and Access to Medicines, overview of advance market commitments</a></li>
+  <li><a href="https://gavi.org/news/document-library/pneumococcal-amc-outcomes-and-impact-evaluation-summary">Gavi, summary of the outcomes and impact evaluation, 2016</a></li>
+  <li><a href="https://gavi.org/news/document-library/pneumococcal-amc-impact-evaluation-gavi-management-response">Gavi, management response to the evaluation</a></li>
+  <li><a href="https://msfaccess.org/sites/default/files/2020-06/Executive-Summary_Gavi-AMC-PCV-critique_MSF-AC.pdf">Médecins Sans Frontières Access Campaign, critique of the AMC, 2020</a></li>
+  <li><a href="https://www.cgdev.org/node/3041495">Center for Global Development, on the AMC price and tail price</a></li>
+</ul>
+
+[Back to case studies](/cases/)

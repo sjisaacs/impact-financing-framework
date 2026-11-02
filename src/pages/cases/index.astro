@@ -1,0 +1,32 @@
+---
+import Page from '../../layouts/Page.astro';
+import { CASES } from '../../data/cases.js';
+---
+<Page
+  title="Case Studies"
+  description="Market and financial interventions read through the framework: which gaps they faced, which levers fired, who paid, and what that implies for cost-effectiveness."
+  lede="The framework in action. Each case is read the same way: decompose the gap, name the payer, account for the levers, and ask what the impact was beyond what would have happened anyway."
+  bands={true}
+>
+  <section class="py-14 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap justify-center gap-4 mb-10 text-sm">
+        <span class="flex items-center gap-2"><span class="tag tag-mode1">Transitional Access Gap</span><span class="text-slate-500">temporary path through the ridge</span></span>
+        <span class="flex items-center gap-2"><span class="tag tag-mode2">Structural Misalignment</span><span class="text-slate-500">permanent terraforming</span></span>
+      </div>
+      <div class="space-y-5">
+        {CASES.map((c) => (
+          <a href={c.href} class="block bg-white rounded-xl border border-slate-200 card-hover overflow-hidden">
+            <div class="px-6 pt-5 flex flex-wrap items-center gap-2"><span class={`tag ${c.tag[1]}`}>{c.tag[0]}</span><span class="text-xs text-slate-500">{c.sector}</span></div>
+            <div class="p-6 pt-3">
+              <h2 class="font-serif text-2xl text-slate-900 mb-2">{c.title}</h2>
+              <p class="text-slate-600">{c.summary}</p>
+              <p class="text-sm font-medium text-blue-900 mt-3">Read the full case study</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      <p class="text-slate-600 mt-10 text-center max-w-2xl mx-auto">More cases are in preparation, including novel antibiotics (a gap that looks transitional but is structural), the Rikers Island social impact bond, and Spain's feed-in tariff cuts. Suggestions are welcome through the <a class="text-blue-800 underline" href="/about/#feedback">feedback link</a>.</p>
+    </div>
+  </section>
+</Page>

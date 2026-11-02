@@ -1,0 +1,16 @@
+---
+import Markers from './Markers.astro';
+---
+<svg viewBox="0 0 360 255" role="img" aria-labelledby="hs-title hs-desc">
+  <title id="hs-title">A structural misalignment</title>
+  <desc id="hs-desc">The financial landscape's low point, where capital pools, sits far from the social landscape's low point, where we want it.</desc>
+  <Markers id="hs" />
+  <path class="soc" d="M20 80 C 50 160, 80 185, 110 185 C 150 185, 220 80, 340 50" />
+  <path class="water" d="M213 160 C 222 167, 230 170, 240 170 C 252 170, 264 166, 273 160 Z" />
+  <path class="fin" d="M20 45 C 120 50, 190 170, 240 170 C 285 170, 315 115, 340 80" />
+  <circle class="d-soc" cx="110" cy="185" r="5" />
+  <text x="264" y="196" text-anchor="middle">capital pools here</text>
+  <text x="100" y="210" text-anchor="middle" class="t-strong">social low point</text>
+  <line class="wedge" x1="116" y1="226" x2="234" y2="226" marker-start="url(#hs-w)" marker-end="url(#hs-w)" />
+  <text x="175" y="246" text-anchor="middle" class="t-small">gap between low points</text>
+</svg>
