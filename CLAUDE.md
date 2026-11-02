@@ -50,6 +50,8 @@ Owner: Steve Isaacs (personal project). Read docs/HANDOVER.md first for status a
 - Introduce every economist or thinker with a line of background (who they were, when, what they showed).
   Credit established concepts to their originators (the wedge goes back to Pigou) rather than to the framework.
 - Do not reintroduce the easy/hard levers ranking or claims that the field drifts toward risk transfer.
+- Keep incentive and information problems (rational behavior, misaligned incentives) distinct from behavioral biases
+  (departures from rational choice). A procurement officer protecting their career is a principal-agent problem.
 - Political topics (carbon pricing, budget laws) are described factually; the framework takes no side.
 - Use `<Term>` for the first use of a key glossary term on a page, never inside another link or a heading.
 - Front-matter labels containing commas must be quoted (`label: 'Gaps, Not Markets'`); the check script enforces this.

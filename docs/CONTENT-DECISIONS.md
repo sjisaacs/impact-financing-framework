@@ -83,5 +83,9 @@ definitions, instrument strengths and limitations, visual design, illustrations.
   distinguishes financial transfers from risk transfer.
 - **Language.** No "bind"; no references to earlier versions on content pages; economists introduced with background;
   the wedge credited to Pigou.
-- **The catalyst** has its own page, framed as the bridge between rational-actor models and how markets behave, drawing
-  on behavioral and institutional economics. A first draft for Steve to deepen.
+- **The catalyst** has its own page, framed as the bridge between simple rational-actor models and how markets behave.
+  It separates two kinds of departure, because they need different responses: rational behavior with misaligned
+  incentives or incomplete information (principal-agent problems, information asymmetry, incomplete contracts,
+  coordination; fixed by changing incentives and information), and behavioral departures from rational choice
+  (bounded rationality, loss aversion and status quo bias, defaults; addressed through framing, sequencing and
+  defaults). Never present an incentive problem as a behavioral bias.

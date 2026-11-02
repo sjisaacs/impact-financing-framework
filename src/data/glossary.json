@@ -45,7 +45,7 @@
   },
   {
     "term": "Catalyst",
-    "def": "The organization that makes an instrument work in a real market of people and institutions: understanding supplier and buyer economics and the individuals who decide, brokering trust, negotiating terms and adapting as conditions change. Its role should shrink in a transitional gap and persist in a structural one."
+    "def": "The organization that makes an instrument work in a real market: understanding the incentives and information of the individuals who decide, brokering trust, convening and sequencing commitments, and adapting as conditions change. Its role should shrink in a transitional gap and persist in a structural one."
   },
   {
     "term": "Ceiling Price Agreement",
@@ -186,6 +186,10 @@
   {
     "term": "Price per Unit of Outcome",
     "def": "What the buyer spends per unit of the outcome it values, such as a patient-year of viral suppression or a ton removed. The price the six levers act on."
+  },
+  {
+    "term": "Principal-Agent Problem",
+    "def": "A situation in which someone acting for an organization (the agent) faces incentives that differ from the organization's (the principal's). The agent behaves rationally for themselves, which is not always best for the organization. A misalignment of incentives, not a behavioral bias."
   },
   {
     "term": "Principle of Precision",
