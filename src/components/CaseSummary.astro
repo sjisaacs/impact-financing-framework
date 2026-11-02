@@ -1,0 +1,7 @@
+---
+interface Item { term: string; detail: string }
+const { items } = Astro.props as { items: Item[] };
+---
+<dl class="not-prose bg-slate-50 border border-slate-200 rounded-xl p-6 grid sm:grid-cols-[max-content_1fr] gap-x-6 gap-y-3 text-sm">
+  {items.map((i) => (<><dt class="font-semibold text-slate-900">{i.term}</dt><dd class="text-slate-600 mb-2 sm:mb-0">{i.detail}</dd></>))}
+</dl>

@@ -1,0 +1,20 @@
+---
+// Inline definition for a glossary term. Links to the glossary entry; on devices with a mouse, hovering or
+// focusing shows the definition in place. Definitions come from src/data/glossary.json, so there is one source.
+// Usage in MDX: <Term>wedge</Term>, or <Term t="Concessional Capital">concessional money</Term>.
+import terms from '../data/glossary.json';
+const { t } = Astro.props;
+const text = (await Astro.slots.render('default')).replace(/<[^>]+>/g, '');
+const key = (t ?? text).trim().toLowerCase();
+const plain = (s: string) => s.toLowerCase().replace(/\s*\(.*\)\s*/, '');
+const entry = terms.find((x) => x.term.toLowerCase() === key) ?? terms.find((x) => plain(x.term) === key);
+if (!entry) throw new Error(`Term: no glossary entry for "${key}". Add it to src/data/glossary.json or pass t="Exact Term".`);
+const slug = entry.term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+// Deterministic id, unique per page: count uses of each term on the page being rendered.
+const counts: Map<string, number> = ((globalThis as any).__iffTermCounts ??= new Map());
+const countKey = `${Astro.url.pathname}#${slug}`;
+const n = (counts.get(countKey) ?? 0) + 1;
+counts.set(countKey, n);
+const id = `def-${slug}-${n}`;
+---
+<span class="term-wrap"><a class="term" href={`/glossary/#${slug}`} aria-describedby={id}><slot /></a><span class="term-def" id={id} role="tooltip"><strong>{entry.term}.</strong> {entry.def}</span></span>

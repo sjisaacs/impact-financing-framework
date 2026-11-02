@@ -1,0 +1,32 @@
+---
+import Page from '../layouts/Page.astro';
+import terms from '../data/glossary.json';
+const sorted = [...terms].sort((a, b) => a.term.localeCompare(b.term));
+const slug = (t: string) => t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+---
+<Page title="Glossary" description="Key terms and concepts from the Impact Financing Framework, defined the way the framework uses them." lede="Key terms and concepts from the Impact Financing Framework, defined the way the framework uses them." bands={true}>
+  <section class="py-14 md:py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      <div class="relative mb-8 no-print" id="gsearch" hidden>
+        <input id="gq" type="search" placeholder="Search terms" aria-label="Search terms" class="w-full border border-slate-300 rounded-lg pl-4 pr-4 py-3 text-sm" />
+      </div>
+      <dl class="space-y-3" id="terms">
+        {sorted.map((t) => (
+          <div class="bg-slate-50 p-5 rounded-lg border border-slate-200" id={slug(t.term)} data-text={`${t.term} ${t.def}`.toLowerCase()}>
+            <dt class="font-semibold text-slate-900 mb-1">{t.term}</dt>
+            <dd class="text-sm text-slate-600 leading-relaxed">{t.def}</dd>
+          </div>
+        ))}
+      </dl>
+      <p id="gnone" class="text-center text-slate-500 py-8" hidden>No terms match your search.</p>
+    </div>
+  </section>
+  <script is:inline>
+    (function () { var b = document.getElementById('gsearch'); b.hidden = false; var q = document.getElementById('gq');
+      var items = Array.prototype.slice.call(document.querySelectorAll('#terms > div')), none = document.getElementById('gnone');
+      q.addEventListener('input', function () { var t = q.value.trim().toLowerCase(), n = 0;
+        items.forEach(function (i) { var ok = !t || i.dataset.text.indexOf(t) > -1; i.style.display = ok ? '' : 'none'; if (ok) n++; }); none.hidden = n > 0; });
+      // Links from inline terms land on an entry; re-align once web fonts have settled the layout.
+      if (location.hash && document.fonts) document.fonts.ready.then(function () { var el = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (el) el.scrollIntoView(); }); })();
+  </script>
+</Page>

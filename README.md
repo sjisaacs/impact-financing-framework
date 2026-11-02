@@ -1,21 +1,17 @@
 # Impact Financing Framework
 
-A practical guide to designing market interventions that work. Diagnose market failures and choose the right tools, whether you work in health, climate, or development.
+How to think about market shaping and adjacent market and financial interventions in terms of economic theory and
+cost-effectiveness. Live at https://impactfinancingframework.org
 
-**Live site:** https://impactfinancingframework.org
-
-## About
-
-The IFF is a structured framework for designing interventions that redirect private capital toward social good. It distinguishes between two kinds of market failure (Transitional Access Gap and Structural Misalignment), names the six mechanisms through which interventions actually move price, and catalogues thirty-six financial instruments mapped against the framework.
-
-## Local development
-
-Open `index.html` directly in a browser. The app uses React via in-browser Babel; no build step required.
-
-## Deployment
-
-Hosted on Netlify with continuous deployment from `main`. Any commit to `main` deploys automatically.
+## Develop
+```
+npm install
+npm run dev      # local server
+npm run build    # static site in dist/
+node scripts/check-content.mjs   # post-build QA (exits non-zero on any problem)
+```
+Built with Astro and Tailwind CSS, deployed on Netlify from `main`. See `CLAUDE.md` for conventions and
+`docs/` for the handover, content decisions and fact-check ledger.
 
 ## License
-
-[Creative Commons Attribution 4.0 International](LICENSE).
+Text licensed under Creative Commons Attribution 4.0 International (see LICENSE).

@@ -1,20 +1,7 @@
-# macOS
-.DS_Store
-
-# Local Claude Code config
-.claude/
-
-# Source files not deployed to the public site
-CHAI-Market-Shaping-Framework 202410.pdf
-Critique 1.docx
-Critique 2.docx
-Critique 3.docx
-
-# Editor / OS noise
-*.swp
-*.bak
-Thumbs.db
-
-# Defensive: build artefacts that don't apply today but might appear later
 node_modules/
+dist/
+.astro/
+.DS_Store
 *.log
+# Keep private source material OUT of the repo entirely, and list it in .git/info/exclude
+# (not here), so its filenames are not published.

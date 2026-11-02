@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://impactfinancingframework.org/sitemap-index.xml

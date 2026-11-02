@@ -1,0 +1,121 @@
+---
+import '@fontsource-variable/inter/wght.css';
+import '@fontsource-variable/inter/wght-italic.css';
+import '@fontsource-variable/playfair-display/wght.css';
+import '@fontsource-variable/playfair-display/wght-italic.css';
+import '../styles/global.css';
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import playfairLatin from '@fontsource-variable/playfair-display/files/playfair-display-latin-wght-normal.woff2?url';
+import { SITE, NAV } from '../data/site.js';
+interface Props { title?: string; description?: string; }
+const { title, description = SITE.description } = Astro.props;
+const fullTitle = title ? `${title} | ${SITE.name}` : `The ${SITE.name} | Market Shaping and Cost-Effectiveness`;
+const canonical = new URL(Astro.url.pathname, SITE.url).href;
+const path = Astro.url.pathname;
+const current = (href: string) => path === href || (href !== '/' && path.startsWith(href));
+// Structured data so search engines and AI tools can attribute and cite the framework correctly.
+const author = { '@type': 'Person', name: 'Steve Isaacs', url: 'https://www.linkedin.com/in/sjisaacs' };
+const website = { '@type': 'WebSite', name: SITE.name, url: SITE.url + '/' };
+const ld = path === '/'
+  ? { '@context': 'https://schema.org', ...website, description, author, license: SITE.license, inLanguage: 'en' }
+  : { '@context': 'https://schema.org', '@type': 'Article', headline: title, description, url: canonical, author,
+      license: SITE.license, isPartOf: website, dateModified: SITE.modified, inLanguage: 'en' };
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="author" content="Steve Isaacs" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={title ?? `The ${SITE.name}`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL('/og.png', SITE.url).href} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={playfairLatin} as="font" type="font/woff2" crossorigin />
+    <script type="application/ld+json" set:html={JSON.stringify(ld)} />
+  </head>
+  <body class="min-h-screen flex flex-col bg-white">
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] bg-white px-4 py-2 rounded shadow">Skip to content</a>
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 no-print" aria-label="Main">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="flex justify-between items-center h-16">
+          <a href="/" class="flex items-center gap-3 group">
+            <span class="w-9 h-9 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center text-white font-serif font-bold text-xl shadow-sm group-hover:shadow-md transition-shadow" aria-hidden="true">I</span>
+            <span class="font-serif font-semibold text-lg text-slate-900 tracking-tight">Impact Financing Framework</span>
+          </a>
+          <ul class="hidden lg:flex items-center gap-1">
+            {NAV.map((n) => (
+              <li>
+                <a href={n.href} class={`nav-item block px-3 xl:px-4 py-2 text-sm font-medium transition-colors ${current(n.href) ? 'text-blue-900' : 'text-slate-500 hover:text-slate-900'}`} aria-current={current(n.href) ? 'page' : undefined}>
+                  {n.label}<span class="nav-indicator"></span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <details class="lg:hidden relative">
+            <summary class="list-none cursor-pointer p-2 text-slate-600" aria-label="Menu">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </summary>
+            <ul class="absolute right-0 mt-2 w-60 bg-white border border-slate-200 rounded-lg shadow-lg py-2">
+              {NAV.map((n) => (
+                <li><a href={n.href} class={`block px-4 py-3 text-sm font-medium ${current(n.href) ? 'text-blue-900 bg-blue-50' : 'text-slate-600'}`} aria-current={current(n.href) ? 'page' : undefined}>{n.label}</a></li>
+              ))}
+            </ul>
+          </details>
+        </div>
+      </div>
+    </nav>
+    <main id="main" class="flex-grow">
+      <slot />
+    </main>
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800 no-print">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div>
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center text-white font-serif font-bold" aria-hidden="true">I</span>
+              <span class="font-serif text-white font-semibold">Impact Financing Framework</span>
+            </div>
+            <p class="text-sm text-slate-400">How to think about market shaping and adjacent interventions in terms of economic theory and cost-effectiveness.</p>
+          </div>
+          <div>
+            <h2 class="text-white font-semibold mb-3 text-sm font-sans">Framework</h2>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/framework/" class="hover:text-white transition-colors">Two Landscapes, Two Kinds of Gap</a></li>
+              <li><a href="/framework/mechanisms/" class="hover:text-white transition-colors">Mechanisms</a></li>
+              <li><a href="/framework/payers/" class="hover:text-white transition-colors">Payers and Buyers</a></li>
+              <li><a href="/framework/catalyst/" class="hover:text-white transition-colors">The Catalyst</a></li>
+              <li><a href="/cost-effectiveness/" class="hover:text-white transition-colors">Cost-Effectiveness</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="text-white font-semibold mb-3 text-sm font-sans">Resources</h2>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/cases/" class="hover:text-white transition-colors">Case Studies</a></li>
+              <li><a href="/instruments/" class="hover:text-white transition-colors">Instrument Catalogue</a></li>
+              <li><a href="/diagnostic/" class="hover:text-white transition-colors">Diagnostic</a></li>
+              <li><a href="/questions/" class="hover:text-white transition-colors">Open Questions</a></li>
+              <li><a href="/related-work/" class="hover:text-white transition-colors">Related Work</a></li>
+              <li><a href="/about/" class="hover:text-white transition-colors">About and How to Cite</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-xs text-slate-400">© {SITE.year} Impact Financing Framework. Version {SITE.version}. Text licensed CC BY 4.0.</p>
+          <p class="text-xs text-slate-400">Developed by <a href="https://www.linkedin.com/in/sjisaacs" rel="noopener" class="text-blue-400 hover:text-blue-300">Steve Isaacs</a> in a personal capacity.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

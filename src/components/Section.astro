@@ -1,0 +1,12 @@
+---
+// A full-width band in the original site's style. Body content is long-form prose.
+interface Props { id?: string; tone?: 'white' | 'slate'; title?: string; intro?: string; wide?: boolean; }
+const { id, tone = 'white', title, intro, wide = false } = Astro.props;
+---
+<section id={id} class={`py-16 md:py-20 scroll-mt-28 ${tone === 'slate' ? 'bg-slate-50' : 'bg-white'}`}>
+  <div class={`${wide ? 'max-w-5xl' : 'max-w-4xl'} mx-auto px-4 sm:px-6`}>
+    {title && <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">{title}</h2>}
+    {intro && <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">{intro}</p>}
+    <div class="prose-iff"><slot /></div>
+  </div>
+</section>

@@ -1,0 +1,14 @@
+---
+import Markers from './Markers.astro';
+---
+<svg viewBox="0 0 480 250" role="img" aria-labelledby="lc-title lc-desc">
+  <title id="lc-title">Learning curves wear the ridge down</title>
+  <desc id="lc-desc">Three versions of the financial landscape over time. Each time more capital crosses, unit costs fall and the ridge gets lower, until there is no ridge left and capital reaches the better valley on its own.</desc>
+  <Markers id="lc" />
+  <path class="water" d="M82 130 C 88 137, 94 140, 100 140 C 108 140, 115 136, 121 130 Z" />
+  <path class="fin" style="opacity:0.3" d="M30 60 C 60 100, 80 140, 100 140 C 130 140, 160 70, 200 70 C 245 70, 290 200, 340 200 C 390 200, 425 155, 450 120" />
+  <path class="fin" style="opacity:0.6" d="M30 60 C 60 100, 80 140, 100 140 C 130 140, 160 110, 200 110 C 245 110, 290 200, 340 200 C 390 200, 425 155, 450 120" />
+  <path class="fin" d="M30 60 C 60 100, 80 140, 100 140 C 125 141, 160 148, 200 154 C 245 161, 290 200, 340 200 C 390 200, 425 155, 450 120" />
+  <line class="wedge" x1="200" y1="76" x2="200" y2="144" marker-end="url(#lc-w)" />
+  <text x="240" y="236" text-anchor="middle">each crossing wears the ridge down</text>
+</svg>
