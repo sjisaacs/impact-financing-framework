@@ -24,7 +24,8 @@ export const NAV = [
 export const FRAMEWORK_NAV = [
   { href: '/framework/', label: 'Two Landscapes' },
   { href: '/framework/mechanisms/', label: 'Mechanisms' },
-  { href: '/framework/payers/', label: 'Payers' },
+  { href: '/framework/payers/', label: 'Payers and Buyers' },
+  { href: '/framework/catalyst/', label: 'The Catalyst' },
 ];
 
 // Reading order for the "Continue" link at the foot of each page.
@@ -33,7 +34,8 @@ export const SEQUENCE = [
   { href: '/foundations/', label: 'Foundations' },
   { href: '/framework/', label: 'The Framework' },
   { href: '/framework/mechanisms/', label: 'Mechanisms' },
-  { href: '/framework/payers/', label: 'Payers' },
+  { href: '/framework/payers/', label: 'Payers and Buyers' },
+  { href: '/framework/catalyst/', label: 'The Catalyst' },
   { href: '/cost-effectiveness/', label: 'Cost-Effectiveness' },
   { href: '/cases/', label: 'Case Studies' },
   { href: '/diagnostic/', label: 'The Diagnostic' },

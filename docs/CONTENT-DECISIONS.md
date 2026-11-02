@@ -11,13 +11,12 @@ cost per death averted or multiples of cash).
 - Kept: Transitional Access Gap vs Structural Misalignment.
 - Defined by whether the target state is self-enforcing (walk-away test), i.e. whether the externality binds on the
   path (transitional) or at the destination (structural).
-- Applied to each gap, not each market. Payer first, then lever. Global health market shaping is transitional work
-  nested inside structural payers; climate largely lacks the payer; some health services (e.g. community mental health
-  in many LMICs) lack one too.
+- Superseded in the November 2026 review (see below): donors and governments buying on others' behalf are buyers, not
+  structural payers.
 - "Converging misalignment" moved into transitional gaps (learning curves create two equilibria). v1 filed solar both ways.
 - Structural misalignment has two forms: harm that pays (toxic pit) and good nobody pays for (no pit).
-- Three sources of the wedge: third-party effects, non-excludable value, needs without purchasing power. Tobacco is
-  mostly an internality.
+- Two sources of the wedge: third-party effects and non-excludable value. Needs without purchasing power are a
+  distribution question, not a market failure. Tobacco is mostly an internality.
 
 ## Geometry of the externality (new)
 The externality is social minus private value; what separates the low points is its slope at the market's low point
@@ -64,3 +63,25 @@ definitions, instrument strengths and limitations, visual design, illustrations.
   vouchers (an innovation incentive that rewards approval, not access) and voluntary carbon credits (a voluntary payer).
 - **Corrective taxes** are described as raising the floor under the harmful activity, never as moving a "peak".
 - **Valleys kept.** The home page now says plainly that low ground means high returns.
+
+## Steve's review, November 2026
+- **Payers and buyers.** Inability to pay is not a market failure; treating it as structural would make almost every
+  market structural. Donors, governments and pooled funds that buy on others' behalf are buyers inside the market.
+  "Payer" is reserved for whoever corrects a structural gap (externality or public good). The Payers page, the
+  nested-markets figure (axis now "buyer at scale"), the wedge sources, the implants, TLD and PCV cases, the
+  Cost-Effectiveness page and the diagnostic follow this. The "Diagnose Gaps, Not Markets" section was removed;
+  "When Costs Fall with Volume" stays.
+- **First illustration.** Water is capital and appears only on the financial landscape. The social landscape shows
+  value; an annotation marks where the same capital sits on it (high ground, the misaligned case) and where social
+  value is highest. Three cases follow: aligned and capital there (no problem), aligned but stuck (transitional),
+  misaligned (structural).
+- **Levers.** Lever 2 is "scale and learning": economies of scale (volume per period, lost if volume falls) and the
+  experience curve (cumulative output, largely kept). Process improvement is different in kind for durability;
+  competition is often fragile. The easy/hard levers section and its figure were removed. The cost/margin figure is
+  now a horizontal bar so levers read 1 to 6 in order.
+- **Financial transfers.** A buy-down is time-limited by design; the section is about permanent subsidies, and
+  distinguishes financial transfers from risk transfer.
+- **Language.** No "bind"; no references to earlier versions on content pages; economists introduced with background;
+  the wedge credited to Pigou.
+- **The catalyst** has its own page, framed as the bridge between rational-actor models and how markets behave, drawing
+  on behavioral and institutional economics. A first draft for Steve to deepen.

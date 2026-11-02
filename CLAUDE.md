@@ -19,7 +19,7 @@ Owner: Steve Isaacs (personal project). Read docs/HANDOVER.md first for status a
 - Deploys on Netlify from `main` via `netlify.toml` (build `npm run build`, publish `dist`, Node 22).
 
 ## Map
-- `src/pages/`: routes. `framework/index.mdx`, `framework/mechanisms.mdx`, `framework/payers.mdx`,
+- `src/pages/`: routes. `framework/index.mdx`, `framework/mechanisms.mdx`, `framework/payers.mdx`, `framework/catalyst.mdx`,
   `cost-effectiveness.mdx`, `foundations.mdx`, `cases/*.mdx`, `instruments.astro`, `diagnostic.astro`, `glossary.astro`.
 - `src/components/figures/`: analytic SVG figures (inline, accessible title/desc). `Section.astro` = full-width band.
   On phones (<640px) SVG labels are drawn larger (see `global.css`), so check new figures at 375px for overlaps.
@@ -37,8 +37,19 @@ Owner: Steve Isaacs (personal project). Read docs/HANDOVER.md first for status a
 - Color grammar in figures: blue #1e40af financial, green #059669 social, amber #d97706 wedge/intervention,
   slate #94a3b8 dashed counterfactual, light blue fill = capital (water).
 - Terminology: Transitional Access Gap, Structural Misalignment, navigate/terraform, walk-away test, wedge,
-  six levers, payer, catalyst, Principle of Precision, bridge to nowhere, windfall. Do not reintroduce
-  "Mode 1/Mode 2", "Blocked Flow", "Wrong Destination", or "deadweight loss" for windfall.
+  six levers (lever 2 is "scale and learning"), payer, buyer, catalyst, Principle of Precision, bridge to nowhere,
+  windfall, financial transfer. Do not reintroduce "Mode 1/Mode 2", "Blocked Flow", "Wrong Destination", or
+  "deadweight loss" for windfall.
+- Payer vs buyer: a payer corrects a structural gap (externality or public good) for as long as it matters. Donors,
+  governments and pooled funds that buy on others' behalf are buyers, part of the market, not a market failure.
+  Inability to pay is a distribution question, never a third kind of structural gap.
+- Write "financial transfer" or "subsidy" for payments that lower the buyer's price; "risk transfer" is lever 6.
+  A buy-down is time-limited by design.
+- Do not use "bind"/"binding" for barriers or externalities ("stopped being a critical barrier", "matters on the way").
+- Never refer to earlier versions of the framework on content pages; the About changelog is the only place.
+- Introduce every economist or thinker with a line of background (who they were, when, what they showed).
+  Credit established concepts to their originators (the wedge goes back to Pigou) rather than to the framework.
+- Do not reintroduce the easy/hard levers ranking or claims that the field drifts toward risk transfer.
 - Political topics (carbon pricing, budget laws) are described factually; the framework takes no side.
 - Use `<Term>` for the first use of a key glossary term on a page, never inside another link or a heading.
 - Front-matter labels containing commas must be quoted (`label: 'Gaps, Not Markets'`); the check script enforces this.

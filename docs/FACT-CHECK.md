@@ -47,6 +47,17 @@ publicly sourced; Q = kept qualitative on the site pending a source; R = removed
 | CGD 2005 working group report, *Making Markets for Vaccines*, set out the AMC design (related work) | V (2026-11-02) | Center for Global Development, 2005 working group report; title and year are well documented |
 | FDA priority review voucher for tropical diseases exists (instrument catalogue) | V (2026-11-02) | https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/FDA/8940fnl-Tropical-Disease-PRV.pdf |
 | Power purchase agreements financed early utility-scale solar and wind; tiered pricing widely used for vaccines (instrument catalogue) | Q | Qualitative, no numbers on the site; add IRENA or Gavi/UNICEF sources if figures are added |
+| Pigou, *The Economics of Welfare* (1920), divergence of private and social net product; Pigouvian tax | V (2026-11-02) | Standard history of economics; A. C. Pigou, The Economics of Welfare, Macmillan, 1920 |
+| Rosenstein-Rodan 1943 on coordinated industrialization; "big push" named later (1961) | V (2026-11-02) | P. N. Rosenstein-Rodan, Economic Journal 53 (1943); "Notes on the Theory of the 'Big Push'" (1961) |
+| Arrow 1962, learning by doing with spillovers; Nobel 1972 | V (2026-11-02) | K. J. Arrow, Review of Economic Studies 29 (1962); Nobel Prize in Economic Sciences 1972 |
+| Simon, bounded rationality; Nobel 1978 | V (2026-11-02) | nobelprize.org, 1978 laureate |
+| Kahneman and Tversky 1979, loss aversion; Kahneman Nobel 2002 | V (2026-11-02) | Econometrica 47 (1979); nobelprize.org, 2002 |
+| Schelling 1960, focal points; Nobel 2005 | V (2026-11-02) | T. C. Schelling, The Strategy of Conflict (1960); nobelprize.org, 2005 |
+| Akerlof 1970, market for lemons; Nobel 2001 | V (2026-11-02) | Quarterly Journal of Economics 84 (1970); nobelprize.org, 2001 |
+| Williamson, governance of transactions contracts cannot specify; Nobel 2009 | V (2026-11-02) | nobelprize.org, 2009 |
+| Thaler and Sunstein on defaults (*Nudge*, 2008); Thaler Nobel 2017 | V (2026-11-02) | nobelprize.org, 2017 |
+| Cost analysis and process work with suppliers remain central to CHAI's market-shaping practice (Mechanisms) | A | Steve; practitioner knowledge |
+| TLD transition also needed updated guidelines, transition plans and confidence in supply (Catalyst page) | A | Steve to confirm; qualitative |
 | Worked example on the Cost-Effectiveness page ($20M guarantee, $30 per patient-year, 1M patient-years, 3 years, 0.8, 75%, 50%, $5M; ratios 60, 5.4, 1.8, 12.6) | Illustrative | Hypothetical by design and labeled as such on the page; the arithmetic is checked in `scripts/check-content.mjs` |
 | Viral load per-test all-inclusive pricing (disintermediation example) | Q | v1 named Hologic and ~35% below incumbents; source before restoring |
 

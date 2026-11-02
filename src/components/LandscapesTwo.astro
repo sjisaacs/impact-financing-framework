@@ -1,0 +1,24 @@
+---
+// The two-landscapes illustration with annotations. Visual rule: water is capital and exists only on the financial
+// landscape. On the social landscape, a dashed outline marks where that same capital sits, and a dot marks the
+// social low point. Shapes are drawn in the image's own coordinates (1600 x 893); labels are HTML so they stay
+// legible at any width.
+import Illustration from './Illustration.astro';
+const labels = [
+  { x: 69.7, y: 28.5, short: '', long: 'capital pools here', cls: 'text-blue-900' },
+  { x: 69.7, y: 71.0, short: 'same capital', long: 'same capital, on high ground', cls: 'text-blue-900' },
+  { x: 30.0, y: 81.0, short: 'most social value', long: 'highest social value', cls: 'text-emerald-800' },
+];
+---
+<div class="relative">
+  <Illustration name="landscapes-two" alt="Two stacked landscapes over the same ground. In the financial landscape, rivers of capital flow into a lake on the right. In the social landscape, the most valuable valley is on the left, and the place where the capital sits is high ground." width={1600} height={893} eager />
+  <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 1600 893" preserveAspectRatio="none" aria-hidden="true" style="max-width:none">
+    <line x1="1115" y1="392" x2="1115" y2="698" stroke="#0f172a" stroke-opacity="0.35" stroke-width="4" vector-effect="non-scaling-stroke" />
+    <line x1="1115" y1="392" x2="1115" y2="698" stroke="#ffffff" stroke-width="2" stroke-dasharray="6 5" vector-effect="non-scaling-stroke" />
+    <ellipse cx="1115" cy="735" rx="215" ry="36" fill="#67e8f9" fill-opacity="0.55" stroke="#ffffff" stroke-width="2.5" stroke-dasharray="7 5" vector-effect="non-scaling-stroke" />
+    <circle cx="480" cy="790" r="18" fill="#059669" stroke="#ffffff" stroke-width="3" vector-effect="non-scaling-stroke" />
+  </svg>
+  {labels.map((l) => (
+    <span class={`absolute -translate-x-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-white/90 px-1.5 py-0.5 text-[10px] sm:text-xs font-semibold shadow-sm ${l.cls} ${l.short ? '' : 'hidden sm:inline'}`} style={`left:${l.x}%;top:${l.y}%`} aria-hidden="true"><span class="sm:hidden">{l.short}</span><span class="hidden sm:inline">{l.long}</span></span>
+  ))}
+</div>

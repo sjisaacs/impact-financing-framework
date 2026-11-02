@@ -5,9 +5,9 @@ import Term from '../components/Term.astro';
 import instruments from '../data/instruments.json';
 const ROLE = { Navigate: ['Transitional', 'tag-mode1'], Reshape: ['Structural', 'tag-mode2'], Either: ['Either', 'tag-hybrid'] };
 const LEVER = {
-  process: ['Process improvement', 'chip-cost'], scale: ['Scale', 'chip-cost'], capital: ['Capital cost', 'chip-cost'],
+  process: ['Process improvement', 'chip-cost'], scale: ['Scale and learning', 'chip-cost'], capital: ['Capital cost', 'chip-cost'],
   competition: ['Competition', 'chip-margin'], disintermediation: ['Disintermediation', 'chip-margin'], risk: ['Risk transfer', 'chip-margin'],
-  transfer: ['Transfer', 'chip-transfer'], innovation: ['Innovation incentive', 'chip-innovation'], payment: ['Payment design', 'chip-structural'],
+  transfer: ['Financial transfer', 'chip-transfer'], innovation: ['Innovation incentive', 'chip-innovation'], payment: ['Payment design', 'chip-structural'],
   correction: ['Price correction', 'chip-structural'], voluntary: ['Voluntary payer', 'chip-structural'],
 };
 const sorted = [...instruments].sort((a, b) => a.name.localeCompare(b.name));
@@ -57,9 +57,9 @@ const sorted = [...instruments].sort((a, b) => a.name.localeCompare(b.name));
         </select>
         <select id="lever" aria-label="Filter by lever" class="border border-slate-300 rounded-lg px-3 py-2.5 text-sm bg-white">
           <option value="">All levers</option>
-          <optgroup label="Cost reduction"><option value="process">Process improvement</option><option value="scale">Scale</option><option value="capital">Capital cost</option></optgroup>
+          <optgroup label="Cost reduction"><option value="process">Process improvement</option><option value="scale">Scale and learning</option><option value="capital">Capital cost</option></optgroup>
           <optgroup label="Margin reduction"><option value="competition">Competition</option><option value="disintermediation">Disintermediation</option><option value="risk">Risk transfer</option></optgroup>
-          <optgroup label="Parallel approaches"><option value="transfer">Transfer</option><option value="innovation">Innovation incentive</option><option value="payment">Payment design</option><option value="correction">Price correction</option><option value="voluntary">Voluntary payer</option></optgroup>
+          <optgroup label="Parallel approaches"><option value="transfer">Financial transfer</option><option value="innovation">Innovation incentive</option><option value="payment">Payment design</option><option value="correction">Price correction</option><option value="voluntary">Voluntary payer</option></optgroup>
         </select>
       </div>
       <p class="text-sm text-slate-500 mb-6" id="count" aria-live="polite"></p>

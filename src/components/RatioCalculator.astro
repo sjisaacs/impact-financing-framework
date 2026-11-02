@@ -1,9 +1,9 @@
 ---
 // Interactive version of the ratio, prefilled with the worked example. Hidden until its script runs.
 const fields = [
-  { id: 'rc-size', label: 'Size of the change, per year', hint: 'In your units of impact before valuation, such as dollars saved by the payer', value: 30000000, step: 'any' },
+  { id: 'rc-size', label: 'Size of the change, per year', hint: 'In your units of impact before valuation, such as dollars saved by the buyer', value: 30000000, step: 'any' },
   { id: 'rc-years', label: 'Duration beyond the counterfactual, in years', hint: 'How much earlier than otherwise, plus any permanent difference', value: 3, step: 'any' },
-  { id: 'rc-value', label: 'Value per unit', hint: 'For example, the share of each dollar saved that the payer redeploys', value: 0.8, step: 'any' },
+  { id: 'rc-value', label: 'Value per unit', hint: 'For example, the share of each dollar saved that the buyer redeploys', value: 0.8, step: 'any' },
   { id: 'rc-prob', label: 'Probability of success, %', hint: 'Chance the change takes hold at all', value: 75, step: 'any' },
   { id: 'rc-attr', label: 'Share attributable, %', hint: 'The part of the change this funder caused', value: 50, step: 'any' },
   { id: 'rc-cost', label: 'Expected cost to the funder, $', hint: 'Expected payouts, capital held and catalyst costs, not the headline commitment', value: 5000000, step: 'any' },
@@ -24,7 +24,7 @@ const fields = [
     ))}
     <div class="sm:col-span-2">
       <label for="rc-unit" class="block text-sm font-semibold text-slate-900">Unit of impact</label>
-      <input id="rc-unit" type="text" value="payer dollars redeployed" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-900 bg-white focus:outline focus:outline-2 focus:outline-blue-900" />
+      <input id="rc-unit" type="text" value="buyer dollars redeployed" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-900 bg-white focus:outline focus:outline-2 focus:outline-blue-900" />
     </div>
   </form>
   <div class="mt-6 bg-slate-50 border border-slate-200 rounded-lg p-5" aria-live="polite">

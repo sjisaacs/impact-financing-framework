@@ -31,7 +31,7 @@
     "money": "Contingent",
     "levers": "Risk transfer, scale, with a capped long-term price",
     "use": "A promise to pay a set price, often with a premium for early units, for products that meet specified criteria, paid only when they are delivered.",
-    "holds": "The long-term price commitment is honored after the premium is spent, and a payer keeps buying.",
+    "holds": "The long-term price commitment is honored after the premium is spent, and buyers keep buying.",
     "example": "The 2009 pneumococcal vaccine commitment, and Frontier for carbon removal.",
     "exampleLink": "/cases/pneumococcal-amc/",
     "watch": "Where the product already exists, the counterfactual is murky and a guarantee or ceiling price may buy the same acceleration for less.",
@@ -82,7 +82,7 @@
     "money": "No capital on its own",
     "levers": "Competition",
     "use": "An originator licenses generic manufacturers to produce for specified markets, often through a patent pool.",
-    "holds": "Licensed suppliers remain viable; competition is among the most durable levers.",
+    "holds": "Licensed suppliers stay viable at the lower price. Competition is often fragile: thin margins lead to exits and consolidation.",
     "example": "The Medicines Patent Pool provided the licensing channel for generic TLD.",
     "exampleLink": "/cases/tld/",
     "watch": "Territorial limits can exclude middle-income markets where the gap is real.",
@@ -90,7 +90,7 @@
       "competition"
     ],
     "strengths": [
-      "Activates competition, one of the most durable levers",
+      "Activates competition without donor capital",
       "Can cover many countries at once"
     ],
     "limitations": [
@@ -105,10 +105,10 @@
     "money": "Time-limited grant",
     "levers": "Process improvement",
     "use": "Expert work with suppliers on production processes, sourcing and cost structure, usually under confidentiality.",
-    "holds": "Robustly: suppliers keep what they learn.",
+    "holds": "Robustly: suppliers keep what they learn, which makes this the most durable lever.",
     "example": "The 2003 generic antiretroviral agreements, which cut a common triple-therapy pill from about $300 to under $140 per patient per year.",
     "exampleLink": "/framework/mechanisms/",
-    "watch": "Requires industrial capability and supplier trust that most funders lack, which is why it is under-used.",
+    "watch": "Requires industrial engineering capability, access to supplier cost data and supplier trust, so it depends heavily on who does it.",
     "leverKeys": [
       "process"
     ],
@@ -252,14 +252,14 @@
   {
     "id": "buy-down",
     "name": "Price buy-down or subsidy",
-    "role": "Either",
-    "money": "Flow",
-    "levers": "None directly: it is a transfer",
-    "use": "A third party pays part of the price so buyers pay less.",
-    "holds": "Only if it buys volume that fires scale or competition; otherwise it must continue indefinitely.",
-    "example": "Early feed-in tariffs for solar worked as a transitional transfer.",
-    "exampleLink": "/framework/mechanisms/",
-    "watch": "Decide in advance whether it is a bridge or a permanent payment, and fund it accordingly.",
+    "role": "Navigate",
+    "money": "Time-limited flow",
+    "levers": "None directly: a time-limited financial transfer",
+    "use": "A third party pays part of the price for a fixed period, so buyers can afford more volume while costs fall.",
+    "holds": "Designed to end: it holds if the volume it buys lowers the underlying price, through scale, learning or new entrants, before the subsidy stops.",
+    "example": "Early solar feed-in tariffs, which paid above-market prices for a set period while costs fell.",
+    "exampleLink": "/framework/mechanisms/#transfers-and-incentives",
+    "watch": "If the price returns when the subsidy ends, it was a permanent subsidy all along. Set the end date and the price target at the start.",
     "leverKeys": [
       "transfer"
     ],
@@ -269,9 +269,9 @@
       "Directly addresses affordability"
     ],
     "limitations": [
-      "Ongoing cost burden unless it fires a lever",
-      "May suppress natural price discovery",
-      "Exit is hard to plan"
+      "Costly if the levers it relies on do not fire",
+      "May mask the true price while it runs",
+      "Ending it on schedule takes discipline"
     ]
   },
   {
@@ -506,7 +506,7 @@
     "use": "Buyers pay for certified emission reductions or removals they are not required to make, usually to meet their own climate commitments.",
     "holds": "Buyers keep buying. Demand rests on mission and reputation, the least durable kind of payer.",
     "example": "Traded value peaked at around $2 billion in 2021 and fell to $535 million in 2024.",
-    "exampleLink": "/framework/payers/#every-gap-needs-a-payer",
+    "exampleLink": "/framework/payers/#structural-payers",
     "watch": "Credits do not change what emitters pay, so they do not correct the externality. Check additionality and permanence, the market's main integrity problems.",
     "leverKeys": [
       "voluntary"

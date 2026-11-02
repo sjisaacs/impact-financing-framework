@@ -1,75 +1,72 @@
 ---
 layout: ../../layouts/Page.astro
-title: Payers
-description: Every structural gap needs a payer. Global health market shaping works inside existing payers; climate and many health services still lack one. What a saved dollar is worth, and what happens when payers retreat.
-lede: Every structural gap needs a payer. Who that payer is, what a dollar in its hands is worth, and whether it keeps paying determine most of the cost-effectiveness of anything built on top of it.
+title: Payers and Buyers
+description: Structural gaps need a payer that keeps paying. Many markets that matter for health also have buyers who pay on others' behalf. Telling the two apart, and knowing whether either will last, shapes the cost-effectiveness of everything built on top.
+lede: A structural gap needs someone to pay for as long as the outcome matters. Many markets also have buyers who pay on others' behalf. Whether these exist, what a dollar in their hands is worth and whether they keep paying determine much of the cost-effectiveness of anything built on top of them.
 bands: true
 framework: true
 toc:
-  - { id: every-gap-needs-a-payer, label: Every Gap Needs a Payer }
-  - { id: payer-first, label: Payer First }
-  - { id: nested-markets, label: Nested Markets }
+  - { id: structural-payers, label: Payers }
+  - { id: buyers-for-others, label: Buyers for Others }
+  - { id: missing-buyers, label: Missing Buyers }
   - { id: value-of-savings, label: Value of Savings }
-  - { id: payer-durability, label: Payer Durability }
+  - { id: when-payers-stop, label: When Payment Stops }
   - { id: two-kinds-of-money, label: Two Kinds of Money }
 ---
 import Section from '../../components/Section.astro';
 import Fig from '../../components/Fig.astro';
-import GapDecomposition from '../../components/figures/GapDecomposition.astro';
 import NestedMarkets from '../../components/figures/NestedMarkets.astro';
 import Term from '../../components/Term.astro';
 
-<Section id="every-gap-needs-a-payer" title="Every Structural Gap Needs a Payer">
+<Section id="structural-payers" title="Structural Gaps Need a Payer">
 
-A <Term t="Structural Misalignment">structural gap</Term> does not close on its own, so someone must fill it for as long as the outcome matters. Payers take a few forms: governments funding through taxes, donors and multilateral funds such as Gavi and the Global Fund, compliance markets created by regulation, such as <Term>cap-and-trade</Term>, and voluntary buyers acting from mission or reputation.
+A structural gap does not close on its own. Someone must pay to correct it for as long as the outcome matters: a government through taxes, subsidies or regulation, a compliance market created by regulation, such as <Term>cap-and-trade</Term>, or voluntary buyers acting from mission or reputation. The framework calls whoever does this the <Term>payer</Term>.
 
-They differ most in durability. Voluntary payers are the most fragile: the traded value of the voluntary carbon market peaked at around $2 billion in 2021 and fell to $535 million in 2024, according to [Ecosystem Marketplace](https://www.forest-trends.org/?p=4656710).
-
-</Section>
-
-<Section id="payer-first" tone="slate" title="Decompose the Gap, Payer First">
-
-<Fig takeaway="Diagnose the payer before the lever." caption="The structural part of a gap needs a payer for as long as the outcome matters; the transitional part can be closed by a lever and left.">
-  <GapDecomposition />
-</Fig>
-
-Most gaps have both parts. Today's price splits into what end users can pay, a structural gap that a payer must fill, and a transitional gap that a lever can close. Diagnosing in that order keeps the two kinds of money apart: permanent money for the structural part, contingent money for the transitional part.
+Payers differ most in durability. Voluntary payers are the most fragile: the traded value of the voluntary carbon market peaked at around $2 billion in 2021 and fell to $535 million in 2024, according to [Ecosystem Marketplace](https://www.forest-trends.org/?p=4656710).
 
 </Section>
 
-<Section id="nested-markets" title="Nested Markets" intro="These are not different disciplines. They are the same structure at different stages.">
+<Section id="buyers-for-others" tone="slate" title="Buyers Who Pay for Others">
 
-<Fig takeaway="What to do first depends on whether a payer exists." caption="Shaded: where classic market shaping operates, inside an existing payer.">
+Many of the markets that matter most for health and development have buyers who purchase on behalf of people who cannot pay: governments, donors and pooled funds such as Gavi and the Global Fund. These <Term t="Buyer">buyers</Term> are not a correction to a market failure. They are part of the market. Their willingness to pay reflects how much they value the outcome, and suppliers respond to their demand as they would to anyone's.
+
+The distinction matters for diagnosis. Whether people who cannot pay should be served is a question of distribution and priorities, settled by those buyers' budgets. The framework asks a narrower question: given the buyers that exist, does the market reach the best outcome they can sustain? When it does not, the obstacle is usually a transitional gap, such as the high-price, low-volume trap in contraceptive implants before 2013 ([see the case](/cases/implants/)), and occasionally an externality that no buyer accounts for.
+
+</Section>
+
+<Section id="missing-buyers" title="Where Buyers Are Missing" intro="What to do first depends on whether anyone is buying at scale.">
+
+<Fig takeaway="What to do first depends on whether a buyer exists." caption="Shaded: where classic market shaping operates, alongside an established buyer.">
   <div class="max-w-lg mx-auto"><NestedMarkets /></div>
 </Fig>
 
-Global health already has its structural payers in Gavi, the Global Fund and ministries of health. Most global health market shaping is therefore transitional work inside a market reshaped long ago: the payer exists, and the job is to lower what it pays per outcome.
+Global health already has established buyers in ministries of health, Gavi, the Global Fund and other donors. Most global health market shaping is therefore transitional work in markets where the buyer exists: the job is to lower what that buyer pays per outcome.
 
-Climate largely lacks such a payer, which is why its toolkit is mostly about reshaping incentives. Buyer coalitions for carbon removal such as Frontier now say explicitly that each purchase needs a line of sight to long-term demand from compliance markets, regulation or government procurement ([see the case](/cases/frontier/)).
+Climate largely lacks a buyer for the outcomes that matter most, and for a structural reason: the benefit of avoiding or removing a ton of carbon goes to everyone, so no one has a private reason to pay for it. Buyer coalitions for carbon removal such as Frontier now say explicitly that each purchase needs a line of sight to long-term demand from compliance markets, regulation or government procurement ([see the case](/cases/frontier/)).
 
-The same logic covers fields where no payer exists yet. Community mental health care in many low- and middle-income countries has effective, low-cost interventions but no structural payer at scale, so classic market shaping has little to sit inside. Building the payer comes first.
+Some markets lack a buyer for a different reason. Community mental health care in many low- and middle-income countries has effective, low-cost interventions but no one buying them at scale. That is not a market failure in the economic sense; it is a gap in financing and priorities. Either way, classic market shaping has little to work with until someone commits to buy.
 
 </Section>
 
 <Section id="value-of-savings" tone="slate" title="What a Dollar Saved Is Worth">
 
-In a market with a structural payer, a lower price matters because of what the payer does with the money it no longer spends. If demand is unmet, savings buy more of the same outcome. If demand is met, savings fund the payer's next-best use.
+Where a government or donor buys on others' behalf, a lower price matters because of what that buyer does with the money it no longer spends. If needs are unmet, savings buy more of the same outcome. If they are met, savings fund the buyer's next-best use.
 
-Either way, the value of a market intervention depends on an estimate of the payer's marginal use of funds. That links market shaping directly to the cost-effectiveness of the payer's other spending, and it is the term most often left implicit.
+Either way, the value of a market intervention depends on an estimate of the buyer's marginal use of funds. That links market shaping directly to the cost-effectiveness of the buyer's other spending, and it is the term most often left implicit.
 
 </Section>
 
-<Section id="payer-durability" title="Payers That Stop Paying">
+<Section id="when-payers-stop" title="When Payment Stops">
 
 The two kinds of gap fail in different ways. Transitional solutions fail economically: the better equilibrium did not exist, or the lever did not hold. Structural solutions fail politically or financially: the payer stops paying.
 
-Recent examples make the second failure concrete. British Columbia, which had priced carbon since 2008, [set its consumer carbon tax to zero](https://news.gov.bc.ca/releases/2025FIN0014-000280) on April 1, 2025 ([see the case](/cases/bc-carbon-tax/)). The 2025 US budget law [ended federal wind and solar tax credits](https://www.pierceatwood.com/alerts/congress-phases-out-energy-tax-credits) for projects that begin construction on or after July 4, 2026 and enter service after 2027. In global health, donor retrenchment raises the same question about payers that have long seemed permanent.
+Recent examples make the second failure concrete. British Columbia, which had priced carbon since 2008, [set its consumer carbon tax to zero](https://news.gov.bc.ca/releases/2025FIN0014-000280) on April 1, 2025 ([see the case](/cases/bc-carbon-tax/)). The 2025 US budget law [ended federal wind and solar tax credits](https://www.pierceatwood.com/alerts/congress-phases-out-energy-tax-credits) for projects that begin construction on or after July 4, 2026 and enter service after 2027.
 
 What helps payers last is a question the framework poses rather than answers ([open questions](/questions/)). Candidates include earmarked revenue, visible rebates to households, pooling across many funders, and legal commitments that raise the cost of reversal.
 
-### Exposure When a Payer Retreats
+### Exposure When Buyers Retreat
 
-In nested markets, the two failures connect. Many transitional gains, such as low prices from scale, rest on volume financed by the structural payer. When payer-financed volume falls, scale economies can reverse and entrants can exit. The framework therefore predicts which past gains are most exposed: those whose low price depends on payer-financed volume rather than on process improvement or durable competition.
+Buyers who pay for others can retreat too, and recent cuts in donor funding for global health make the risk concrete. For market shaping this is a demand risk rather than a structural failure, but it matters for durability, because many past gains rest on volume those buyers financed. When that volume falls, economies of scale reverse and suppliers can exit. The gains most exposed are those that depend on volume, through scale or competition. Process improvements and experience-curve learning largely survive.
 
 </Section>
 
