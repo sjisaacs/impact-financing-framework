@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/Page.astro
 title: Contraceptive Implants, 2013
-description: A volume guarantee inside donor-financed family planning markets cut implant prices from about $18 to $8.50 per unit. A transitional gap in a market where donors and governments were already the buyers, closed through four levers.
-lede: A volume guarantee inside donor-financed family planning markets cut the price of contraceptive implants by more than half. It is the clearest example of a transitional gap in a market where donors and governments were already the buyers, and of a price drop driven by several levers at once.
+description: A volume guarantee inside donor-financed family planning markets cut implant prices from about $18 to $8.50 per unit. A transitional gap in a market where donors and governments were already the buyers, closed through four levers, with a retrospective estimate of what the deal was worth.
+lede: A volume guarantee inside donor-financed family planning markets cut the price of contraceptive implants by more than half. It is the clearest example of a transitional gap in a market where donors and governments were already the buyers, of a price drop driven by several levers at once, and of how much a retrospective estimate depends on the counterfactual and on what buyers did with the savings.
 tag: { label: "Transitional Access Gap", cls: "tag-mode1" }
 ---
 import CaseSummary from '../../components/CaseSummary.astro';
@@ -15,7 +15,7 @@ import Term from '../../components/Term.astro';
   { term: 'Intervention', detail: 'A volume guarantee from a partnership including the Gates Foundation, in exchange for price cuts by Bayer and Merck.' },
   { term: 'Levers', detail: 'Scale, risk transfer, process improvement, and later competition.' },
   { term: 'Durability', detail: 'Prices stayed low after the guarantee period and fell further when a third supplier entered.' },
-  { term: 'Key uncertainty', detail: 'How far and how fast prices would have fallen anyway, given a lower-cost competitor already in development.' },
+  { term: 'Key uncertainty', detail: 'How fast prices would have fallen anyway, and what buyers would have spent on implants without the deal.' },
 ]} />
 
 ## The Trap
@@ -44,13 +44,104 @@ The price drop is usually attributed to "the volume guarantee." Decomposing it b
 
 **Diagnosis.** Donors and governments were already buying implants for women who could not pay full price, so demand existed. What held the market back was the trap: a transitional gap. The guarantee navigated it, and left the buyers to carry on buying at the lower price.
 
-**Durability.** The levers that fired hold under different conditions. Process improvement holds almost regardless of what happens next. Scale holds while volume holds, and the learning it brought largely persists. Competition holds only while the third supplier stays viable at the lower price. Whether risk transfer held depends on whether the guarantee was drawn on, which the public record reviewed here does not settle.
+**Durability.** The levers that fired hold under different conditions. Process improvement holds almost regardless of what happens next. Scale holds while volume holds, and the learning it brought largely persists. Competition holds only while the third supplier stays viable at the lower price. Risk transfer held because demand proved real: both suppliers delivered more than the agreed volumes in the first year, and no public source reports a payout on the guarantees.
 
-**Value per unit.** Because donors and governments were buying, most of the value of the price cut flowed through their budgets. Each dollar saved could buy more implants or fund other family planning, so the value depends on what payers did with the savings.
+**Value per unit.** Because donors and governments were buying, most of the value of the price cut flowed through their budgets. Some of it bought more implants and some was released for other uses, and the two are worth very different amounts. The retrospective below values both.
 
 **The counterfactual.** A lower-cost implant was already moving toward prequalification, so some price decline was likely coming. The honest claim is the acceleration the <Term>volume guarantee</Term> caused, years of lower prices and higher volume earlier than otherwise, plus any permanent difference.
 
 **Exposure.** The low price rests partly on volume financed by donors and governments. If that volume falls, economies of scale are the part most likely to unwind, and competition may weaken if lower volume squeezes a supplier out. The process improvements and the learning should largely hold.
+
+## A Retrospective Estimate
+
+What was the deal worth, in the terms a funder would use to compare it with direct programs? This section works through the [ratio](/cost-effectiveness/) with public data. Where the record is silent, it says so and states a judgment instead. It values the deal as a whole; how much each partner's participation changed is the question of <Term>counterfactual contribution</Term>, which the public record cannot settle. Results are in GiveWell's <Term>units of value</Term> and as multiples of its benchmark, taken as 0.0033 units per dollar, the figure in its recent grant pages (its methods page rounds it to about 0.003).
+
+### The Price Without the Deal
+
+Prices were already falling before 2013. Jadelle cost $24 in 2008 and 2009, $22 in 2010, $19 in 2011 and $18 in 2012, a decline of 7 to 9 percent a year. Implanon fell from $20 in 2010 to $16.50 before its cut. Over the longer run from 2005 to 2011, implant prices fell only about 20 percent, or roughly 4 percent a year.
+
+A cheaper competitor already existed. Sino-implant (II) had sold for $8 since 2008, but it lacked World Health Organization prequalification, which most donor procurement requires. It was prequalified as Levoplant on June 30, 2017, and offered at $6.90 in 2018. In comparable markets, a new supplier has moved prices only modestly: in developing-country markets for children's antiretrovirals between 2004 and 2012, each additional manufacturer was associated with price declines of about 2 percent for originator products and 8 percent for generics.
+
+That evidence supports three counterfactual price paths, each starting from $18 in 2012:
+
+- **Fast.** Prices keep falling 9 percent a year through 2016, then drop to $8.50 in 2017 as the prequalified competitor arrives. The deal's advantage lasts four years.
+- **Central.** Prices fall 8 percent a year through 2017, then drop to $8.50 in 2018, once buyers can choose Levoplant. Five years.
+- **Slow.** Prices fall at the long-run 4 percent a year through 2017, then converge on $8.50 by 2021 as buyers shift to Levoplant gradually, in line with the modest response to entry in comparable markets. Eight years.
+
+Over those windows, the price advantage on the implants actually bought came to about $175 million, $215 million and $400 million. The figure usually reported, more than $500 million in savings, compares implants bought at $8.50 with the old price and has no counterfactual.
+
+### What Buyers Did With the Lower Price
+
+Supplier shipments to the 69 focus countries of FP2020, the global family planning partnership, are the only series that runs from before the deal to 2020.
+
+<div class="table-wrap">
+<table class="data-table">
+  <thead><tr><th>Year</th><th>Implants shipped</th><th>Spending</th></tr></thead>
+  <tbody>
+    <tr><td>2011</td><td>3.1 million</td><td>about $58 million</td></tr>
+    <tr><td>2012</td><td>5.8 million</td><td>about $104 million</td></tr>
+    <tr><td>2013</td><td>6.1 million</td><td>$52 million</td></tr>
+    <tr><td>2014</td><td>6.2 million</td><td>about $53 million</td></tr>
+    <tr><td>2015</td><td>10.2 million</td><td>$87 million</td></tr>
+    <tr><td>2016</td><td>9.2 million</td><td>$78 million</td></tr>
+    <tr><td>2017</td><td>8.3 million</td><td>$70 million</td></tr>
+    <tr><td>2018</td><td>10.6 million</td><td>$90 million</td></tr>
+    <tr><td>2019</td><td>11.2 million</td><td>$94 million</td></tr>
+    <tr><td>2020</td><td>13.7 million</td><td>$113 million</td></tr>
+  </tbody>
+</table>
+</div>
+
+<p class="text-sm text-slate-500">Clinton Health Access Initiative market reports. Spending for 2011, 2012 and 2014 is volume times the average unit price for those years.</p>
+
+Shipments were already rising before the deal, from 3.1 million in 2011 to 5.8 million in 2012 at about $18, and the partners also paid for training to expand services, so some later growth would have come without the lower price.
+
+The record does not settle how the first year's gain was used. In the shipment series, spending halved in 2013 while volume rose 5 percent. Donors' procurement records, compiled by UNFPA, show the opposite: 7.5 million implants bought in 2013 for $74.4 million, against 4 million for $75.8 million in 2012. The series differ in coverage and timing, since shipments lag orders, which may explain part of the gap, and using shipments credits the deal with fewer extra implants in 2013.
+
+By 2015, volumes were well above what the 2012 budget would have bought at the old price, while spending stayed below its 2012 level until 2020. That is consistent with buyers taking the lower price partly as more implants and partly as money for other uses.
+
+What buyers would have spent without the deal cannot be observed, so the estimate brackets it:
+
+- **Spending rises.** Buyers would have raised budgets enough to buy the same implants at the higher price. The whole advantage is money released for other uses.
+- **Spending holds.** Buyers would have kept spending up to the 2012 level of about $104 million a year: enough to buy the implants they actually bought where that sum allowed, and fewer where it did not. Implants beyond what the budget would have bought at the counterfactual price are extra implants the deal caused, and the rest of the advantage is released money. This case credits the deal with the most extra implants.
+- **Midway.** Spending halfway between the two. This is the central case.
+
+### What It Was Worth
+
+**An extra implant.** Standard conversion factors credit an implant with 2.5 couple-years of protection for a three-year product and 3.8 for a five-year one. The product mix is not published, so the estimate uses 3.1. Some extra implant users would otherwise have used another modern method. A 2020 evaluation found implants were the main driver of rising modern contraceptive use in 11 of 12 sub-Saharan African countries with repeated surveys, so the estimate assumes, as a judgment, that 60 percent of extra implant use was contraception that would not otherwise have happened. GiveWell values a year of modern contraception that would not otherwise have happened at about 0.7 units of value, which gives about 1.3 units per extra implant.
+
+Extra implants also had to be inserted, at a cost to health systems and other funders. A costing of a postpartum implant scale-up in Kigali, Rwanda, found $77 per insertion including the device, training and demand creation, and routine services cost less, so the estimate assumes $30 per insertion excluding the device, a judgment, valued at what that money would otherwise have done. That leaves about 1.1 units per extra implant.
+
+**A released dollar.** Money buyers no longer needed for implants went to their next priority, in family planning or elsewhere. The estimate values it at 0.007 units per dollar, about twice the benchmark. That is the figure GiveWell's staff use for Gavi spending a grant displaces; they use 0.015 for the Global Fund. Choosing it is a judgment.
+
+**Probability and contribution.** The deal happened, so in retrospect the probability of success is one. An estimate made in 2012 would have weighted these outcomes by the chance that suppliers delivered and demand materialized. The estimate covers the partners together and assumes, as a judgment, that no comparable deal would have happened without them, for instance through the largest buyers negotiating on their own.
+
+### The Result
+
+The central estimate is about 3.4 million units of value, as much good as about $1 billion spent at the benchmark. The table gives the largest combined cost to the partners at which the deal would still meet GiveWell's funding bar, 6x the benchmark as of May 2026. Rows are the three cases for what buyers would have spent; columns are the three price paths.
+
+<div class="table-wrap">
+<table class="data-table">
+  <thead><tr><th>Buyer spending</th><th>Fast</th><th>Central</th><th>Slow</th></tr></thead>
+  <tbody>
+    <tr><td>Spending rises</td><td>$60 million</td><td>$80 million</td><td>$140 million</td></tr>
+    <tr><td>Midway</td><td>$140 million</td><td><strong>$170 million</strong></td><td>$530 million</td></tr>
+    <tr><td>Spending holds</td><td>$220 million</td><td>$270 million</td><td>$910 million</td></tr>
+  </tbody>
+</table>
+</div>
+
+The public record does not give the partners' combined cost. The guarantees' face value ran to hundreds of millions of dollars, and Sida, Sweden's development agency and one of the guarantors, put the total at $409 million. But both suppliers delivered more than the agreed volumes in 2013, and no public source reports a payout. The costs that were certainly incurred are the <Term>catalyst</Term>'s work, the coordination of procurement, the in-country training the partners funded, and whatever it cost the guarantors to hold the commitments. Unless those exceeded about $60 million, the deal met the bar in every cell of the table, on the judgments above. At a combined cost of $25 million, chosen for illustration, the central estimate is about 40x the benchmark, with a range of about 15x to 220x.
+
+The table also shows where the uncertainty lies. Within each column, what buyers would have spent moves the result by a factor of three to six; among the price paths, only the slow one moves it by as much. An extra implant is worth far more than a released dollar, so for this deal the valuation is most of the analysis.
+
+### What the Estimate Leaves Out
+
+- GiveWell's value of a year of contraception has a 25th to 75th percentile range of about 0.3 to 1.1 units. Across that range, an extra implant is worth about 0.35 to 1.8 units rather than 1.1.
+- It gives no value to anything after the counterfactual date, including what manufacturers learned, or to savings when users switched from costlier methods.
+- It applies no discounting over 2013 to 2020; discounting would lower the slow cases most.
+- It counts no guarantee payout, since none is reported. The partners' costs enter only through the break-even figures.
+- Shipments measure supply rather than use, though the 2020 evaluation found no evidence of overstocking.
 
 ## Sources
 
@@ -58,10 +149,21 @@ The price drop is usually attributed to "the volume guarantee." Decomposing it b
   <li><a href="https://www.clintonhealthaccess.org/wp-content/uploads/2015/08/Case-Study_LARC.pdf">Clinton Health Access Initiative, case study on long-acting reversible contraceptives</a></li>
   <li><a href="https://sif.gatesfoundation.org/news-and-updates/press-release-innovative-partnership-reduces-cost-bayers-long-acting-reversible-contraceptive-implant-50-percent/">Gates Foundation, press release on the Jadelle agreement, 2013</a></li>
   <li><a href="https://informahealthcare.com/doi/full/10.2147/OAJC.S55968">Open Access Journal of Contraception, review noting the 27-million-unit, six-year agreement</a></li>
-  <li><a href="https://www.fhi360.org/wp-content/uploads/2023/12/resource-sino-implant-brief_0.pdf">FHI 360, brief on the Sino-implant (II) initiative and implant prices, 2009 to 2018</a></li>
+  <li><a href="https://www.fhi360.org/wp-content/uploads/2023/12/resource-sino-implant-brief_0.pdf">FHI 360, brief on the Sino-implant (II) initiative and implant prices, 2008 to 2018</a></li>
   <li><a href="https://degrees.fhi360.org/?p=15489">FHI 360, on Levoplant and price competition</a></li>
+  <li><a href="https://www3.weforum.org/docs/GACSD_Knowledge%20Hub_Using_Financial_Guarantees_To_Provide_Women_Access_To_Modern_Contraceptives.pdf">World Economic Forum, using financial guarantees to provide access to modern contraceptives, 2016 (prices 2005 to 2011)</a></li>
+  <li><a href="https://cdn.sida.se/publications/files/sida61890en-increase-acess-to-contraceptives.pdf">Sida, guarantee example on implants, 2015 (volumes delivered in 2013; guarantee value)</a></li>
+  <li><a href="https://clintonhealthaccess.org/wp-content/uploads/2016/08/2016_CHAI_Family_Planning_Market_Report_2019_update.pdf">Clinton Health Access Initiative, Family Planning Market Report, August 2016 (volumes and prices, 2011 to 2015)</a></li>
+  <li><a href="https://clintonhealthaccess.org/wp-content/uploads/2021/12/2021-CHAI-RHSC-Family-Planning-Market-Report.pdf">Clinton Health Access Initiative and Reproductive Health Supplies Coalition, Family Planning Market Report, 2021 (volumes, spending and conversion factors, 2016 to 2020; Levoplant prequalification)</a></li>
+  <li><a href="https://aa.unfpa.org/sites/default/files/pub-pdf/UNFPA%20donor%20support%20report%202013%20web_4_5.pdf">UNFPA, External Procurement Support Report 2013</a></li>
+  <li><a href="https://wordpress.fp2030.org/wp-content/uploads/2023/08/GHSP-D-19-00383.full_.pdf">Braun and Grever, summative evaluation of the Implants Access Program, Global Health: Science and Practice, 2020</a></li>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/26979974/">Lee and others, prices of pediatric antiretrovirals in developing countries, 2004 to 2012, BMC Pediatrics, 2016</a></li>
+  <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7163922/">Wall and others, cost per insertion of postpartum implants in Kigali, Rwanda, Gates Open Research, 2020</a></li>
+  <li><a href="https://www.givewell.org/node/4239">GiveWell, valuing contraception in its cost-effectiveness analysis, April 2025</a></li>
+  <li><a href="https://blog.givewell.org/2024/06/21/the-fungibility-question/">GiveWell, the fungibility question, 2024, with staff replies on the value of displaced Gavi and Global Fund spending</a></li>
+  <li><a href="https://www.givewell.org/how-we-work/our-criteria/cost-effectiveness/cost-effectiveness-models">GiveWell, cost-effectiveness models: units of value, benchmark and funding bar</a></li>
 </ul>
 
-The packaging harmonization detail is drawn from the author's practitioner knowledge rather than a published source.
+The packaging harmonization detail is drawn from the author's practitioner knowledge rather than a published source. The judgments in the retrospective are labeled where they are made.
 
 [Back to case studies](/cases/)

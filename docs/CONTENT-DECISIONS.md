@@ -2,10 +2,10 @@
 
 ## Objective
 The framework has one objective: the most durable impact per dollar of scarce concessional capital.
-Ratio: size of the change × duration beyond the counterfactual × value per unit × probability of success × share
-attributable, over expected cost to the funder. Precision acts on the denominator, durability on the numerator.
-This is deliberately compatible with cost-effectiveness analysis used by evaluators such as GiveWell (units such as
-cost per death averted or multiples of cash).
+Ratio: size of the change × duration beyond the counterfactual × probability of success × value per unit ×
+counterfactual contribution, over expected cost to the funder. Precision acts on the denominator, durability on the
+numerator. This is deliberately compatible with cost-effectiveness analysis used by evaluators such as GiveWell (units
+of value, stated as multiples of GiveWell's benchmark, which GiveWell called multiples of cash until November 2025).
 
 ## The binary, sharpened
 - Kept: Transitional Access Gap vs Structural Misalignment.
@@ -89,3 +89,20 @@ definitions, instrument strengths and limitations, visual design, illustrations.
   coordination; fixed by changing incentives and information), and behavioral departures from rational choice
   (bounded rationality, loss aversion and status quo bias, defaults; addressed through framing, sequencing and
   defaults). Never present an incentive problem as a behavioral bias.
+
+## Added after the November 2026 critical review
+- **Counterfactual contribution replaces "share attributable".** The reviewer's point: the worked example assigned 50%
+  because two other partners were needed, which is credit-sharing, not counterfactual impact. The term is now worked
+  out by scenario (deal fails without this funder vs another funder steps in), net of what co-funders' money would have
+  done elsewhere, matching GiveWell's leverage and funging adjustments. Credit shares are kept for reporting only.
+- **Value per unit split in two.** The worked example's 0.8 blended the share of savings redeployed with the value of
+  what it buys, and valued the rest at zero. It now values the redeployed share and the returned share separately and
+  carries the example through to multiples of the benchmark (naive 120x, honest 17x), with sensitivities to the
+  counterfactual, the buyer's marginal dollar and the contribution.
+- **Implants retrospective.** Chosen over TLD for its cleaner record: a single instrument, a dated competitor, published
+  volumes and spending. The counterfactual price paths are drawn from the product's own pre-deal trend, the competitor's
+  prequalification date and comparable-market evidence on entry. What buyers would have spent is bracketed, not
+  assumed. Because the partners' costs are not public, the result is stated as the break-even cost at GiveWell's 6x bar,
+  plus one illustrative cost. All judgments are labeled on the page and the model is re-run by the check script.
+- **Calculator and diagnostic** now take value in benchmark dollars and a counterfactual contribution; the diagnostic
+  flags round contribution shares that may be credit splits.

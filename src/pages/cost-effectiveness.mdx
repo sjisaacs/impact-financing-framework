@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/Page.astro
 title: Cost-Effectiveness
-description: The framework's single objective, the most durable impact per concessional dollar, written as a ratio, with a worked example and a calculator. Size of the change, duration beyond the counterfactual, value per unit, probability and attribution, over expected cost.
+description: The framework's single objective, the most durable impact per concessional dollar, written as a ratio, with a worked example, a calculator and a retrospective on real data. Size of the change, duration beyond the counterfactual, probability, value per unit and counterfactual contribution, over expected cost.
 lede: The framework has one objective, the most durable impact per dollar of scarce concessional capital. Every principle in it is a term in that ratio.
 bands: true
 toc:
@@ -9,6 +9,7 @@ toc:
   - { id: why-durability-multiplies-impact, label: Why Durability Matters }
   - { id: the-terms, label: The Terms }
   - { id: worked-example, label: Worked Example }
+  - { id: retrospective, label: Retrospective }
   - { id: precision-and-durability, label: Precision and Durability }
   - { id: what-misdiagnosis-costs, label: Misdiagnosis }
 ---
@@ -23,9 +24,9 @@ import Term from '../components/Term.astro';
 
 <Ratio />
 
-Each term has a home in the framework. The size of the change comes from the [levers](/framework/mechanisms/) an intervention fires. The duration comes from the [diagnosis](/framework/): whether the gap is transitional or structural, and whether the lever or payer holds. The value per unit depends on [who buys](/framework/payers/) and what they do with what they save. Probability, attribution and expected cost are where most claims about market interventions are weakest.
+Each term has a home in the framework. The size of the change comes from the [levers](/framework/mechanisms/) an intervention fires. The duration comes from the [diagnosis](/framework/): whether the gap is transitional or structural, and whether the lever or payer holds. The value per unit depends on [who buys](/framework/payers/) and what they do with what they save. Probability, contribution and expected cost are where most claims about market interventions are weakest.
 
-Express the result in the same units used for direct programs, such as cost per death averted or multiples of the value of cash transfers. Market interventions should compete with direct delivery on equal terms.
+Express the result in the same units used for direct programs, so that market interventions compete with direct delivery on equal terms. GiveWell, an evaluator that directs donations to the charities it finds most cost-effective, measures good done in <Term>units of value</Term>, where doubling one person's consumption for a year counts as one. It compares programs as multiples of a benchmark worth about 0.003 units per dollar, which it described as multiples of cash until November 2025. The worked example and the retrospective below use those multiples.
 
 </Section>
 
@@ -46,29 +47,35 @@ In a structural gap, impact lasts only as long as the payer keeps paying. Setup 
 
 ### Size of the Change
 
-Measure the price that matters: what the buyer spends per unit of the outcome it values, such as a patient-year of viral suppression, a delivered test result or a ton of carbon removed. Pricing per outcome lets a product switch, a bundled service contract and a unit-price cut count in the same currency. [Mechanisms](/framework/mechanisms/) shows how each lever changes it.
+Measure the price that matters: what the <Term t="Buyer">buyer</Term> spends per unit of the outcome it values, such as a patient-year of viral suppression, a delivered test result or a ton of carbon removed. Pricing per outcome lets a product switch, a bundled service contract and a unit-price cut count in the same currency. [Mechanisms](/framework/mechanisms/) shows how each lever changes it.
 
 ### Duration Beyond the Counterfactual
 
-Usually the largest term and the least modeled. Estimate when the outcome would have arrived without the intervention: through generic entry after patent expiry, a competitor's product, falling costs elsewhere, or another funder acting. Model it as explicit scenarios rather than a single guess, then ask whether the lever fired will hold after exit.
+Usually the largest term and the least modeled. Estimate when the outcome would have arrived without the intervention: through generic entry after patent expiry, a competitor's product, falling costs elsewhere, or another funder acting. Model it as explicit scenarios rather than a single guess, and draw them from evidence: the product's own price trend before the intervention, the dates competitors were due to arrive, and how prices moved in comparable markets when they did. Then ask whether the lever fired will hold after exit.
 
 <div class="callout callout-amber"><span class="label">Common error</span>Claiming credit for all the volume that follows a price drop. Credit runs only until the counterfactual would have caught up, plus any permanent difference.</div>
-
-### Value per Unit
-
-Where a government or donor buys on others' behalf, most of the value of a lower price flows through that buyer's budget. A dollar saved is worth whatever the buyer does with its marginal dollar: more of the same outcome if demand is unmet, the next-best program if not. Where price itself was the barrier to access, the value is the additional people reached.
-
-<div class="callout callout-amber"><span class="label">Common error</span>Assuming savings become health automatically. They do only if the buyer redeploys them.</div>
 
 ### Probability of Success
 
 Deals fail. Suppliers miss delivery, regulators delay registration, demand forecasts prove optimistic, and guarantees get called. Weight the outcome by an explicit probability, and treat a called guarantee as evidence about the diagnosis, not just as a cost.
 
-### Share Attributable
+### Value per Unit
 
-Most market interventions involve several funders, a catalyst and the <Term t="Buyer">buyer</Term>. Count only the share of the change this intervention caused: what would have happened had this funder stayed out, and what co-funders would otherwise have done with their money.
+A lower price frees buyer dollars, and their value depends on two things that are easy to blend into one number and better kept apart: where the freed money goes, and what each use is worth. Where a government or donor buys on others' behalf, part of the money usually buys more of the same product and the rest returns to the buyer's wider budget. A dollar that buys more of the product is worth what that product achieves at the margin. A dollar returned to the budget is worth whatever the buyer funds next, which is rarely nothing ([what a dollar saved is worth](/framework/payers/#value-of-savings)). Where price itself was the barrier to access, the value is the additional people reached.
 
-<div class="callout callout-amber"><span class="label">Common error</span>Double counting. When every partner in a deal claims the full price drop, the field's combined claims exceed the impact that actually occurred.</div>
+For most market interventions, this conversion is the bulk of the analysis. A ratio of buyer dollars per funder dollar can describe an exceptional grant or a weak one, depending on what a marginal dollar of the Global Fund or a ministry of health buys. GiveWell's own working figures show the spread: [its staff have put](https://blog.givewell.org/2024/06/21/the-fungibility-question/) the Global Fund spending its grants displace at about 0.015 units of value per dollar, roughly four and a half times its benchmark, and displaced Gavi spending at about 0.007, roughly twice.
+
+<div class="callout callout-amber"><span class="label">Common error</span>Stopping at dollars saved, or counting only the share redeployed. A saved dollar is worth what its next use buys, and the part not spent on the product is worth something too.</div>
+
+### Counterfactual Contribution
+
+Most market interventions involve several funders, a catalyst and the buyer. The question for a funding decision is what this funder's participation changes: the outcome with it, minus the outcome without it.
+
+Work it out by scenario. If the deal would have collapsed without this funder, its contribution is the whole change, less the value of what co-funders' money would have done had they spent it elsewhere. If another funder would have stepped in, the deal happens either way, and the contribution shrinks to the value of the money that funder keeps for other uses. Weight the scenarios by how likely each is. The answer can sit far above or far below an even split. GiveWell builds the same logic into its estimates as explicit <Term>leverage and funging</Term> adjustments.
+
+Dividing credit among partners, by share of cost or by agreement, serves a different purpose. It stops the field from double counting in its reports, because counterfactual contributions need not add up to the whole: two partners who were each indispensable each caused nearly all of the change. Credit shares are the right tool for reporting and the wrong input for deciding whether to fund.
+
+<div class="callout callout-amber"><span class="label">Common error</span>Using a credit share as the contribution term. Dividing the result among the partners looks conservative but answers a different question, and it can understate or overstate what one funder's money changed.</div>
 
 ### Expected Cost
 
@@ -78,7 +85,9 @@ Count what the intervention is expected to cost the funder, not what it commits.
 
 <Section id="worked-example" title="A Worked Example" intro="The figures below are hypothetical. They describe no real deal; they show how the terms combine, and how far the common errors can inflate a claim.">
 
-A funder offers two generic manufacturers a three-year volume guarantee with a face value of $20 million, in exchange for a ceiling price on a treatment that national programs, financed partly by donors, buy for one million patients a year. The ceiling lowers the price by $30 per patient-year. Without the deal, generic competition would have brought the price down by the same amount three years later.
+A funder offers two generic manufacturers a three-year volume guarantee with a face value of $20 million, in exchange for a ceiling price on a treatment that national programs, financed partly by donors, buy for one million patients a year. The ceiling lowers the price by $30 per patient-year. Without the deal, generic competition would have brought the price down by the same amount three years later. A second foundation spends $2 million helping countries switch to the new supply, and the funder judges there is a 30 percent chance that another guarantor would have stepped in had it stayed out.
+
+Value is stated in benchmark dollars: the amount that, spent at the benchmark's cost-effectiveness, would do the same good. The ratio is then a multiple of the benchmark.
 
 <div class="table-wrap">
 <table class="ce-table">
@@ -86,27 +95,38 @@ A funder offers two generic manufacturers a three-year volume guarantee with a f
   <tbody>
     <tr><td>Size of the change</td><td>$30 million a year</td><td>$30 million a year</td><td>$30 per patient-year across one million patient-years. Both agree.</td></tr>
     <tr><td>Duration beyond the counterfactual</td><td>10 years</td><td>3 years</td><td>Credit runs only until competition would have delivered the same price.</td></tr>
-    <tr><td>Value per unit</td><td>1.0</td><td>0.8</td><td>The buyers redeploy about 80 cents of each dollar saved into more treatment.</td></tr>
     <tr><td>Probability of success</td><td>100%</td><td>75%</td><td>Registration delays or a supplier exit could stop the lower price from taking hold.</td></tr>
-    <tr><td>Share attributable</td><td>100%</td><td>50%</td><td>Two other partners were needed to make the deal happen.</td></tr>
-    <tr><td><strong>Durable impact</strong></td><td><strong>$300 million</strong></td><td><strong>$27 million</strong></td><td>The product of the five terms above.</td></tr>
+    <tr><td>Buyer dollars freed</td><td>$300 million</td><td>$67.5 million</td><td>The product of the three terms above.</td></tr>
+    <tr><td>Value per buyer dollar</td><td>2x the benchmark</td><td>1.8x the benchmark</td><td>The naive claim has every dollar buying more treatment, worth 2x. The buyers spend 80 cents of each dollar on more treatment; the other 20 cents return to budgets where they do about as well as the benchmark, 1x.</td></tr>
+    <tr><td><strong>Durable impact</strong></td><td><strong>$600 million</strong></td><td><strong>$121.5 million</strong></td><td>In benchmark dollars.</td></tr>
+    <tr><td>Counterfactual contribution</td><td>100%</td><td>$85 million (70%)</td><td>A 70% chance the deal collapses without this funder, in which case it caused $121.5 million less the $4 million the co-funder's $2 million would have done elsewhere (at 2x). A 30% chance another guarantor steps in, in which case it caused $10 million, the value of the $5 million that guarantor keeps for other uses (at 2x).</td></tr>
     <tr><td>Expected cost to the funder</td><td>$5 million</td><td>$5 million</td><td>A 15% chance the guarantee is called, with half its face value drawn if so ($1.5 million), the cost of capital held against the commitment ($1 million) and the catalyst's work ($2.5 million).</td></tr>
-    <tr><td><strong>Ratio</strong></td><td><strong>60 to 1</strong></td><td><strong>5.4 to 1</strong></td><td>Buyer dollars redeployed per funder dollar.</td></tr>
+    <tr><td><strong>Ratio</strong></td><td><strong>120x the benchmark</strong></td><td><strong>17x the benchmark</strong></td><td>Benchmark dollars per funder dollar.</td></tr>
   </tbody>
 </table>
 </div>
 
-Both columns describe the same deal at the same cost. The honest estimate is about a ninth of the naive one, and the whole difference sits in the numerator. The counterfactual alone accounts for more than a factor of three. The expected cost, meanwhile, is a quarter of the $20 million headline commitment, which is why a guarantee that is rarely called can still be the precise choice.
+Both columns describe the same deal at the same cost. The honest estimate is about a seventh of the naive one, and the whole difference sits in the numerator. The duration term alone accounts for more than a factor of three. The expected cost, meanwhile, is a quarter of the $20 million headline commitment, which is why a guarantee that is rarely called can still be the precise choice.
 
-The estimate is most sensitive to the term that is hardest to observe. If generic competition would have arrived after one year rather than three, the honest ratio falls to 1.8 to 1; after seven years, it rises to 12.6 to 1. Presenting the range, rather than a single figure, is the honest way to report it.
+The estimate moves most with the terms that are hardest to observe. If generic competition would have arrived after one year rather than three, the ratio falls to about 6x the benchmark; after seven years, it rises to about 40x. If the buyers' marginal treatment dollar were worth half the benchmark rather than twice it, the ratio would also fall to about 6x, and at four times the benchmark it would rise to about 32x. If another guarantor would certainly have stepped in, the contribution falls to $10 million and the ratio to 2x. Presenting the range, rather than a single figure, is the honest way to report it.
 
-The result is in buyer dollars redeployed per funder dollar. To compare it with direct programs, multiply by the value of the buyers' marginal spending, expressed in the same units used for direct programs, such as deaths averted per dollar ([what a dollar saved is worth](/framework/payers/#value-of-savings)). In a structural gap, the duration term becomes the payer's expected lifetime and the expected cost includes every year of payment, so the impact no longer depends on when the market would have arrived, but it does depend on the payer continuing.
+In a structural gap, the duration term becomes the payer's expected lifetime and the expected cost includes every year of payment, so the impact no longer depends on when the market would have arrived, but it does depend on the payer continuing.
 
 <RatioCalculator />
 
 </Section>
 
-<Section id="precision-and-durability" tone="slate" title="The Principle of Precision" intro="Catalytic capital is scarce. Precision acts on the denominator of the ratio and durability on the numerator; together they are the framework's practical guidance." wide>
+<Section id="retrospective" tone="slate" title="A Retrospective: Contraceptive Implants" intro="The same terms, applied with public data to a deal that has run its course: the 2013 volume guarantees that halved the price of contraceptive implants.">
+
+The usual claim for the implant guarantees is that they saved more than $500 million against the old price. A counterfactual reading starts from the price that would have prevailed without the deal. Prices were already falling before 2013, and a cheaper competitor was prequalified by the World Health Organization in 2017. Depending on how fast prices would have fallen, the deal's advantage lasted four to eight years and was worth $175 million to $400 million at the prices buyers would otherwise have paid.
+
+What that advantage was worth depends on what buyers did with it. The data are consistent with both channels: by 2015 volumes were well above what the 2012 budget would have bought at the old price, while spending stayed below its 2012 level until 2020. Valuing extra implants with GiveWell's estimate of a year of contraception, and released money at roughly twice the benchmark, the central estimate is about 3.4 million units of value. That is worth as much as about $1 billion spent at the benchmark.
+
+No public source reports a payout on the guarantees. On the case study's judgments, unless the partners' combined cost exceeded about $60 million, the deal met GiveWell's current funding bar of 6x the benchmark under every counterfactual considered, and at a cost of $25 million the central estimate is about 40x. The [case study](/cases/implants/#a-retrospective-estimate) sets out the data, the judgments and the full range.
+
+</Section>
+
+<Section id="precision-and-durability" title="The Principle of Precision" intro="Catalytic capital is scarce. Precision acts on the denominator of the ratio and durability on the numerator; together they are the framework's practical guidance." wide>
 
 <div class="not-prose bg-slate-900 text-white rounded-xl p-6 md:p-8 mb-10">
   <div class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Before Everything: The Starting Question</div>
@@ -133,7 +153,7 @@ Precision does not mean minimal spending. A cheap intervention that fires no dur
 
 </Section>
 
-<Section id="what-misdiagnosis-costs" title="What Misdiagnosis Costs">
+<Section id="what-misdiagnosis-costs" tone="slate" title="What Misdiagnosis Costs">
 
 A **bridge to nowhere**, a structural gap treated as transitional, spends temporary money and then watches the impact collapse at exit, so the numerator stays small. A **windfall**, a transitional gap treated as structural, keeps paying after the market would have held on its own, so the denominator grows with no impact added. Both errors are visible in the ratio before money moves, which is the case for diagnosing first. The [diagnostic](/diagnostic/) walks through it.
 

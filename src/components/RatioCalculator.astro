@@ -1,12 +1,16 @@
 ---
 // Interactive version of the ratio, prefilled with the worked example. Hidden until its script runs.
+// Value is in benchmark dollars (the amount that, spent at the benchmark's cost-effectiveness, does the same good),
+// so the ratio is a multiple of the benchmark.
 const fields = [
-  { id: 'rc-size', label: 'Size of the change, per year', hint: 'In your units of impact before valuation, such as dollars saved by the buyer', value: 30000000, step: 'any' },
-  { id: 'rc-years', label: 'Duration beyond the counterfactual, in years', hint: 'How much earlier than otherwise, plus any permanent difference', value: 3, step: 'any' },
-  { id: 'rc-value', label: 'Value per unit', hint: 'For example, the share of each dollar saved that the buyer redeploys', value: 0.8, step: 'any' },
-  { id: 'rc-prob', label: 'Probability of success, %', hint: 'Chance the change takes hold at all', value: 75, step: 'any' },
-  { id: 'rc-attr', label: 'Share attributable, %', hint: 'The part of the change this funder caused', value: 50, step: 'any' },
-  { id: 'rc-cost', label: 'Expected cost to the funder, $', hint: 'Expected payouts, capital held and catalyst costs, not the headline commitment', value: 5000000, step: 'any' },
+  { id: 'rc-size', label: 'Buyer dollars freed per year', hint: 'The size of the change, such as the price cut times the volume bought', value: 30000000 },
+  { id: 'rc-years', label: 'Years beyond the counterfactual', hint: 'How much earlier than otherwise, plus any permanent difference', value: 3 },
+  { id: 'rc-prob', label: 'Probability of success, %', hint: 'Chance the change takes hold at all', value: 75 },
+  { id: 'rc-value', label: 'Value per buyer dollar, multiple of the benchmark', hint: 'Share spent on more of the product times its value, plus the rest times the value of its next use', value: 1.8 },
+  { id: 'rc-collapse', label: 'Chance the deal fails without this funder, %', hint: 'The rest is the chance another funder would have stepped in', value: 70 },
+  { id: 'rc-co', label: 'What co-funders’ money in the deal would do elsewhere, benchmark $', hint: 'Subtracted if the deal would have failed without this funder', value: 4000000 },
+  { id: 'rc-rep', label: 'What a replacement funder’s money does elsewhere, benchmark $', hint: 'This funder’s contribution if another would have stepped in', value: 10000000 },
+  { id: 'rc-cost', label: 'Expected cost to the funder, $', hint: 'Expected payouts, capital held and catalyst costs, not the headline commitment', value: 5000000 },
 ];
 ---
 <div id="rc" class="not-prose bg-white border border-slate-200 rounded-xl p-5 sm:p-8" hidden>
@@ -18,49 +22,46 @@ const fields = [
       <div class="flex flex-col">
         <label for={f.id} class="block text-sm font-semibold text-slate-900">{f.label}</label>
         <span id={`${f.id}-hint`} class="block text-xs text-slate-500 mb-1">{f.hint}</span>
-        <input id={f.id} type="number" inputmode="decimal" min="0" step={f.step} value={f.value} aria-describedby={`${f.id}-hint`}
+        <input id={f.id} type="number" inputmode="decimal" min="0" step="any" value={f.value} aria-describedby={`${f.id}-hint`}
           class="mt-auto w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-900 bg-white focus:outline focus:outline-2 focus:outline-blue-900" />
       </div>
     ))}
-    <div class="sm:col-span-2">
-      <label for="rc-unit" class="block text-sm font-semibold text-slate-900">Unit of impact</label>
-      <input id="rc-unit" type="text" value="buyer dollars redeployed" class="w-full border border-slate-300 rounded-lg px-3 py-2 text-slate-900 bg-white focus:outline focus:outline-2 focus:outline-blue-900" />
-    </div>
   </form>
   <div class="mt-6 bg-slate-50 border border-slate-200 rounded-lg p-5" aria-live="polite">
     <div class="text-sm text-slate-600">Durable impact <span id="rc-num" class="font-semibold text-slate-900"></span></div>
+    <div class="text-sm text-slate-600 mt-1">This funder's contribution <span id="rc-contrib" class="font-semibold text-slate-900"></span></div>
     <div class="mt-2 flex flex-wrap items-baseline gap-x-3">
       <span id="rc-ratio" class="font-serif text-4xl text-slate-900"></span>
       <span id="rc-ratio-unit" class="text-sm text-slate-600"></span>
     </div>
-    <div id="rc-inverse" class="text-sm text-slate-600 mt-1"></div>
   </div>
-  <p class="text-xs text-slate-500 mt-4">Over long durations, discount later years before multiplying. The ratio is only as good as its weakest term, which is usually the counterfactual.</p>
+  <p class="text-xs text-slate-500 mt-4">Over long durations, discount later years before multiplying. The ratio is only as good as its weakest term, which is usually the counterfactual or the value per buyer dollar.</p>
 </div>
 <script is:inline>
   (function () {
     var box = document.getElementById('rc'); if (!box) return; box.hidden = false;
-    var ids = ['rc-size', 'rc-years', 'rc-value', 'rc-prob', 'rc-attr', 'rc-cost'];
-    var el = {}; ids.concat(['rc-unit', 'rc-num', 'rc-ratio', 'rc-ratio-unit', 'rc-inverse']).forEach(function (i) { el[i] = document.getElementById(i); });
+    var ids = ['rc-size', 'rc-years', 'rc-prob', 'rc-value', 'rc-collapse', 'rc-co', 'rc-rep', 'rc-cost'];
+    var el = {}; ids.concat(['rc-num', 'rc-contrib', 'rc-ratio', 'rc-ratio-unit']).forEach(function (i) { el[i] = document.getElementById(i); });
     function n(i) { var v = parseFloat(el[i].value); return isFinite(v) && v >= 0 ? v : 0; }
     function fmt(x) {
-      var a = Math.abs(x);
-      if (a >= 1e9) return String(+(x / 1e9).toFixed(a >= 1e10 ? 0 : 1)) + ' billion';
-      if (a >= 1e6) return String(+(x / 1e6).toFixed(a >= 1e7 ? 0 : 1)) + ' million';
-      if (a >= 100) return Math.round(x).toLocaleString('en-US');
-      if (a >= 10) return String(+x.toFixed(1));
-      return String(+x.toPrecision(2));
+      var a = Math.abs(x), s = x < 0 ? '-' : '';
+      if (a >= 1e9) return s + String(+(a / 1e9).toFixed(a >= 1e10 ? 0 : 1)) + ' billion';
+      if (a >= 1e6) return s + String(+(a / 1e6).toFixed(1)) + ' million';
+      if (a >= 100) return s + Math.round(a).toLocaleString('en-US');
+      if (a >= 10) return s + String(+a.toFixed(1));
+      return s + String(+a.toPrecision(2));
     }
     function update() {
-      var unit = el['rc-unit'].value.trim() || 'units of impact';
-      var num = n('rc-size') * n('rc-years') * n('rc-value') * (n('rc-prob') / 100) * (n('rc-attr') / 100);
+      var impact = n('rc-size') * n('rc-years') * (n('rc-prob') / 100) * n('rc-value');
+      var q = Math.min(n('rc-collapse'), 100) / 100;
+      var contrib = q * (impact - n('rc-co')) + (1 - q) * n('rc-rep');
       var cost = n('rc-cost');
-      el['rc-num'].textContent = fmt(num) + ' ' + unit;
-      if (!cost) { el['rc-ratio'].textContent = '–'; el['rc-ratio-unit'].textContent = 'enter an expected cost above zero'; el['rc-inverse'].textContent = ''; return; }
-      var r = num / cost;
-      el['rc-ratio'].textContent = fmt(r);
-      el['rc-ratio-unit'].textContent = unit + ' per funder dollar';
-      el['rc-inverse'].textContent = num > 0 ? 'Equivalently, an expected cost of $' + fmt(cost / num) + ' per unit of impact.' : '';
+      el['rc-num'].textContent = '$' + fmt(impact) + ' in benchmark dollars';
+      el['rc-contrib'].textContent = '$' + fmt(contrib) + (impact > 0 ? ' (' + Math.round(100 * contrib / impact) + '% of the impact)' : '');
+      if (!cost) { el['rc-ratio'].textContent = '–'; el['rc-ratio-unit'].textContent = 'enter an expected cost above zero'; return; }
+      var r = contrib / cost;
+      el['rc-ratio'].textContent = (Math.abs(r) >= 10 ? String(Math.round(r)) : fmt(r)) + 'x';
+      el['rc-ratio-unit'].textContent = 'the benchmark (benchmark dollars per funder dollar)';
     }
     box.addEventListener('input', update); update();
   })();
