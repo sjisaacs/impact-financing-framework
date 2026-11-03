@@ -9,7 +9,7 @@
   },
   {
     "term": "Attribution",
-    "def": "The share of an observed change that a particular intervention or funder caused, after accounting for co-funders and what they would otherwise have done with their money."
+    "def": "Dividing credit for an observed change among the partners who contributed to it, for reporting. It stops the field from double counting, but it is not the input to a funding decision; that is counterfactual contribution."
   },
   {
     "term": "Big Push",
@@ -258,5 +258,17 @@
   {
     "term": "Windfall",
     "def": "The error of treating a transitional gap as structural: locking in permanent support for an outcome the market would have sustained on its own."
+  },
+  {
+    "term": "Leverage and Funging",
+    "def": "Adjustments for how a funder's money changes what others spend. Leverage: the funder draws other money into a program, money that then cannot do good elsewhere. Funging: the funder pays for something others would have paid for anyway, so its real effect is to free their money for other uses. GiveWell applies both explicitly in its cost-effectiveness estimates."
+  },
+  {
+    "term": "Units of Value",
+    "def": "GiveWell's common measure of good done, in which doubling one person's consumption for a year counts as one unit. GiveWell compares programs by units of value per dollar, stated as multiples of a benchmark of about 0.003 units per dollar, which it described as multiples of cash until November 2025."
+  },
+  {
+    "term": "Counterfactual Contribution",
+    "def": "What a particular funder's participation changed: the outcome with it minus the outcome without it. If the deal would have failed without the funder, that is the whole change less what co-funders' money would have done elsewhere; if another funder would have stepped in, it is little more than the value of that funder's money kept for other uses. Contributions need not add up to the whole."
   }
 ]

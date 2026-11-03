@@ -13,7 +13,8 @@ Owner: Steve Isaacs (personal project). Read docs/HANDOVER.md first for status a
 - `npm install`, `npm run dev`, `npm run build` (outputs `dist/`), `npm run preview`.
 - `node scripts/check-content.mjs` after a build: titles, descriptions, canonical, JSON-LD, one h1 and no skipped heading
   levels, internal links and #anchors, no external scripts, image weight and dimensions, unquoted commas in front-matter
-  labels, and the worked example's arithmetic.
+  labels, the worked example's arithmetic, and the implants retrospective (it re-runs the model and checks every figure
+  shown). Change an input on the page and the check script together.
 - `node scripts/render-figures.mjs http://localhost:4321 /tmp/figs 375` screenshots every SVG figure at a viewport width
   (run `npm run preview` first; needs Playwright installed globally, not as a site dependency). Check 375 and 1280.
 - Deploys on Netlify from `main` via `netlify.toml` (build `npm run build`, publish `dist`, Node 22).
@@ -38,8 +39,16 @@ Owner: Steve Isaacs (personal project). Read docs/HANDOVER.md first for status a
   slate #94a3b8 dashed counterfactual, light blue fill = capital (water).
 - Terminology: Transitional Access Gap, Structural Misalignment, navigate/terraform, walk-away test, wedge,
   six levers (lever 2 is "scale and learning"), payer, buyer, catalyst, Principle of Precision, bridge to nowhere,
-  windfall, financial transfer. Do not reintroduce "Mode 1/Mode 2", "Blocked Flow", "Wrong Destination", or
-  "deadweight loss" for windfall.
+  windfall, financial transfer, counterfactual contribution, units of value. Do not reintroduce "Mode 1/Mode 2",
+  "Blocked Flow", "Wrong Destination", "deadweight loss" for windfall, or "share attributable".
+- Ratio order: size x duration x probability x value per unit x counterfactual contribution, over expected cost.
+- Counterfactual contribution is what this funder's participation changed, worked out by scenario (deal fails without it:
+  whole change less what co-funders' money would have done elsewhere; another funder steps in: the value of that
+  funder's freed money), i.e. explicit leverage and funging. Dividing credit among partners is for reporting only and is
+  never the input to a funding decision.
+- Value per unit keeps two things apart: where freed buyer money goes (more of the product vs back to the budget) and
+  what each use is worth. Money not redeployed is worth its next use, never zero. Express results in units of value and
+  multiples of GiveWell's benchmark; GiveWell called these "multiples of cash" until November 2025, so say "benchmark".
 - Payer vs buyer: a payer corrects a structural gap (externality or public good) for as long as it matters. Donors,
   governments and pooled funds that buy on others' behalf are buyers, part of the market, not a market failure.
   Inability to pay is a distribution question, never a third kind of structural gap.

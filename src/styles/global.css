@@ -66,6 +66,9 @@ blockquote { border-left: 4px solid #1e3a8a; padding-left: 1.5rem; margin: 1.5re
 .table-wrap { overflow-x: auto; }
 .ce-table td:nth-child(2), .ce-table td:nth-child(3) { white-space: nowrap; }
 .ce-table { min-width: 36rem; }
+/* Short numeric tables (implants retrospective): fit a phone without sideways scrolling. */
+.data-table td { white-space: nowrap; }
+@media (max-width: 639px) { .prose-iff .data-table th, .prose-iff .data-table td { padding: 0.6rem 0.45rem; font-size: 0.8rem; } .prose-iff .data-table td:first-child { white-space: normal; } }
 .callout { background: #eff6ff; border-left: 4px solid #1e3a8a; border-radius: 0 8px 8px 0; padding: 1rem 1.25rem; font-size: 0.97rem; color: #334155; }
 .callout .label { display: block; font-size: 0.75rem; font-weight: 700; color: #1e3a8a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem; }
 .callout-amber { background: #fffbeb; border-left-color: #d97706; }
