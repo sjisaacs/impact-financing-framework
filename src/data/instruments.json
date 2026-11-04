@@ -105,7 +105,7 @@
     "money": "Time-limited grant",
     "levers": "Process improvement",
     "use": "Expert work with suppliers on production processes, sourcing and cost structure, usually under confidentiality.",
-    "holds": "Suppliers keep what they learn, which makes this the most durable lever.",
+    "holds": "Almost always, because suppliers keep what they learn. This makes it the most durable lever.",
     "example": "The 2003 generic antiretroviral agreements, which cut a common triple-therapy pill from about $300 to under $140 per patient per year.",
     "exampleLink": "/framework/mechanisms/",
     "watch": "Requires industrial engineering capability, access to supplier cost data and supplier trust, so it depends heavily on who does it.",
@@ -119,7 +119,7 @@
     ],
     "limitations": [
       "Takes a lot of expert time",
-      "Works only if suppliers can take up the changes",
+      "Dependent on absorptive capacity",
       "Hard to measure without cost data"
     ]
   },
@@ -184,13 +184,13 @@
     "holds": "Buyers prove creditworthy, so the premium does not return when the guarantee ends.",
     "example": "",
     "exampleLink": "",
-    "watch": "Can hide a buyer's inability to pay, which only government or donor financing can address.",
+    "watch": "Can hide a buyer's inability to pay, a distribution problem that no guarantee solves.",
     "leverKeys": [
       "risk"
     ],
     "strengths": [
       "Lets suppliers serve higher-risk markets",
-      "Reduces the premium suppliers add for the risk of late payment",
+      "Reduces the premium suppliers charge for perceived payment risk",
       "Makes suppliers more willing to enter"
     ],
     "limitations": [
@@ -233,18 +233,17 @@
     "holds": "Performance proves the risk lower than feared, so investors stay without the cover.",
     "example": "",
     "exampleLink": "",
-    "watch": "First-loss (junior) and pari passu (proportional) cover transfer very different amounts of risk, so a deal should specify which.",
+    "watch": "First-loss (junior) and pari passu (proportional) cover transfer very different amounts of risk, so an assessment should state which.",
     "leverKeys": [
       "capital",
       "risk"
     ],
     "strengths": [
-      "A small amount of cover can bring in much larger private investment",
-      "Draws in commercial investors",
+      "A small amount of cover can draw in much larger commercial investment",
       "Shows investors that the market can work"
     ],
     "limitations": [
-      "If badly designed, covered investors may take less care",
+      "Moral hazard if poorly structured",
       "May shift losses without reducing the risk behind them",
       "Complex to structure"
     ]
@@ -259,7 +258,7 @@
     "holds": "The volume it pays for lowers the underlying price, through scale, learning or new entrants, before the subsidy ends as planned.",
     "example": "Early solar feed-in tariffs, which paid above-market prices for a set period while costs fell.",
     "exampleLink": "/framework/mechanisms/#transfers-and-incentives",
-    "watch": "If the price rises again when the subsidy ends, it was in effect a permanent subsidy, so the end date and price target should be set at the start.",
+    "watch": "If the price rises again when the subsidy ends, it was in effect a permanent subsidy. The end date and price target should be set at the start.",
     "leverKeys": [
       "transfer"
     ],
@@ -355,7 +354,7 @@
     "money": "Flow (forgone revenue)",
     "levers": "None directly: a transfer",
     "use": "Reduces tax owed per unit invested or produced.",
-    "holds": "Costs fall below what buyers will pay. Otherwise the effect lasts only as long as the credit.",
+    "holds": "Costs fall below what buyers will pay (the transitional case). Otherwise only while the credit lasts.",
     "example": "US wind and solar credits, curtailed by 2025 legislation for projects starting construction after July 4, 2026 and entering service after 2027.",
     "exampleLink": "https://www.pierceatwood.com/alerts/congress-phases-out-energy-tax-credits",
     "watch": "Only those with tax liability benefit, and a later law can end the credit.",
@@ -414,7 +413,7 @@
     "strengths": [
       "Pays out quickly",
       "Cheap to administer",
-      "Payouts depend on a measured index"
+      "Payouts follow an objective index, with no loss assessment"
     ],
     "limitations": [
       "Basis risk: the index can miss real losses",
