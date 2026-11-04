@@ -9,7 +9,7 @@
   },
   {
     "term": "Attribution",
-    "def": "Dividing credit for an observed change among the partners who contributed to it, for reporting. It prevents double counting across the field. Funding decisions should use counterfactual contribution instead."
+    "def": "Dividing credit for an observed change among the partners who contributed to it, which prevents double counting in reporting across the field. Funding decisions should use counterfactual contribution instead."
   },
   {
     "term": "Big Push",
@@ -29,7 +29,7 @@
   },
   {
     "term": "Buyer",
-    "def": "Anyone who purchases in a market, including governments, donors and pooled funds that buy on behalf of people who cannot pay. The framework treats such buyers as part of the market. Buying on others' behalf does not correct a market failure."
+    "def": "Anyone who purchases in a market, including governments, donors and pooled funds that buy on behalf of people who cannot pay. The framework treats such buyers as part of the market, since buying on others' behalf does not correct a market failure."
   },
   {
     "term": "Cap-and-Trade",
@@ -41,7 +41,7 @@
   },
   {
     "term": "Carbon Tax",
-    "def": "A levy on greenhouse gas emissions that raises the financial floor of carbon-intensive activities. A structural intervention that lasts only as long as its political support."
+    "def": "A levy on greenhouse gas emissions that raises the financial floor of carbon-intensive activities, a structural intervention that lasts only as long as its political support."
   },
   {
     "term": "Catalyst",
@@ -57,7 +57,7 @@
   },
   {
     "term": "Contingent Instrument",
-    "def": "An instrument that costs the funder money only if something happens, such as a guarantee being called. The natural tool for transitional gaps. It is valued at its expected cost instead of its face value."
+    "def": "An instrument that costs the funder money only if something happens, such as a guarantee being called, and is the natural tool for transitional gaps. It is valued at its expected cost instead of its face value."
   },
   {
     "term": "Coordination Failure",
@@ -113,7 +113,7 @@
   },
   {
     "term": "Financial Transfer",
-    "def": "A payment by a third party that makes something cheaper for the buyer without changing the supplier's cost or margin, such as a subsidy or tax credit. Not to be confused with risk transfer, one of the six levers. A time-limited subsidy, such as a price buy-down, is meant to end once a lever has lowered the price. A permanent subsidy must be funded indefinitely."
+    "def": "A payment by a third party that makes something cheaper for the buyer without changing the supplier's cost or margin, such as a subsidy or tax credit. Not to be confused with risk transfer, one of the six levers. A time-limited subsidy, such as a price buy-down, is meant to end once a lever has lowered the price, while a permanent subsidy must be funded indefinitely."
   },
   {
     "term": "First-Loss Capital",
@@ -121,7 +121,7 @@
   },
   {
     "term": "Flow Instrument",
-    "def": "An instrument that must be funded continuously, such as a permanent subsidy, tax or outcome payment. The natural tool for structural misalignments."
+    "def": "An instrument that must be funded continuously, such as a permanent subsidy, tax or outcome payment, and is the natural tool for structural misalignments."
   },
   {
     "term": "Focal Point",
@@ -141,7 +141,7 @@
   },
   {
     "term": "Learning by Doing",
-    "def": "Kenneth Arrow's 1962 term for productivity gains that come from experience in production, part of which spill over to other firms. The source of the experience curve."
+    "def": "Kenneth Arrow's 1962 term for productivity gains from experience in production, which underlie the experience curve and partly spill over to other firms."
   },
   {
     "term": "Lever",
@@ -169,7 +169,7 @@
   },
   {
     "term": "Payment Trigger",
-    "def": "The conditions that release funding. Traditional financing pays on activity; results-based financing pays on verified outcomes."
+    "def": "The conditions that release funding, which traditional financing ties to activity and results-based financing to verified outcomes."
   },
   {
     "term": "Pigouvian Tax",
@@ -185,7 +185,7 @@
   },
   {
     "term": "Price per Unit of Outcome",
-    "def": "What the buyer spends per unit of the outcome it values, such as a patient-year of viral suppression or a ton removed. The price the six levers act on."
+    "def": "What the buyer spends per unit of the outcome it values, such as a patient-year of viral suppression or a ton removed. The six levers act on this price."
   },
   {
     "term": "Principal-Agent Problem",
@@ -193,7 +193,7 @@
   },
   {
     "term": "Principle of Precision",
-    "def": "Deploy no more concessionality than is needed to make a durable lever work or to fill the wedge, measured in expected cost. A cheap intervention that changes nothing permanent does not meet the principle."
+    "def": "Using no more concessionality than is needed to make a durable lever work or to fill the wedge, measured in expected cost. A cheap intervention that changes nothing permanent does not meet the principle."
   },
   {
     "term": "Priority Review Voucher",
@@ -205,7 +205,7 @@
   },
   {
     "term": "Return Expectations",
-    "def": "The financial return capital providers require. Commercial investors want market rates and philanthropy may accept no return. Concessional capital accepts less than a market rate."
+    "def": "The financial return capital providers require. Commercial investors want market rates, while concessional capital accepts less and philanthropy may accept none."
   },
   {
     "term": "Ridge",
@@ -233,7 +233,7 @@
   },
   {
     "term": "Tiered Pricing",
-    "def": "A supplier charging lower prices in lower-income markets and recovering fixed costs in higher-income ones. A cross-subsidy, so its price is not the result of competition."
+    "def": "A supplier charging lower prices in lower-income markets and recovering fixed costs in higher-income ones. As a cross-subsidy, its low price does not result from competition."
   },
   {
     "term": "Transitional Access Gap",
@@ -245,7 +245,7 @@
   },
   {
     "term": "Walk-Away Test",
-    "def": "Imagine the intervention succeeds and is then withdrawn. If the market keeps its position, the gap was transitional. If it slides back, the gap was structural."
+    "def": "A test that supposes the intervention succeeds and is then withdrawn. The gap was transitional if the market keeps its position and structural if it slides back."
   },
   {
     "term": "Wedge",

@@ -6,7 +6,7 @@ const step = 'w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center fl
 <Page
   title="Diagnostic"
   description="A six-step diagnostic that applies the framework to a real market and produces a one-page brief: the gap, the buyers and payers, the lever, the instrument and a back-of-envelope cost-effectiveness ratio."
-  lede="Apply the framework to a real market in six steps. The diagnostic produces a one-page brief you can print or share, and flags the common errors the framework is designed to catch."
+  lede="This diagnostic applies the framework to a real market in six steps, producing a one-page brief to print or share and flagging the common errors the framework is designed to catch."
   bands={true}
   printHero={false}
 >
@@ -123,8 +123,8 @@ const step = 'w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center fl
         return { lo: lo, hi: hi, impactLo: k * lo, impactHi: k * hi, rLo: k * lo / c, rHi: k * hi / c, cost: c };
       }
       function diagnose(d) {
-        if (d.volume === 'no') return ['Structural Misalignment', 'tag-mode2', 'Volume should stay limited, so the market cannot become self-sustaining. Plan a permanent payer and decouple payment from volume.'];
-        if (d.payerState === 'none') return ['Missing buyer', 'tag-hybrid', 'No one is yet buying at scale. If the benefit falls on others, the gap is structural and needs a payer. If users cannot pay, governments or donors need to finance demand. Market shaping can do little until a buyer exists.'];
+        if (d.volume === 'no') return ['Structural Misalignment', 'tag-mode2', 'Volume should stay limited, so the market cannot sustain itself and needs a permanent payer, with payment decoupled from volume.'];
+        if (d.payerState === 'none') return ['Missing buyer', 'tag-hybrid', 'No one buys at scale yet, and market shaping can do little until someone does. If the benefit falls on others, the gap is structural and needs a payer, while users who cannot pay need governments or donors to finance demand.'];
         if (d.payerState === 'unneeded') {
           if (d.entry === 'yes') return ['Transitional Access Gap', 'tag-mode1', 'The better position looks self-enforcing once reached. Open a temporary path through the ridge, then exit.'];
           if (d.entry === 'no') return ['Possibly structural', 'tag-mode2', 'No ongoing support is planned, but new suppliers could not enter at the target price, so the market may slide back after exit. Apply the walk-away test before committing.'];

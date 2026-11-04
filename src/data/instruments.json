@@ -9,7 +9,7 @@
     "holds": "Demand proves real, so the guarantee is not drawn on, and volume persists at the new price.",
     "example": "Contraceptive implants in 2013 and TLD in 2017.",
     "exampleLink": "/cases/implants/",
-    "watch": "Payouts count as costs. A guarantee that keeps being called suggests a structural gap.",
+    "watch": "Payouts count as costs, and a guarantee called repeatedly suggests a structural gap.",
     "leverKeys": [
       "risk",
       "scale"
@@ -130,10 +130,10 @@
     "money": "Small recurring grant",
     "levers": "Competition, disintermediation",
     "use": "Publishing prices, suppliers, forecasts and costs so buyers can bargain and suppliers can plan.",
-    "holds": "Someone keeps producing it. Information is a public good, so it needs a small continuing payer of its own.",
+    "holds": "Someone keeps producing it, which requires a small continuing payer because information is a public good.",
     "example": "Public price and supplier reports for HIV and other commodities.",
     "exampleLink": "",
-    "watch": "Its value depends on buyers using it, so measure it by the decisions it changes.",
+    "watch": "Its value depends on buyers using it and is best measured by the decisions it changes.",
     "leverKeys": [
       "competition",
       "disintermediation"
@@ -155,7 +155,7 @@
     "money": "No capital on its own",
     "levers": "Competition, scale, disintermediation",
     "use": "Aggregating demand across buyers into fewer, larger, more predictable orders.",
-    "holds": "The pool persists. If buyers leave, volume and bargaining power go with them.",
+    "holds": "The pool persists, since buyers who leave take volume and bargaining power with them.",
     "example": "Common in vaccine and HIV commodity markets.",
     "exampleLink": "",
     "watch": "Can concentrate supply on few manufacturers and weaken resilience.",
@@ -233,7 +233,7 @@
     "holds": "Performance proves the risk lower than feared, so investors stay without the cover.",
     "example": "",
     "exampleLink": "",
-    "watch": "First-loss (junior) and pari passu (proportional) cover transfer very different amounts of risk, so specify which.",
+    "watch": "First-loss (junior) and pari passu (proportional) cover transfer very different amounts of risk, so a deal should specify which.",
     "leverKeys": [
       "capital",
       "risk"
@@ -259,7 +259,7 @@
     "holds": "The volume it pays for lowers the underlying price, through scale, learning or new entrants, before the subsidy ends as planned.",
     "example": "Early solar feed-in tariffs, which paid above-market prices for a set period while costs fell.",
     "exampleLink": "/framework/mechanisms/#transfers-and-incentives",
-    "watch": "If the price rises again when the subsidy ends, it was in effect a permanent subsidy. Set the end date and the price target at the start.",
+    "watch": "If the price rises again when the subsidy ends, it was in effect a permanent subsidy, so the end date and price target should be set at the start.",
     "leverKeys": [
       "transfer"
     ],
@@ -281,7 +281,7 @@
     "money": "Flow",
     "levers": "None directly: a payment trigger",
     "use": "A payer funds only verified results. In an impact bond, investors provide upfront capital and are repaid on results.",
-    "holds": "The outcome payer keeps paying. The bond structure does not create a payer by itself.",
+    "holds": "The outcome payer keeps paying, since the bond structure does not by itself create one.",
     "example": "In the Educate Girls development impact bond, the investor provided $270,000 and was repaid with a 15 percent return after targets were exceeded.",
     "exampleLink": "https://ciff.org/?p=736",
     "watch": "Verifying results can cost more than the added accountability is worth.",
@@ -306,7 +306,7 @@
     "money": "Flow",
     "levers": "None directly: a payment design",
     "use": "A fixed payment for access, independent of volume sold.",
-    "holds": "The payer keeps paying. By design, the market will not sustain itself.",
+    "holds": "The payer keeps paying, since by design the market will not sustain itself.",
     "example": "Used for novel antibiotics, where stewardship should keep volumes low.",
     "exampleLink": "",
     "watch": "Setting the payment requires an estimate of social value instead of a market price.",
@@ -333,7 +333,7 @@
     "holds": "The policy survives politically.",
     "example": "British Columbia priced carbon from 2008 until setting its consumer tax to zero in 2025.",
     "exampleLink": "/cases/bc-carbon-tax/",
-    "watch": "Include the chance of political reversal in the cost-effectiveness estimate.",
+    "watch": "The cost-effectiveness estimate should include the chance of political reversal.",
     "leverKeys": [
       "correction"
     ],
@@ -379,10 +379,10 @@
     "money": "Contingent",
     "levers": "Innovation incentive, prior to the six levers",
     "use": "A reward paid to whoever first meets a defined technical goal.",
-    "holds": "The prize gets a product made. Its price after that depends on the six levers.",
+    "holds": "The prize gets a product made, after which its price depends on the six levers.",
     "example": "",
     "exampleLink": "",
-    "watch": "Pair with a downstream lever so the winning product reaches a sustainable access price.",
+    "watch": "Without a downstream lever, the winning product may not reach a sustainable access price.",
     "leverKeys": [
       "innovation"
     ],
@@ -457,7 +457,7 @@
     "holds": "The supplier keeps an incentive to offer the low tier, which depends on keeping markets separate so the low price does not spread.",
     "example": "Widely used for vaccines sold to public buyers in low-income countries.",
     "exampleLink": "",
-    "watch": "A tiered price set by an originator is not a competitive price. Do not credit it for reductions that came from generic competition.",
+    "watch": "A tiered price set by an originator is not a competitive price and deserves no credit for reductions from generic competition.",
     "leverKeys": [
       "transfer"
     ],
@@ -479,10 +479,10 @@
     "money": "No donor capital: the value is created by a regulator",
     "levers": "Innovation incentive, prior to the six levers",
     "use": "A regulator grants something valuable, such as a voucher for faster review of another product, extended exclusivity or waived fees, to developers of products for neglected needs.",
-    "holds": "Like other innovation incentives, it gets a product made. Its price and reach after that depend on the six levers.",
+    "holds": "Like other innovation incentives, it gets a product made, after which its price and reach depend on the six levers.",
     "example": "The US Food and Drug Administration's priority review voucher for tropical diseases.",
     "exampleLink": "https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/FDA/8940fnl-Tropical-Disease-PRV.pdf",
-    "watch": "A voucher rewards approval only. Pair it with access commitments or a downstream lever, or the product may launch at a price its target market cannot pay.",
+    "watch": "A voucher rewards approval only, so without access commitments or a downstream lever the product may launch at a price its target market cannot pay.",
     "leverKeys": [
       "innovation"
     ],
@@ -504,10 +504,10 @@
     "money": "Flow (voluntary purchases)",
     "levers": "None directly: a voluntary payer",
     "use": "Buyers pay for certified emission reductions or removals they are not required to make, usually to meet their own climate commitments.",
-    "holds": "Buyers keep buying. Because their motives are mission and reputation, they are the least durable kind of payer.",
+    "holds": "Buyers keep buying, although buying for mission and reputation makes them the least durable kind of payer.",
     "example": "Traded value peaked at around $2 billion in 2021 and fell to $535 million in 2024.",
     "exampleLink": "/framework/payers/#structural-payers",
-    "watch": "Credits do not change what emitters pay, so they do not correct the externality. Check additionality and permanence, the market's main integrity problems.",
+    "watch": "Credits do not change what emitters pay, so they do not correct the externality. Additionality and permanence are the market's main integrity problems.",
     "leverKeys": [
       "voluntary"
     ],
