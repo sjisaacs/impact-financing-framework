@@ -2,7 +2,7 @@ export const SITE = {
   name: 'Impact Financing Framework',
   url: 'https://impactfinancingframework.org',
   description:
-    'A practical framework for market shaping and adjacent market and financial interventions, grounded in economic theory and organized around cost-effectiveness: two kinds of gap, the levers that last, and the payers that keep paying.',
+    'A practical framework for market shaping and adjacent market and financial interventions, grounded in economic theory and organized around cost-effectiveness. It distinguishes two kinds of gap and asks which levers have lasting effects and whether a payer will keep paying.',
   version: '2.0 (draft)',
   updated: 'November 2026',
   modified: '2026-11-02', // ISO date for structured data; update with each content release

@@ -6,17 +6,17 @@ import Ratio from '../components/Ratio.astro';
 import Term from '../components/Term.astro';
 import { SITE } from '../data/site.js';
 const five = [
-  { n: 1, href: '/framework/', title: 'Diagnosis', text: 'Is each gap transitional or structural? Misreading it builds bridges to nowhere or pays windfalls.' },
-  { n: 2, href: '/cost-effectiveness/#duration-beyond-the-counterfactual', title: 'The Counterfactual', text: 'Credit runs only until the market would have arrived anyway. It is usually the largest term, and the least modeled.' },
-  { n: 3, href: '/framework/mechanisms/', title: 'Lever Durability', text: 'A transitional intervention works only if the lever it fires survives exit, and the levers differ widely in how well they do.' },
-  { n: 4, href: '/framework/payers/', title: 'Payers and Buyers', text: 'Structural gaps need a payer that keeps paying, and a dollar saved is worth what the buyer does with it.' },
-  { n: 5, href: '/cost-effectiveness/#counterfactual-contribution', title: 'Contribution', text: 'Ask what changes if this funder stays out. Splitting credit among partners answers a different question.' },
+  { n: 1, href: '/framework/', title: 'Diagnosis', text: 'Is each gap transitional or structural? A wrong diagnosis leads funders to build bridges to nowhere or to pay windfalls.' },
+  { n: 2, href: '/cost-effectiveness/#duration-beyond-the-counterfactual', title: 'The Counterfactual', text: 'Credit runs only until the market would have reached the outcome without help. This duration is usually the largest term in the ratio.' },
+  { n: 3, href: '/framework/mechanisms/', title: 'Lever Durability', text: 'A transitional intervention works only if the lever it uses survives exit, and levers differ widely on this.' },
+  { n: 4, href: '/framework/payers/', title: 'Payers and Buyers', text: 'Structural gaps need a payer that keeps paying. The value of a dollar saved depends on what the buyer does with it.' },
+  { n: 5, href: '/cost-effectiveness/#counterfactual-contribution', title: 'Contribution', text: 'A funder\'s contribution is what would change if it stayed out, which a split of credit among partners does not measure.' },
 ];
 const explore = [
   { href: '/cost-effectiveness/', title: 'Cost-Effectiveness', text: 'The framework\'s single objective, written as a ratio, with a worked example, a calculator and the errors that inflate it.' },
-  { href: '/cases/', title: 'Case Studies', text: 'Implants, TLD, the pneumococcal AMC, Frontier and British Columbia, read through the framework.' },
-  { href: '/instruments/', title: 'Instruments', text: 'The anatomy of an instrument and a focused catalogue: role, levers and when each holds after exit.' },
-  { href: '/diagnostic/', title: 'Diagnostic', text: 'Apply the framework to a real market in five steps and produce a one-page brief.' },
+  { href: '/cases/', title: 'Case Studies', text: 'Implants, TLD, the pneumococcal AMC, Frontier and British Columbia, analyzed with the framework.' },
+  { href: '/instruments/', title: 'Instruments', text: 'The anatomy of an instrument and a focused catalog: role, levers and whether each lasts after exit.' },
+  { href: '/diagnostic/', title: 'Diagnostic', text: 'Six steps that apply the framework to a real market and produce a one-page brief.' },
 ];
 ---
 <Base>
@@ -34,13 +34,13 @@ const explore = [
         Why doesn't money flow where it's needed most, and <strong class="text-slate-800">when can public and philanthropic capital change that cost-effectively?</strong>
       </p>
       <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed animate-fade-in-up delay-200 mb-8">
-        A practical way to think about market shaping, and the market and financial interventions around it, grounded in economic theory and organized around one question: how much durable impact each dollar of scarce <Term>concessional capital</Term> buys.
+        A practical way to think about market shaping, and the market and financial interventions around it. It draws on standard economics and judges each intervention by how much durable impact each dollar of scarce <Term>concessional capital</Term> buys.
       </p>
       <div class="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 justify-center items-center">
         <a href="/foundations/" class="px-8 py-4 bg-blue-900 text-white rounded-lg font-semibold hover:bg-blue-800 transition-colors inline-flex items-center gap-2">Start with the Foundations</a>
         <a href="/framework/" class="px-8 py-4 bg-white text-slate-700 border border-slate-300 rounded-lg font-semibold hover:bg-slate-50 transition-colors inline-flex items-center gap-2">Skip to the Framework</a>
       </div>
-      <p class="text-sm text-slate-500 mt-4">New to impact finance? Start with the foundations (about 10 minutes). Already familiar? Go straight to the framework.</p>
+      <p class="text-sm text-slate-500 mt-4">If you are new to impact finance, start with the foundations (about 10 minutes). Otherwise, go straight to the framework.</p>
     </div>
   </section>
 
@@ -56,7 +56,7 @@ const explore = [
           </div>
           <div class="p-6">
             <HeroTransitional />
-            <p class="text-slate-600 text-sm mt-4">The market would sustain the outcome once it got there. A temporary path carries capital through the ridge, then leaves.</p>
+            <p class="text-slate-600 text-sm mt-4">The market would sustain the outcome once it reached it. A funder opens a temporary path through the ridge, then exits.</p>
           </div>
         </div>
         <div class="bg-white rounded-xl border border-emerald-200 overflow-hidden">
@@ -73,22 +73,22 @@ const explore = [
       <div class="legend justify-center">
         <span><i class="k-fin"></i>financial landscape</span><span><i class="k-soc"></i>social landscape</span><span><i class="k-water"></i>capital</span><span><i class="k-wedge"></i>intervention</span>
       </div>
-      <p class="text-slate-600 text-center max-w-2xl mx-auto mt-8">Most real markets contain both kinds of gap. <a class="text-blue-800 underline" href="/framework/">The framework</a> separates them.</p>
+      <p class="text-slate-600 text-center max-w-2xl mx-auto mt-8">Most real markets contain both kinds of gap. <a class="text-blue-800 underline" href="/framework/">The framework</a> shows how to tell them apart.</p>
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-slate-50">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">The Question Behind Every Intervention</h2>
-      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">How much durable impact does each dollar of concessional capital buy? Every principle in the framework is a term in this ratio.</p>
+      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">One Objective</h2>
+      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">The framework asks how much durable impact each dollar of concessional capital buys. Each of its principles concerns a term in this ratio.</p>
       <Ratio />
     </div>
   </section>
 
   <section class="py-16 md:py-20 bg-white">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
-      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">Where Impact Is Won or Lost</h2>
-      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">Five places where market and financial interventions gain or lose their cost-effectiveness, and where current practice is weakest.</p>
+      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">Five Principles</h2>
+      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">The five points where estimates of an intervention's cost-effectiveness most often go wrong.</p>
       <div class="space-y-4">
         {five.map((f) => (
           <a href={f.href} class="block bg-slate-50 p-6 rounded-xl border border-slate-200 card-hover">
@@ -116,7 +116,7 @@ const explore = [
           </a>
         ))}
       </div>
-      <p class="text-sm text-slate-500 text-center mt-10">Version {SITE.version}. A working framework: the <a class="underline" href="/questions/">open questions</a> are as much a part of it as the answers.</p>
+      <p class="text-sm text-slate-500 text-center mt-10">Version {SITE.version}. The framework is still being developed, and its <a class="underline" href="/questions/">open questions</a> are part of it.</p>
     </div>
   </section>
 </Base>

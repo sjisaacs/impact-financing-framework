@@ -9,19 +9,19 @@
     "holds": "Demand proves real, so the guarantee is not drawn on, and volume persists at the new price.",
     "example": "Contraceptive implants in 2013 and TLD in 2017.",
     "exampleLink": "/cases/implants/",
-    "watch": "Drawn guarantees are payments. A guarantee that keeps being called signals a structural gap.",
+    "watch": "Payouts count as costs, and a guarantee called repeatedly suggests a structural gap.",
     "leverKeys": [
       "risk",
       "scale"
     ],
     "strengths": [
       "Low expected cost when demand is real",
-      "Preserves market incentives",
-      "Self-liquidating if the market develops"
+      "Suppliers still earn from sales to buyers",
+      "Expires unused if demand turns out to be real"
     ],
     "limitations": [
-      "Requires credible demand forecasting",
-      "May distort market signals if poorly calibrated"
+      "Needs a reliable demand forecast",
+      "Set at the wrong volume, it can mislead suppliers about demand"
     ]
   },
   {
@@ -34,15 +34,15 @@
     "holds": "The long-term price commitment is honored after the premium is spent, and buyers keep buying.",
     "example": "The 2009 pneumococcal vaccine commitment, and Frontier for carbon removal.",
     "exampleLink": "/cases/pneumococcal-amc/",
-    "watch": "Where the product already exists, the counterfactual is murky and a guarantee or ceiling price may buy the same acceleration for less.",
+    "watch": "Where the product already exists, the counterfactual is murky and a guarantee or ceiling price may bring supply forward as quickly for less.",
     "leverKeys": [
       "risk",
       "scale",
       "innovation"
     ],
     "strengths": [
-      "Pulls forward investment in capacity or development",
-      "Creates price certainty for manufacturers",
+      "Brings forward investment in capacity or development",
+      "Gives manufacturers a known price",
       "Pays only on delivery"
     ],
     "limitations": [
@@ -61,17 +61,17 @@
     "holds": "Enough suppliers stay viable at or below the ceiling to keep competing.",
     "example": "TLD at about $75 per patient per year in 2017.",
     "exampleLink": "/cases/tld/",
-    "watch": "A ceiling set too low drives suppliers out; set too high, it becomes the price.",
+    "watch": "Suppliers exit if the ceiling is too low and charge it if it is too high.",
     "leverKeys": [
       "competition"
     ],
     "strengths": [
       "No capital required on its own",
-      "Enables competitive tenders beneath the ceiling",
+      "Allows competitive tenders beneath the ceiling",
       "Gives buyers price certainty for planning"
     ],
     "limitations": [
-      "Set too low, it drives suppliers out; too high, it becomes the price",
+      "Hard to set at the right level",
       "Usually needs volume assurance to be credible"
     ]
   },
@@ -82,7 +82,7 @@
     "money": "No capital on its own",
     "levers": "Competition",
     "use": "An originator licenses generic manufacturers to produce for specified markets, often through a patent pool.",
-    "holds": "Licensed suppliers stay viable at the lower price. Competition is often fragile: thin margins lead to exits and consolidation.",
+    "holds": "Licensed suppliers stay viable at the lower price. Thin margins often lead to exits and consolidation, which weakens competition.",
     "example": "The Medicines Patent Pool provided the licensing channel for generic TLD.",
     "exampleLink": "/cases/tld/",
     "watch": "Territorial limits can exclude middle-income markets where the gap is real.",
@@ -90,12 +90,12 @@
       "competition"
     ],
     "strengths": [
-      "Activates competition without donor capital",
+      "Brings in generic competition without donor capital",
       "Can cover many countries at once"
     ],
     "limitations": [
       "Territorial limits can exclude middle-income markets",
-      "Depends on the originator's willingness"
+      "Depends on the originator agreeing to license"
     ]
   },
   {
@@ -105,7 +105,7 @@
     "money": "Time-limited grant",
     "levers": "Process improvement",
     "use": "Expert work with suppliers on production processes, sourcing and cost structure, usually under confidentiality.",
-    "holds": "Robustly: suppliers keep what they learn, which makes this the most durable lever.",
+    "holds": "Suppliers keep what they learn, which makes this the most durable lever.",
     "example": "The 2003 generic antiretroviral agreements, which cut a common triple-therapy pill from about $300 to under $140 per patient per year.",
     "exampleLink": "/framework/mechanisms/",
     "watch": "Requires industrial engineering capability, access to supplier cost data and supplier trust, so it depends heavily on who does it.",
@@ -113,13 +113,13 @@
       "process"
     ],
     "strengths": [
-      "Builds lasting capacity",
-      "Addresses root causes of cost",
-      "High leverage potential"
+      "Improvements stay with the supplier",
+      "Lowers the supplier's underlying production costs",
+      "A small grant can lower prices across a large market"
     ],
     "limitations": [
-      "Time-intensive",
-      "Dependent on absorptive capacity",
+      "Takes a lot of expert time",
+      "Works only if suppliers can take up the changes",
       "Hard to measure without cost data"
     ]
   },
@@ -130,22 +130,22 @@
     "money": "Small recurring grant",
     "levers": "Competition, disintermediation",
     "use": "Publishing prices, suppliers, forecasts and costs so buyers can bargain and suppliers can plan.",
-    "holds": "Someone keeps producing it. Information is a public good, so this carries a small structural need of its own.",
+    "holds": "Someone keeps producing it, which requires a small continuing payer because information is a public good.",
     "example": "Public price and supplier reports for HIV and other commodities.",
     "exampleLink": "",
-    "watch": "Value depends on buyers using it; measure decisions changed, not reports published.",
+    "watch": "Its value depends on buyers using it and is best measured by the decisions it changes.",
     "leverKeys": [
       "competition",
       "disintermediation"
     ],
     "strengths": [
-      "Public good with high spillovers",
+      "Benefits every buyer and supplier who uses it",
       "Relatively low cost",
-      "Enables market efficiency"
+      "Helps buyers bargain and suppliers plan"
     ],
     "limitations": [
-      "Requires ongoing investment",
-      "May face data access challenges"
+      "Needs continuing funding",
+      "Suppliers and buyers may not share their data"
     ]
   },
   {
@@ -155,7 +155,7 @@
     "money": "No capital on its own",
     "levers": "Competition, scale, disintermediation",
     "use": "Aggregating demand across buyers into fewer, larger, more predictable orders.",
-    "holds": "The pool persists. If buyers leave, volume and bargaining power go with them.",
+    "holds": "The pool persists, since buyers who leave take volume and bargaining power with them.",
     "example": "Common in vaccine and HIV commodity markets.",
     "exampleLink": "",
     "watch": "Can concentrate supply on few manufacturers and weaken resilience.",
@@ -165,9 +165,9 @@
       "disintermediation"
     ],
     "strengths": [
-      "Significant price reductions",
+      "Larger orders can lower prices substantially",
       "Quality assurance",
-      "Reduced transaction costs"
+      "Fewer, larger tenders cost less to run"
     ],
     "limitations": [
       "Requires coordination among buyers",
@@ -184,18 +184,18 @@
     "holds": "Buyers prove creditworthy, so the premium does not return when the guarantee ends.",
     "example": "",
     "exampleLink": "",
-    "watch": "Can mask a buyer's underlying inability to pay, which is a structural problem.",
+    "watch": "Can hide a buyer's inability to pay, which only government or donor financing can address.",
     "leverKeys": [
       "risk"
     ],
     "strengths": [
-      "Enables suppliers to serve higher-risk markets",
-      "Reduces the pricing premium for perceived risk",
-      "Builds supplier confidence for market entry"
+      "Lets suppliers serve higher-risk markets",
+      "Reduces the premium suppliers add for the risk of late payment",
+      "Makes suppliers more willing to enter"
     ],
     "limitations": [
-      "Requires robust verification of delivery",
-      "May mask underlying buyer capacity issues"
+      "Requires reliable verification of delivery",
+      "Can hide whether a buyer is able to pay"
     ]
   },
   {
@@ -213,14 +213,14 @@
       "capital"
     ],
     "strengths": [
-      "Addresses cash-flow timing mismatches",
+      "Covers gaps between paying costs and receiving revenue",
       "Can be tied to access commitments",
-      "Preserves repayment discipline"
+      "Borrowers still have to repay"
     ],
     "limitations": [
-      "Requires repayment capacity",
+      "Borrowers must be able to repay",
       "Lowers price only if the saving is passed through",
-      "May crowd out commercial lending"
+      "May replace loans commercial lenders would have made"
     ]
   },
   {
@@ -233,20 +233,20 @@
     "holds": "Performance proves the risk lower than feared, so investors stay without the cover.",
     "example": "",
     "exampleLink": "",
-    "watch": "First-loss (junior) and pari passu (proportional) cover transfer very different amounts of risk; say which.",
+    "watch": "First-loss (junior) and pari passu (proportional) cover transfer very different amounts of risk, so a deal should specify which.",
     "leverKeys": [
       "capital",
       "risk"
     ],
     "strengths": [
-      "High leverage ratio",
-      "Crowds in commercial capital",
-      "Demonstrates market viability"
+      "A small amount of cover can bring in much larger private investment",
+      "Draws in commercial investors",
+      "Shows investors that the market can work"
     ],
     "limitations": [
-      "Moral hazard if poorly structured",
-      "May not address underlying risks",
-      "Requires sophisticated structuring"
+      "If badly designed, covered investors may take less care",
+      "May shift losses without reducing the risk behind them",
+      "Complex to structure"
     ]
   },
   {
@@ -256,21 +256,21 @@
     "money": "Time-limited flow",
     "levers": "None directly: a time-limited financial transfer",
     "use": "A third party pays part of the price for a fixed period, so buyers can afford more volume while costs fall.",
-    "holds": "Designed to end: it holds if the volume it buys lowers the underlying price, through scale, learning or new entrants, before the subsidy stops.",
+    "holds": "The volume it pays for lowers the underlying price, through scale, learning or new entrants, before the subsidy ends as planned.",
     "example": "Early solar feed-in tariffs, which paid above-market prices for a set period while costs fell.",
     "exampleLink": "/framework/mechanisms/#transfers-and-incentives",
-    "watch": "If the price returns when the subsidy ends, it was a permanent subsidy all along. Set the end date and the price target at the start.",
+    "watch": "If the price rises again when the subsidy ends, it was in effect a permanent subsidy, so the end date and price target should be set at the start.",
     "leverKeys": [
       "transfer"
     ],
     "strengths": [
-      "Immediate price reduction",
+      "Lowers the price at once",
       "Simple to implement",
-      "Directly addresses affordability"
+      "Directly helps buyers who cannot afford the full price"
     ],
     "limitations": [
-      "Costly if the levers it relies on do not fire",
-      "May mask the true price while it runs",
+      "Costly if the levers it relies on do not work",
+      "Hides the unsubsidized price while it runs",
       "Ending it on schedule takes discipline"
     ]
   },
@@ -280,22 +280,22 @@
     "role": "Reshape",
     "money": "Flow",
     "levers": "None directly: a payment trigger",
-    "use": "A payer funds verified results rather than inputs; in an impact bond, investors provide upfront capital and are repaid on results.",
-    "holds": "The outcome payer keeps paying; the bond structure itself does not create a payer.",
+    "use": "A payer funds only verified results. In an impact bond, investors provide upfront capital and are repaid on results.",
+    "holds": "The outcome payer keeps paying, since the bond structure does not by itself create one.",
     "example": "In the Educate Girls development impact bond, the investor provided $270,000 and was repaid with a 15 percent return after targets were exceeded.",
     "exampleLink": "https://ciff.org/?p=736",
-    "watch": "Verification costs can exceed the value of the accountability they buy.",
+    "watch": "Verifying results can cost more than the added accountability is worth.",
     "leverKeys": [
       "payment"
     ],
     "strengths": [
-      "Shifts delivery risk from the payer",
+      "Moves the risk of failure away from the payer",
       "Focuses spending on results",
-      "Leaves providers free to innovate on method"
+      "Leaves providers free to choose their methods"
     ],
     "limitations": [
       "High transaction and verification costs",
-      "Gaming risks",
+      "Providers may game the measures",
       "Not every outcome worth paying for is measurable"
     ]
   },
@@ -306,16 +306,16 @@
     "money": "Flow",
     "levers": "None directly: a payment design",
     "use": "A fixed payment for access, independent of volume sold.",
-    "holds": "The payer keeps paying; by design the market will not sustain itself.",
+    "holds": "The payer keeps paying, since by design the market will not sustain itself.",
     "example": "Used for novel antibiotics, where stewardship should keep volumes low.",
     "exampleLink": "",
-    "watch": "Setting the payment requires an estimate of social value, not market price.",
+    "watch": "Setting the payment requires an estimate of social value instead of a market price.",
     "leverKeys": [
       "payment"
     ],
     "strengths": [
-      "Revenue predictability",
-      "Removes volume-based incentive distortions",
+      "Gives developers predictable revenue",
+      "Removes the incentive to sell more than is needed",
       "Simplifies planning"
     ],
     "limitations": [
@@ -333,43 +333,43 @@
     "holds": "The policy survives politically.",
     "example": "British Columbia priced carbon from 2008 until setting its consumer tax to zero in 2025.",
     "exampleLink": "/cases/bc-carbon-tax/",
-    "watch": "Political durability is a cost-effectiveness parameter; plan for reversal risk.",
+    "watch": "The cost-effectiveness estimate should include the chance of political reversal.",
     "leverKeys": [
       "correction"
     ],
     "strengths": [
-      "Economy-wide coverage",
+      "Can cover the whole economy",
       "Raises revenue",
       "Corrects the externality at its source"
     ],
     "limitations": [
-      "Political resistance and reversal risk",
-      "Competitiveness concerns",
-      "Regressive without rebates"
+      "Faces political resistance and can be reversed",
+      "Can put taxed firms at a disadvantage against untaxed competitors",
+      "Falls hardest on poorer households unless revenue is returned"
     ]
   },
   {
     "id": "tax-credit",
     "name": "Tax credits",
     "role": "Either",
-    "money": "Flow (foregone revenue)",
+    "money": "Flow (forgone revenue)",
     "levers": "None directly: a transfer",
     "use": "Reduces tax owed per unit invested or produced.",
-    "holds": "Transitional if costs fall below what buyers will pay; otherwise only while the credit lasts.",
+    "holds": "Costs fall below what buyers will pay. Otherwise the effect lasts only as long as the credit.",
     "example": "US wind and solar credits, curtailed by 2025 legislation for projects starting construction after July 4, 2026 and entering service after 2027.",
     "exampleLink": "https://www.pierceatwood.com/alerts/congress-phases-out-energy-tax-credits",
-    "watch": "Benefits only those with tax liability; durability depends on legislation.",
+    "watch": "Only those with tax liability benefit, and a later law can end the credit.",
     "leverKeys": [
       "transfer"
     ],
     "strengths": [
-      "Market-compatible",
-      "Scalable"
+      "Leaves investment decisions to firms",
+      "Can be applied at large scale"
     ],
     "limitations": [
       "Benefits only those with tax liability",
-      "Revenue cost",
-      "Durability depends on legislation"
+      "Costs the government revenue",
+      "A later law can end it"
     ]
   },
   {
@@ -379,21 +379,21 @@
     "money": "Contingent",
     "levers": "Innovation incentive, prior to the six levers",
     "use": "A reward paid to whoever first meets a defined technical goal.",
-    "holds": "The prize causes a product to exist; the six levers then decide its price.",
+    "holds": "The prize gets a product made, after which its price depends on the six levers.",
     "example": "",
     "exampleLink": "",
-    "watch": "Pair with a downstream lever so the winning product reaches a sustainable access price.",
+    "watch": "Without a downstream lever, the winning product may not reach a sustainable access price.",
     "leverKeys": [
       "innovation"
     ],
     "strengths": [
-      "High leverage",
-      "Outcome-focused",
-      "Attracts diverse solvers"
+      "A modest prize can draw much larger research spending",
+      "Pays only for meeting the goal",
+      "Draws entrants from outside the usual developers"
     ],
     "limitations": [
       "Winner-take-all deters some entrants",
-      "Prize must be calibrated to the challenge",
+      "The prize must match the difficulty of the goal",
       "Does not set the access price"
     ]
   },
@@ -412,13 +412,13 @@
       "risk"
     ],
     "strengths": [
-      "Rapid payout",
-      "Low transaction costs",
-      "Objective triggers"
+      "Pays out quickly",
+      "Cheap to administer",
+      "Payouts depend on a measured index"
     ],
     "limitations": [
       "Basis risk: the index can miss real losses",
-      "Index design complexity"
+      "A good index is hard to design"
     ]
   },
   {
@@ -437,7 +437,7 @@
       "scale"
     ],
     "strengths": [
-      "Makes projects bankable",
+      "Lets developers borrow against the contract",
       "Can work at or near market prices",
       "Familiar to commercial lenders"
     ],
@@ -457,7 +457,7 @@
     "holds": "The supplier keeps an incentive to offer the low tier, which depends on keeping markets separate so the low price does not spread.",
     "example": "Widely used for vaccines sold to public buyers in low-income countries.",
     "exampleLink": "",
-    "watch": "A tiered price set by an originator is not a competitive price. Do not credit it for reductions that came from generic competition.",
+    "watch": "A tiered price set by an originator is not a competitive price and deserves no credit for reductions from generic competition.",
     "leverKeys": [
       "transfer"
     ],
@@ -479,16 +479,16 @@
     "money": "No donor capital: the value is created by a regulator",
     "levers": "Innovation incentive, prior to the six levers",
     "use": "A regulator grants something valuable, such as a voucher for faster review of another product, extended exclusivity or waived fees, to developers of products for neglected needs.",
-    "holds": "Like other innovation incentives, it causes a product to exist; the six levers then decide its price and reach.",
+    "holds": "Like other innovation incentives, it gets a product made, after which its price and reach depend on the six levers.",
     "example": "The US Food and Drug Administration's priority review voucher for tropical diseases.",
     "exampleLink": "https://www.hhs.gov/guidance/sites/default/files/hhs-guidance-documents/FDA/8940fnl-Tropical-Disease-PRV.pdf",
-    "watch": "A voucher rewards approval, not access. Pair it with access commitments or a downstream lever, or the product may launch at a price its target market cannot pay.",
+    "watch": "A voucher rewards approval only, so without access commitments or a downstream lever the product may launch at a price its target market cannot pay.",
     "leverKeys": [
       "innovation"
     ],
     "strengths": [
       "Costs donors nothing directly",
-      "Rewards completion rather than effort",
+      "Pays only for completion",
       "Can attract large developers"
     ],
     "limitations": [
@@ -504,22 +504,22 @@
     "money": "Flow (voluntary purchases)",
     "levers": "None directly: a voluntary payer",
     "use": "Buyers pay for certified emission reductions or removals they are not required to make, usually to meet their own climate commitments.",
-    "holds": "Buyers keep buying. Demand rests on mission and reputation, the least durable kind of payer.",
+    "holds": "Buyers keep buying, although buying for mission and reputation makes them the least durable kind of payer.",
     "example": "Traded value peaked at around $2 billion in 2021 and fell to $535 million in 2024.",
     "exampleLink": "/framework/payers/#structural-payers",
-    "watch": "Credits do not change what emitters pay, so they do not correct the externality. Check additionality and permanence, the market's main integrity problems.",
+    "watch": "Credits do not change what emitters pay, so they do not correct the externality. Additionality and permanence are the market's main integrity problems.",
     "leverKeys": [
       "voluntary"
     ],
     "strengths": [
       "Channels private money to activities no one else pays for",
       "Can fund removal and conservation",
-      "Flexible across sectors and countries"
+      "Works across many sectors and countries"
     ],
     "limitations": [
-      "Voluntary demand is fragile",
-      "Integrity concerns over additionality and permanence",
-      "Does not correct the emitter's price"
+      "Buyers can stop buying at any time",
+      "Doubts about additionality and permanence",
+      "Does not change what emitters pay"
     ]
   }
 ]

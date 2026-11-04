@@ -49,7 +49,7 @@ definitions, instrument strengths and limitations, visual design, illustrations.
 
 ## Added in the November 2026 implementation round
 - **Worked example and calculator** on the Cost-Effectiveness page. Hypothetical by design and labeled as such. It
-  contrasts a naive claim (60 to 1) with an honest estimate (5.4 to 1) of the same deal, to show that the inflation
+  contrasts a headline claim (60 to 1) with an adjusted estimate (5.4 to 1) of the same deal, to show that the inflation
   sits in the numerator and mostly in the counterfactual, and that expected cost is far below headline commitment.
   Results are in payer dollars redeployed per funder dollar; converting to deaths averted or multiples of cash needs
   the payer's marginal cost-effectiveness, which the page says.
@@ -97,7 +97,7 @@ definitions, instrument strengths and limitations, visual design, illustrations.
   done elsewhere, matching GiveWell's leverage and funging adjustments. Credit shares are kept for reporting only.
 - **Value per unit split in two.** The worked example's 0.8 blended the share of savings redeployed with the value of
   what it buys, and valued the rest at zero. It now values the redeployed share and the returned share separately and
-  carries the example through to multiples of the benchmark (naive 120x, honest 17x), with sensitivities to the
+  carries the example through to multiples of the benchmark (headline 120x, adjusted 17x), with sensitivities to the
   counterfactual, the buyer's marginal dollar and the contribution.
 - **Implants retrospective.** Chosen over TLD for its cleaner record: a single instrument, a dated competitor, published
   volumes and spending. The counterfactual price paths are drawn from the product's own pre-deal trend, the competitor's
