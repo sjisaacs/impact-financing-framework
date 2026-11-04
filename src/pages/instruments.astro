@@ -14,42 +14,42 @@ const sorted = [...instruments].sort((a, b) => a.name.localeCompare(b.name));
 ---
 <Page
   title="Instruments"
-  description="The anatomy of a financial instrument, and a focused catalogue of market and financial instruments described by role, levers fired, kind of money and when each holds after exit."
-  lede="Every instrument is a set of answers to the same few questions. The catalogue that follows is focused rather than comprehensive: each entry says what matters for cost-effectiveness."
+  description="The anatomy of a financial instrument, and a focused catalog of market and financial instruments described by role, levers used, kind of money and whether the effect lasts after exit."
+  lede="Every instrument can be described by the same few questions. The catalog that follows is selective, and each entry covers what affects cost-effectiveness."
   bands={true}
 >
   <section id="anatomy" class="py-16 md:py-20 bg-white scroll-mt-28">
     <div class="max-w-4xl mx-auto px-4 sm:px-6">
       <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">The Anatomy of an Instrument</h2>
-      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">Every financial instrument, from simple grants to complex impact bonds, is built from the same components. Three questions define any intervention; knowing the answers lets you see through jargon to what an instrument actually does.</p>
+      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-10">Three questions describe any financial instrument, from a grant to an impact bond. The answers show what it does, whatever it is called.</p>
       <div class="grid md:grid-cols-3 gap-4 mb-12">
-        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200"><div class="font-serif text-xl text-slate-900 mb-1">1. If it fails, who pays?</div><div class="text-xs text-slate-500 mb-2">Risk allocation</div><p class="text-sm text-slate-600">Who absorbs the loss if the investment doesn't work? At one extreme, the investor. At the other, a donor or government covers the loss, which is a guarantee. Guarantees shift risk from those who won't bear it to those who can.</p></div>
-        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200"><div class="font-serif text-xl text-slate-900 mb-1">2. How subsidized is the money?</div><div class="text-xs text-slate-500 mb-2">Return expectations</div><p class="text-sm text-slate-600">Commercial capital wants market-rate returns; grants expect none; <Term>concessional capital</Term> sits in between. Concessional capital is scarce, which is why staying as commercial as possible matters.</p></div>
-        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200"><div class="font-serif text-xl text-slate-900 mb-1">3. Pay for effort or results?</div><div class="text-xs text-slate-500 mb-2">Payment trigger</div><p class="text-sm text-slate-600">Traditional funding pays when you act; <Term t="Results-Based Financing (RBF)">outcome-based funding</Term> pays only when results are verified. Outcome-linking creates accountability, but only works when outcomes are measurable and verification is affordable.</p></div>
+        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200"><div class="font-serif text-xl text-slate-900 mb-1">1. If it fails, who pays?</div><div class="text-xs text-slate-500 mb-2">Risk allocation</div><p class="text-sm text-slate-600">Who absorbs the loss if the investment doesn't work? At one extreme, the investor. At the other, a donor or government covers the loss, which is a guarantee. Guarantees move risk from investors to a party able to carry it.</p></div>
+        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200"><div class="font-serif text-xl text-slate-900 mb-1">2. How subsidized is the money?</div><div class="text-xs text-slate-500 mb-2">Return expectations</div><p class="text-sm text-slate-600">Commercial capital expects market-rate returns and grants expect none, while <Term>concessional capital</Term> accepts less than a market rate. Concessional capital is scarce, so a deal should use no more of it than it needs.</p></div>
+        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200"><div class="font-serif text-xl text-slate-900 mb-1">3. Pay for effort or results?</div><div class="text-xs text-slate-500 mb-2">Payment trigger</div><p class="text-sm text-slate-600">Traditional funding pays when you act, while <Term t="Results-Based Financing (RBF)">outcome-based funding</Term> pays only when results are verified. Linking pay to outcomes improves accountability but works only when outcomes are measurable and verification is affordable.</p></div>
       </div>
       <Spectrum label="1. If it fails, who pays?" question="Who absorbs the loss if things go wrong?" left="Investor or borrower" right="Donor or taxpayer" gradient="bg-gradient-to-r from-slate-300 to-blue-600" points={[{pos:10,label:'Commercial loan'},{pos:50,label:'Guarantee'},{pos:90,label:'Grant'}]} />
       <Spectrum label="2. How subsidized is the money?" question="What return does the capital expect?" left="Full market return" right="Free (grant)" gradient="bg-gradient-to-r from-slate-700 to-emerald-400" points={[{pos:10,label:'Equity'},{pos:38,label:'Commercial debt'},{pos:68,label:'Concessional'},{pos:92,label:'Grant'}]} />
       <Spectrum label="3. Pay for effort or results?" question="When does money flow?" left="Pay when they act" right="Pay when we see results" gradient="bg-gradient-to-r from-slate-400 to-amber-500" points={[{pos:10,label:'Grant or loan'},{pos:50,label:'Milestone-based'},{pos:90,label:'Impact bond'}]} />
       <div class="grid md:grid-cols-3 gap-4 mt-4">
-        <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">More risk transfer</div><p class="text-sm text-slate-600">Necessary when the market genuinely can't bear the risk, but it costs the funder more and may weaken market discipline. Absorb only what's necessary.</p></div>
-        <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">More subsidy</div><p class="text-sm text-slate-600">Necessary when deals can't close at commercial rates. Concessional capital is scarce: using less stretches it further.</p></div>
+        <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">More risk transfer</div><p class="text-sm text-slate-600">Necessary when the market can't bear the risk, but it costs the funder more and may weaken market discipline, so absorb only as much as needed.</p></div>
+        <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">More subsidy</div><p class="text-sm text-slate-600">Necessary when deals can't close at commercial rates. Concessional money one deal does not use can fund another.</p></div>
         <div class="bg-white p-5 rounded-xl border border-slate-200"><div class="font-semibold text-slate-900 mb-1">More outcome-linkage</div><p class="text-sm text-slate-600">Better accountability and incentives, but verification costs money and not everything is measurable.</p></div>
       </div>
       <div class="bg-blue-50 border border-blue-100 rounded-xl p-6 mt-8">
-        <div class="font-serif text-xl text-slate-900 mb-2">The Fourth Dimension: Verification</div>
+        <div class="font-serif text-xl text-slate-900 mb-2">Verification</div>
         <div class="grid md:grid-cols-2 gap-4 text-sm text-slate-600">
           <div><div class="font-semibold text-slate-800 mb-1">Verification is feasible when</div><ul class="list-disc pl-5 space-y-1"><li>Outcomes are clearly defined and measurable</li><li>Attribution is possible</li><li>Verification costs are proportionate to deal size</li><li>Timeframes allow outcomes to be observed</li></ul></div>
           <div><div class="font-semibold text-slate-800 mb-1">Verification is difficult when</div><ul class="list-disc pl-5 space-y-1"><li>Outcomes take years to materialize</li><li>Many factors affect results</li><li>Measurement is expensive relative to the intervention</li><li>Gaming or manipulation risks distort behavior</li></ul></div>
         </div>
       </div>
-      <p class="text-slate-600 mt-8">The anatomy describes what the funder gives up. Whether that buys durable impact depends on two further things: the <a class="text-blue-800 underline" href="/framework/mechanisms/">lever</a> the instrument fires, and whether the money is contingent or a flow that must continue. The catalogue below records both.</p>
+      <p class="text-slate-600 mt-8">The anatomy describes what the funder gives up. Whether that produces durable impact depends on the <a class="text-blue-800 underline" href="/framework/mechanisms/">lever</a> the instrument uses and on whether the money is contingent or a flow that must continue. The catalog below records both.</p>
     </div>
   </section>
 
   <section id="catalogue" class="py-16 md:py-20 bg-slate-50 scroll-mt-28">
     <div class="max-w-5xl mx-auto px-4 sm:px-6">
-      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">Instrument Catalogue</h2>
-      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-8">{instruments.length} instruments, each described by the lever it fires or the payer it creates. For broader catalogues of instrument mechanics, see <a class="text-blue-800 underline" href="/related-work/">related work</a>.</p>
+      <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-4 text-center">Instrument Catalog</h2>
+      <p class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-8">{instruments.length} instruments, each described by the lever it uses or the payer it creates. For broader catalogs of instrument mechanics, see <a class="text-blue-800 underline" href="/related-work/">related work</a>.</p>
       <div class="flex flex-col md:flex-row gap-3 mb-4 no-print" id="filters" hidden>
         <input id="q" type="search" placeholder="Search instruments" aria-label="Search instruments" class="flex-1 border border-slate-300 rounded-lg px-4 py-2.5 text-sm bg-white" />
         <select id="role" aria-label="Filter by role" class="border border-slate-300 rounded-lg px-3 py-2.5 text-sm bg-white">
@@ -75,7 +75,7 @@ const sorted = [...instruments].sort((a, b) => a.name.localeCompare(b.name));
             </summary>
             <dl class="mt-4 pt-4 border-t border-slate-100 text-sm grid gap-2">
               <div><dt class="font-semibold text-slate-900">Money</dt><dd class="text-slate-600">{i.money}</dd></div>
-              <div><dt class="font-semibold text-slate-900">Holds after exit if</dt><dd class="text-slate-600">{i.holds}</dd></div>
+              <div><dt class="font-semibold text-slate-900">Lasts after exit if</dt><dd class="text-slate-600">{i.holds}</dd></div>
               {i.example && <div><dt class="font-semibold text-slate-900">Example</dt><dd class="text-slate-600">{i.exampleLink ? <a class="text-blue-800 underline" href={i.exampleLink}>{i.example}</a> : i.example}</dd></div>}
               <div class="grid sm:grid-cols-2 gap-3 mt-1">
                 <div><dt class="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-1">Strengths</dt><dd><ul class="text-slate-600 space-y-1">{i.strengths.map((s) => <li>{s}</li>)}</ul></dd></div>

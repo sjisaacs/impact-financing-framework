@@ -76,7 +76,7 @@ const step = 'w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center fl
           <div class="flex items-center gap-3 mb-1"><span class={step}>6</span><h2 class="font-serif text-xl text-slate-900">What is it worth?</h2></div>
           <p class="text-sm text-slate-500 ml-11">The terms of the <a class="underline" href="/cost-effectiveness/#worked-example">ratio</a>. The numbers are optional; if you fill them all in, the brief shows a back-of-envelope range. Work out the contribution by scenario first, as in the <a class="underline" href="/cost-effectiveness/#worked-example">calculator</a>, and enter the result as a share of the impact.</p>
           <label for="counterfactual">Counterfactual</label><textarea id="counterfactual" name="counterfactual" placeholder="When, and at what price, would this happen without the intervention?"></textarea>
-          <label for="cost">Expected cost to the funder</label><input type="text" id="cost" name="cost" placeholder="Expected, not committed: include the probability a guarantee is called" />
+          <label for="cost">Expected cost to the funder</label><input type="text" id="cost" name="cost" placeholder="Allow for the probability that a guarantee is called" />
           <div class="grid sm:grid-cols-2 gap-x-5 mt-2">
             <div><label for="size">Size of the change, per year</label><input type="number" inputmode="decimal" min="0" step="any" id="size" name="size" placeholder="For example: 30000000" /></div>
             <div><label for="unit">Unit of the change</label><input type="text" id="unit" name="unit" placeholder="For example: buyer dollars freed" /></div>
@@ -124,13 +124,13 @@ const step = 'w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center fl
       }
       function diagnose(d) {
         if (d.volume === 'no') return ['Structural Misalignment', 'tag-mode2', 'Volume should stay limited, so the market cannot become self-sustaining. Plan a permanent payer and decouple payment from volume.'];
-        if (d.payerState === 'none') return ['Missing buyer', 'tag-hybrid', 'No one is yet buying at scale. If that is because the benefit falls on others, the gap is structural and needs a payer; if it is because users cannot pay, it needs governments or donors to finance demand. Either way, market shaping has little to work with until a buyer exists.'];
+        if (d.payerState === 'none') return ['Missing buyer', 'tag-hybrid', 'No one is yet buying at scale. If the benefit falls on others, the gap is structural and needs a payer. If users cannot pay, governments or donors need to finance demand. Market shaping can do little until a buyer exists.'];
         if (d.payerState === 'unneeded') {
-          if (d.entry === 'yes') return ['Transitional Access Gap', 'tag-mode1', 'The better position looks self-enforcing once reached: a temporary path through the ridge, then exit.'];
+          if (d.entry === 'yes') return ['Transitional Access Gap', 'tag-mode1', 'The better position looks self-enforcing once reached. Open a temporary path through the ridge, then exit.'];
           if (d.entry === 'no') return ['Possibly structural', 'tag-mode2', 'No ongoing support is planned, but new suppliers could not enter at the target price, so the market may slide back after exit. Apply the walk-away test before committing.'];
           return ['Transitional, if entry holds', 'tag-mode1', 'The gap looks transitional, but whether suppliers could enter at the target price is not yet known. Gather that evidence before committing.'];
         }
-        if (d.payerState === 'durable' || d.payerState === 'uncertain') return ['Transitional, with established buyers', 'tag-mode1', 'Buyers exist, including any who buy on others\' behalf. The question is what keeps the market from the best outcome they can sustain: shape the market alongside them.'];
+        if (d.payerState === 'durable' || d.payerState === 'uncertain') return ['Transitional, with established buyers', 'tag-mode1', 'Buyers exist, including any who buy on others\' behalf. Find out what keeps the market from the best outcome those buyers can sustain, and shape the market alongside them.'];
         return ['Not yet clear', 'tag-hybrid', 'Answer steps 2 and 3 to diagnose the gap.'];
       }
       function flags(d, r) { var f = [];
@@ -138,20 +138,20 @@ const step = 'w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center fl
         if (d.payerState === 'uncertain') f.push('Buyer durability is uncertain. Weight scenarios in which government or donor purchasing falls, and favor levers that survive lower volume.');
         if (d.volume === 'no') f.push('High volume is not desirable, so payment should be decoupled from volume and planned as permanent.');
         if (d.entry === 'no') f.push('New suppliers could not enter at the target price, so competition will not hold the price down after exit.');
-        if (d.entry === 'unknown') f.push('Entry at the target price is unknown. This is evidence worth gathering before committing.');
-        if (d.lever === 'risk') f.push('Risk transfer holds only if demand proves real. Consider pairing it with a lever whose gains outlast the guarantee, such as process improvement.');
-        if (d.lever === 'capital') f.push('Capital cost reductions hold only if cheaper capital stays available after the concession ends.');
-        if (d.lever === 'transfer') f.push('A subsidy fires no lever on its own. Name the lever it is meant to enable before it ends, or plan to fund it indefinitely.');
-        if (!d.lever) f.push('No lever chosen. Without one, there is no mechanism for the change to outlast the intervention.');
+        if (d.entry === 'unknown') f.push('Entry at the target price is unknown. Gather evidence on it before committing.');
+        if (d.lever === 'risk') f.push('Gains from risk transfer last only if demand proves real. Consider pairing it with a lever whose gains outlast the guarantee, such as process improvement.');
+        if (d.lever === 'capital') f.push('Lower capital costs last only if cheaper capital stays available after the concession ends.');
+        if (d.lever === 'transfer') f.push('A subsidy lowers the price without using a lever. Name the lever that should lower the underlying price before the subsidy ends, or plan to fund it indefinitely.');
+        if (!d.lever) f.push('No lever chosen. Without one, nothing keeps the change in place after the intervention ends.');
         if (!d.counterfactual && num(d.yearsLow) === null && num(d.yearsHigh) === null) f.push('No counterfactual stated. Impact cannot be estimated without one.');
-        if (!d.exit && d.payerState !== 'none' && d.volume !== 'no') f.push('No exit trigger. Transitional support should state in advance when it ends.');
-        if (!d.cost && !num(d.costNum)) f.push('No expected cost. Count expected cost, not the committed amount.');
-        if (num(d.attr) === 100) f.push('The full change is credited to this funder. Ask what would have happened had it stayed out: if another funder would have stepped in, its contribution is small, and if the deal would have failed, subtract what co-funders\' money would have done elsewhere.');
-        if ([50, 33, 33.3, 25].indexOf(num(d.attr)) > -1) f.push('A round contribution can be a split of credit among partners rather than an estimate of what this funder changed. Check it against the scenarios in which the funder stays out.');
-        if (num(d.prob) === 100) f.push('Success is treated as certain. Deals fail; weight the outcome by an explicit probability.');
-        if (num(d.value) === 1 && (d.payerState === 'durable' || d.payerState === 'uncertain')) f.push('Each unit is valued at exactly the benchmark. Split the value into the share buyers spend on more of the product and the share returned to their budgets, and value each by what it buys.');
-        if (r && r.hi > 10) f.push('The high case credits more than ten years beyond the counterfactual. Check that the market would not have arrived sooner on its own.');
-        if (r && r.lo === r.hi) f.push('Only one counterfactual case given. Show a low and a high case; the counterfactual is usually the largest uncertainty.');
+        if (!d.exit && d.payerState !== 'none' && d.volume !== 'no') f.push('No exit trigger. Decide in advance when transitional support ends, and on what evidence.');
+        if (!d.cost && !num(d.costNum)) f.push('No expected cost given. Use the expected cost instead of the committed amount.');
+        if (num(d.attr) === 100) f.push('The full change is credited to this funder. Ask what would have happened had it stayed out. If another funder would have stepped in, this funder\'s contribution is small. If the deal would have failed, subtract what co-funders\' money would have done elsewhere.');
+        if ([50, 33, 33.3, 25].indexOf(num(d.attr)) > -1) f.push('A round contribution may be a split of credit among partners. Estimate what this funder changed by working through the scenarios in which it stays out.');
+        if (num(d.prob) === 100) f.push('Success is treated as certain. Some deals fail, so weight the outcome by an explicit probability.');
+        if (num(d.value) === 1 && (d.payerState === 'durable' || d.payerState === 'uncertain')) f.push('Each unit is valued at exactly the benchmark. Split the value into the share buyers spend on more of the product and the share returned to their budgets, and value each share by what it pays for.');
+        if (r && r.hi > 10) f.push('The high case credits more than ten years beyond the counterfactual. Check that the market would not have reached the same point sooner on its own.');
+        if (r && r.lo === r.hi) f.push('Only one counterfactual case given. Show a low and a high case, because the counterfactual is usually the largest uncertainty.');
         return f; }
       function add(p, tag, text, cls) { var el = document.createElement(tag); el.textContent = text; if (cls) el.className = cls; p.appendChild(el); return el; }
       function range(a, b) { return a === b ? fmt(a) : fmt(a) + ' to ' + fmt(b); }

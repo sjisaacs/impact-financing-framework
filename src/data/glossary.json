@@ -1,15 +1,15 @@
 [
   {
     "term": "Additionality",
-    "def": "The criterion that an intervention causes outcomes that would not have occurred otherwise, or would have occurred later. Without additionality, public resources merely substitute for private investment. Timing counts: arriving years earlier is additional."
+    "def": "The criterion that an intervention causes outcomes that would not have occurred otherwise, or would have occurred later. Without additionality, public resources only replace private investment. An outcome that arrives years earlier counts as additional."
   },
   {
     "term": "Advance Market Commitment (AMC)",
-    "def": "A binding commitment to pay for products meeting specified criteria at a set price, often with a premium for early units, paid only on delivery. Designed for products that do not yet exist; harder to evaluate when they already do."
+    "def": "An enforceable commitment to pay for products meeting specified criteria at a set price, often with a premium for early units, paid only on delivery. It is designed for products that do not yet exist and is harder to evaluate when they already do."
   },
   {
     "term": "Attribution",
-    "def": "Dividing credit for an observed change among the partners who contributed to it, for reporting. It stops the field from double counting, but it is not the input to a funding decision; that is counterfactual contribution."
+    "def": "Dividing credit for an observed change among the partners who contributed to it, for reporting. It prevents double counting across the field. Funding decisions should use counterfactual contribution instead."
   },
   {
     "term": "Big Push",
@@ -17,19 +17,19 @@
   },
   {
     "term": "Blended Finance",
-    "def": "The combination of public or philanthropic capital with private investment to enable transactions neither could achieve alone. Public capital typically absorbs risk or accepts concessional returns to mobilize larger volumes of private capital."
+    "def": "The combination of public or philanthropic capital with private investment to fund deals neither could finance alone. Public capital typically absorbs risk or accepts concessional returns to mobilize larger volumes of private capital."
   },
   {
     "term": "Bounded Rationality",
-    "def": "Herbert Simon's term for decision-making under limited time, attention and information, in which people settle for options that are good enough rather than searching for the best."
+    "def": "Herbert Simon's term for decision-making under limited time, attention and information, in which people stop searching once they find an option that is good enough."
   },
   {
     "term": "Bridge to Nowhere",
-    "def": "The error of treating a structural misalignment as a transitional gap. You launch a pilot, prove it works, then watch it collapse when funding ends, because the underlying economics never changed."
+    "def": "The error of treating a structural misalignment as a transitional gap. A pilot succeeds and then collapses when funding ends, because the underlying economics never changed."
   },
   {
     "term": "Buyer",
-    "def": "Anyone who purchases in a market, including governments, donors and pooled funds that buy on behalf of people who cannot pay. The framework treats such buyers as part of the market, not as a correction to a market failure."
+    "def": "Anyone who purchases in a market, including governments, donors and pooled funds that buy on behalf of people who cannot pay. The framework treats such buyers as part of the market. Buying on others' behalf does not correct a market failure."
   },
   {
     "term": "Cap-and-Trade",
@@ -37,11 +37,11 @@
   },
   {
     "term": "Carbon Credits",
-    "def": "Tradable certificates representing verified emission reductions or removals. Voluntary credits do not change what an emitter pays, which makes them a voluntary payer rather than a correction of the externality."
+    "def": "Tradable certificates representing verified emission reductions or removals. Voluntary credits do not change what an emitter pays, so they do not correct the externality. Their buyers act as voluntary payers."
   },
   {
     "term": "Carbon Tax",
-    "def": "A levy on greenhouse gas emissions that raises the financial floor of carbon-intensive activities. A structural intervention, and only as durable as the politics behind it."
+    "def": "A levy on greenhouse gas emissions that raises the financial floor of carbon-intensive activities. A structural intervention that lasts only as long as its political support."
   },
   {
     "term": "Catalyst",
@@ -49,7 +49,7 @@
   },
   {
     "term": "Ceiling Price Agreement",
-    "def": "A negotiated maximum price that buyers can tender beneath, often paired with a volume guarantee. It gives buyers price certainty and creates room for competition below the ceiling."
+    "def": "A negotiated maximum price that buyers can tender beneath, often paired with a volume guarantee. It gives buyers price certainty and lets suppliers compete below the ceiling."
   },
   {
     "term": "Concessional Capital",
@@ -57,7 +57,7 @@
   },
   {
     "term": "Contingent Instrument",
-    "def": "An instrument that costs the funder money only if something happens, such as a guarantee being called. The natural tool for transitional gaps, valued at its expected cost rather than its face value."
+    "def": "An instrument that costs the funder money only if something happens, such as a guarantee being called. The natural tool for transitional gaps. It is valued at its expected cost instead of its face value."
   },
   {
     "term": "Coordination Failure",
@@ -69,7 +69,7 @@
   },
   {
     "term": "Crowding Out",
-    "def": "The displacement of private investment by public or philanthropic capital. When interventions fund outcomes private capital would have financed anyway, the effect is a change in who pays rather than more beneficial activity."
+    "def": "The displacement of private investment by public or philanthropic capital. When interventions fund outcomes private capital would have financed anyway, they change who pays without adding beneficial activity."
   },
   {
     "term": "Deadweight Loss",
@@ -85,7 +85,7 @@
   },
   {
     "term": "Durability",
-    "def": "Whether an intervention's effect persists. For transitional gaps, whether the lever survives exit; for structural gaps, whether the payer keeps paying."
+    "def": "Whether an intervention's effect persists. For transitional gaps, whether the lever survives exit. For structural gaps, whether the payer keeps paying."
   },
   {
     "term": "Economies of Scale",
@@ -93,7 +93,7 @@
   },
   {
     "term": "Exit Strategy",
-    "def": "The planned conclusion of an intervention. For transitional gaps, exit leaves a self-sustaining market; for structural gaps, the intervention must continue or transition to a durable payer."
+    "def": "The planned end of an intervention. In a transitional gap, exit leaves a self-sustaining market. In a structural gap, the intervention must continue or hand over to a durable payer."
   },
   {
     "term": "Expected Cost",
@@ -105,7 +105,7 @@
   },
   {
     "term": "Externality",
-    "def": "A cost or benefit that falls on parties outside a transaction. What separates the market's position from the social optimum is how this gap slopes at the market's low point, the wedge, not its overall size."
+    "def": "A cost or benefit that falls on parties outside a transaction. How far the market settles from the social optimum depends on the externality at the margin (the wedge), not on its total size."
   },
   {
     "term": "Financial Landscape",
@@ -113,7 +113,7 @@
   },
   {
     "term": "Financial Transfer",
-    "def": "A payment by a third party that makes something cheaper for the buyer without changing the supplier's cost or margin, such as a subsidy or tax credit. Not to be confused with risk transfer, one of the six levers. A time-limited subsidy, such as a price buy-down, is meant to end once a lever has lowered the price; a permanent one must be funded indefinitely."
+    "def": "A payment by a third party that makes something cheaper for the buyer without changing the supplier's cost or margin, such as a subsidy or tax credit. Not to be confused with risk transfer, one of the six levers. A time-limited subsidy, such as a price buy-down, is meant to end once a lever has lowered the price. A permanent subsidy must be funded indefinitely."
   },
   {
     "term": "First-Loss Capital",
@@ -137,7 +137,7 @@
   },
   {
     "term": "Internality",
-    "def": "A cost people impose on their own future selves, for example through addiction or present bias. Tobacco harms are largely internalities rather than externalities."
+    "def": "A cost people impose on their own future selves, for example through addiction or present bias. Most of the harm from tobacco is of this kind."
   },
   {
     "term": "Learning by Doing",
@@ -149,7 +149,7 @@
   },
   {
     "term": "Lever Accounting",
-    "def": "Decomposing a past price change by the levers that produced it, rather than attributing it to the instrument as a whole."
+    "def": "Splitting a past price change into the parts each lever produced, instead of crediting the instrument as a whole."
   },
   {
     "term": "Local Minimum",
@@ -157,7 +157,7 @@
   },
   {
     "term": "Market Shaping",
-    "def": "Interventions that change how a market works, its prices, volumes, quality or entry, so that it delivers outcomes it would not deliver on its own. The term comes from global health, where it usually operates in markets with established public or donor buyers."
+    "def": "Interventions that change how a market works, its prices, volumes, quality or entry, so that it delivers outcomes it would not deliver on its own. The term comes from global health, where it is usually applied to markets with established public or donor buyers."
   },
   {
     "term": "Offtake Agreement",
@@ -165,7 +165,7 @@
   },
   {
     "term": "Payer",
-    "def": "Whoever pays to correct a structural gap for as long as the outcome matters: a government through taxes or subsidies, a compliance market, or voluntary buyers. Distinct from a buyer who purchases on others' behalf, such as a donor, which is part of the market rather than a correction to it."
+    "def": "Whoever pays to correct a structural gap for as long as the outcome matters: a government through taxes or subsidies, a compliance market, or voluntary buyers. A buyer that purchases on others' behalf, such as a donor, is part of the market and is not a payer in this sense."
   },
   {
     "term": "Payment Trigger",
@@ -189,35 +189,35 @@
   },
   {
     "term": "Principal-Agent Problem",
-    "def": "A situation in which someone acting for an organization (the agent) faces incentives that differ from the organization's (the principal's). The agent behaves rationally for themselves, which is not always best for the organization. A misalignment of incentives, not a behavioral bias."
+    "def": "A situation in which someone acting for an organization (the agent) faces incentives that differ from the organization's (the principal's). The agent behaves rationally for themselves, which is not always best for the organization. A misalignment of incentives, distinct from a behavioral bias."
   },
   {
     "term": "Principle of Precision",
-    "def": "Deploy no more concessionality than is needed to fire a durable lever or fill the wedge, measured in expected cost. Precision is not minimal spending: a cheap intervention that changes nothing permanent is imprecise."
+    "def": "Deploy no more concessionality than is needed to make a durable lever work or to fill the wedge, measured in expected cost. A cheap intervention that changes nothing permanent does not meet the principle."
   },
   {
     "term": "Priority Review Voucher",
-    "def": "A voucher a regulator grants to the developer of a product for a neglected disease, entitling a faster review of another product. It rewards approval, not access, so it works best paired with an access commitment."
+    "def": "A voucher a regulator grants to the developer of a product for a neglected disease, entitling a faster review of another product. It rewards approval only, so it works best paired with an access commitment."
   },
   {
     "term": "Results-Based Financing (RBF)",
-    "def": "Financing that links payments to verified outputs or outcomes rather than inputs. It shifts accountability toward results but requires measurable outcomes and affordable verification."
+    "def": "Financing that pays only for verified outputs or outcomes. It shifts accountability toward results but requires measurable outcomes and affordable verification."
   },
   {
     "term": "Return Expectations",
-    "def": "The financial return capital providers require. Commercial investors want market rates, philanthropy may accept none, and concessional capital sits in between."
+    "def": "The financial return capital providers require. Commercial investors want market rates and philanthropy may accept no return. Concessional capital accepts less than a market rate."
   },
   {
     "term": "Ridge",
-    "def": "The barrier of temporary losses between capital's current low point and a better one. Transitional gaps are ridges; learning curves wear them down."
+    "def": "The barrier of temporary losses between capital's current low point and a better one. A transitional gap is such a ridge, and learning curves wear it down."
   },
   {
     "term": "Risk Allocation",
-    "def": "The distribution of potential losses across stakeholders. Investors bear losses in commercial deals; grants place them on donors; guarantees shift them from private investors to public or philanthropic backers."
+    "def": "The distribution of potential losses across stakeholders. In commercial deals, investors bear the losses. A grant puts them on the donor, and a guarantee moves them from private investors to public or philanthropic backers."
   },
   {
     "term": "Social Landscape",
-    "def": "A map over the same ground where low elevation means high social value. Markets cannot see it directly."
+    "def": "A map over the same ground where low elevation means high social value. Market prices do not reflect it directly."
   },
   {
     "term": "Status Quo Bias",
@@ -225,7 +225,7 @@
   },
   {
     "term": "Structural Misalignment",
-    "def": "A gap in which the outcome we want is not one the market would sustain, however well it functioned, because harm is profitable or because much of a good's value goes to people other than its buyer. The externality matters at the destination, not just on the way there."
+    "def": "A gap in which the outcome we want is not one the market would sustain, however well it functioned, because harm is profitable or because much of a good's value goes to people other than its buyer. The externality matters at the destination as well as on the way there."
   },
   {
     "term": "Terraforming",
@@ -233,19 +233,19 @@
   },
   {
     "term": "Tiered Pricing",
-    "def": "A supplier charging lower prices in lower-income markets and recovering fixed costs in higher-income ones. A cross-subsidy rather than a competitive price."
+    "def": "A supplier charging lower prices in lower-income markets and recovering fixed costs in higher-income ones. A cross-subsidy, so its price is not the result of competition."
   },
   {
     "term": "Transitional Access Gap",
-    "def": "A gap in which profitable and socially beneficial outcomes align, but capital fails to reach them because of temporary barriers: unproven markets, perceived risk, coordination failures or information gaps. Any externalities matter on the way to the better outcome, not at the outcome itself."
+    "def": "A gap in which profitable and socially beneficial outcomes align, but capital fails to reach them because of temporary barriers: unproven markets, perceived risk, coordination failures or information gaps. Any externalities matter only on the way to the better outcome."
   },
   {
     "term": "Volume Guarantee",
-    "def": "A binding commitment to purchase, or pay for, specified quantities if demand falls short, enabling suppliers to invest in capacity with reduced demand risk."
+    "def": "An enforceable commitment to purchase, or pay for, specified quantities if demand falls short, so that suppliers can invest in capacity with less demand risk."
   },
   {
     "term": "Walk-Away Test",
-    "def": "Imagine the intervention succeeds and is then withdrawn. If the market holds its position, the gap was transitional; if it slides back, it was structural."
+    "def": "Imagine the intervention succeeds and is then withdrawn. If the market keeps its position, the gap was transitional. If it slides back, the gap was structural."
   },
   {
     "term": "Wedge",
@@ -253,7 +253,7 @@
   },
   {
     "term": "Welfare at Stake",
-    "def": "How much social value is lost where the market sits, compared with the social optimum. It sizes the case for acting."
+    "def": "How much social value is lost where the market is, compared with the social optimum. It measures what acting could gain."
   },
   {
     "term": "Windfall",
@@ -261,7 +261,7 @@
   },
   {
     "term": "Leverage and Funging",
-    "def": "Adjustments for how a funder's money changes what others spend. Leverage: the funder draws other money into a program, money that then cannot do good elsewhere. Funging: the funder pays for something others would have paid for anyway, so its real effect is to free their money for other uses. GiveWell applies both explicitly in its cost-effectiveness estimates."
+    "def": "Adjustments for how a funder's money changes what others spend. Leverage: the funder draws other money into a program, and that money can no longer do good elsewhere. Funging: the funder pays for something others would have paid for anyway, which in effect frees their money for other uses. GiveWell applies both explicitly in its cost-effectiveness estimates."
   },
   {
     "term": "Units of Value",
@@ -269,6 +269,6 @@
   },
   {
     "term": "Counterfactual Contribution",
-    "def": "What a particular funder's participation changed: the outcome with it minus the outcome without it. If the deal would have failed without the funder, that is the whole change less what co-funders' money would have done elsewhere; if another funder would have stepped in, it is little more than the value of that funder's money kept for other uses. Contributions need not add up to the whole."
+    "def": "What a particular funder's participation changed: the outcome with it minus the outcome without it. If the deal would have failed without the funder, that is the whole change less what co-funders' money would have done elsewhere. If another funder would have stepped in, it is little more than the value of that funder's money kept for other uses. Contributions need not add up to the whole."
   }
 ]
